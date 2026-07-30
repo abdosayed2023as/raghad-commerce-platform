@@ -1,0 +1,82 @@
+{
+  "toolVersion": "1.1.0",
+  "runId": "2026-07-30_14-17-15",
+  "timestamp": "2026-07-30T14:18:41.232Z",
+  "executionTimeMs": 85972,
+  "targetUrl": "https://raghadkids.com",
+  "environment": "production",
+  "browser": "Chromium",
+  "browserInfo": {
+    "type": "Playwright Chromium",
+    "path": "C:\\Users\\m7mad\\AppData\\Local\\ms-playwright\\chromium-1234\\chrome-win64\\chrome.exe",
+    "resolved": true,
+    "warning": null
+  },
+  "warnings": [],
+  "headless": true,
+  "maxRetries": 3,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "executionStatus": "SUCCESS",
+  "generatedArtifactsCount": 8,
+  "failedArtifactsCount": 0,
+  "generatedArtifacts": [
+    {
+      "category": "Technical (Console Log)",
+      "path": "console/console-homepage-errors.log",
+      "sizeBytes": 2731,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Network (HAR)",
+      "path": "network/network-homepage.har",
+      "sizeBytes": 23600068,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.html",
+      "sizeBytes": 854991,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.json",
+      "sizeBytes": 929176,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.html",
+      "sizeBytes": 872823,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.json",
+      "sizeBytes": 932432,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Desktop)",
+      "path": "screenshots/desktop/homepage-desktop.png",
+      "sizeBytes": 865917,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Mobile)",
+      "path": "screenshots/mobile/homepage-mobile.png",
+      "sizeBytes": 973142,
+      "status": "SUCCESS"
+    }
+  ],
+  "failedArtifacts": []
+}

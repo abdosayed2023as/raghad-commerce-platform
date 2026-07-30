@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "total": 16,
+    "passed": 5,
+    "failed": 11,
+    "skipped": 0
+  },
+  "rules": [
+    {
+      "id": "PERF_SCORE_DESKTOP_001",
+      "category": "Performance",
+      "title": "Desktop Performance Score",
+      "status": "FAIL",
+      "severity": "High",
+      "metric": "performance.desktop.performance",
+      "actual": 0.4,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "PERF_SCORE_MOBILE_001",
+      "category": "Performance",
+      "title": "Mobile Performance Score",
+      "status": "FAIL",
+      "severity": "High",
+      "metric": "performance.mobile.performance",
+      "actual": 0.14,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "ACCESSIBILITY_SCORE_DESKTOP_001",
+      "category": "Performance",
+      "title": "Desktop Accessibility Score",
+      "status": "PASS",
+      "severity": "Medium",
+      "metric": "performance.desktop.accessibility",
+      "actual": 0.92,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "ACCESSIBILITY_SCORE_MOBILE_001",
+      "category": "Performance",
+      "title": "Mobile Accessibility Score",
+      "status": "PASS",
+      "severity": "Medium",
+      "metric": "performance.mobile.accessibility",
+      "actual": 0.92,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "BEST_PRACTICES_SCORE_DESKTOP_001",
+      "category": "Performance",
+      "title": "Desktop Best Practices Score",
+      "status": "FAIL",
+      "severity": "Medium",
+      "metric": "performance.desktop.bestPractices",
+      "actual": 0.74,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "BEST_PRACTICES_SCORE_MOBILE_001",
+      "category": "Performance",
+      "title": "Mobile Best Practices Score",
+      "status": "FAIL",
+      "severity": "Medium",
+      "metric": "performance.mobile.bestPractices",
+      "actual": 0.75,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "SEO_SCORE_DESKTOP_001",
+      "category": "Performance",
+      "title": "Desktop SEO Score",
+      "status": "PASS",
+      "severity": "Medium",
+      "metric": "performance.desktop.seo",
+      "actual": 1,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "SEO_SCORE_MOBILE_001",
+      "category": "Performance",
+      "title": "Mobile SEO Score",
+      "status": "PASS",
+      "severity": "Medium",
+      "metric": "performance.mobile.seo",
+      "actual": 1,
+      "threshold": 0.9,
+      "operator": ">="
+    },
+    {
+      "id": "PERF_LCP_001",
+      "category": "Performance",
+      "title": "Largest Contentful Paint (LCP)",
+      "status": "FAIL",
+      "severity": "Critical",
+      "metric": "performance.coreWebVitals.lcp",
+      "actual": 38697.61,
+      "threshold": 2500,
+      "operator": "<="
+    },
+    {
+      "id": "PERF_CLS_001",
+      "category": "Performance",
+      "title": "Cumulative Layout Shift (CLS)",
+      "status": "FAIL",
+      "severity": "Critical",
+      "metric": "performance.coreWebVitals.cls",
+      "actual": 0.7847,
+      "threshold": 0.1,
+      "operator": "<="
+    },
+    {
+      "id": "PERF_INP_001",
+      "category": "Performance",
+      "title": "Interaction to Next Paint / TBT",
+      "status": "FAIL",
+      "severity": "High",
+      "metric": "performance.coreWebVitals.inp",
+      "actual": 1315,
+      "threshold": 200,
+      "operator": "<="
+    },
+    {
+      "id": "CONSOLE_ERRORS_001",
+      "category": "Console",
+      "title": "Browser Console Errors",
+      "status": "FAIL",
+      "severity": "High",
+      "metric": "console.errors",
+      "actual": 11,
+      "threshold": 0,
+      "operator": "=="
+    },
+    {
+      "id": "CONSOLE_WARNINGS_001",
+      "category": "Console",
+      "title": "Browser Console Warnings",
+      "status": "PASS",
+      "severity": "Low",
+      "metric": "console.warnings",
+      "actual": 2,
+      "threshold": 5,
+      "operator": "<="
+    },
+    {
+      "id": "NETWORK_FAILED_REQUESTS_001",
+      "category": "Network",
+      "title": "Failed HTTP Requests",
+      "status": "FAIL",
+      "severity": "High",
+      "metric": "network.failedRequests",
+      "actual": 13,
+      "threshold": 0,
+      "operator": "=="
+    },
+    {
+      "id": "NETWORK_TRANSFERRED_BYTES_001",
+      "category": "Network",
+      "title": "Network Transferred Bytes",
+      "status": "FAIL",
+      "severity": "Medium",
+      "metric": "network.transferredBytes",
+      "actual": 13841584,
+      "threshold": 3145728,
+      "operator": "<="
+    },
+    {
+      "id": "NETWORK_REQUEST_COUNT_001",
+      "category": "Network",
+      "title": "Total HTTP Request Count",
+      "status": "FAIL",
+      "severity": "Medium",
+      "metric": "network.requests",
+      "actual": 130,
+      "threshold": 100,
+      "operator": "<="
+    }
+  ]
+}

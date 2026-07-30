@@ -1,0 +1,57 @@
+
+===================================================
+RUN START
+Run ID: 2026-07-30_14-17-15
+Timestamp: 2026-07-30T14:17:15.252Z
+Target: https://raghadkids.com
+Environment: production
+===================================================
+[INFO] 2026-07-30T14:17:15.259Z - ====================================================
+[INFO] 2026-07-30T14:17:15.261Z -    AUDIT TOOLKIT — COMPLETE PIPELINE V1 (AT-01..04) 
+[INFO] 2026-07-30T14:17:15.262Z - ====================================================
+[INFO] 2026-07-30T14:17:15.263Z - Run ID / Timestamp: 2026-07-30_14-17-15
+[INFO] 2026-07-30T14:17:15.263Z - Loaded configuration for target: https://raghadkids.com
+[INFO] 2026-07-30T14:17:15.264Z - Environment: production | Headless: true | Max Retries: 3 (Initial + 3 retries)
+[INFO] 2026-07-30T14:17:15.265Z - Timestamped evidence directory: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE
+[INFO] 2026-07-30T14:17:15.267Z - Starting evidence collection for target: "https://raghadkids.com" (slug: "homepage")...
+[INFO] 2026-07-30T14:17:15.267Z - Launching Playwright Chromium browser (headless: true)...
+[INFO] 2026-07-30T14:17:15.426Z - Capturing Desktop screenshot (1440x900) for https://raghadkids.com...
+[SUCCESS] 2026-07-30T14:17:30.556Z - Desktop screenshot saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\screenshots\desktop\homepage-desktop.png
+[INFO] 2026-07-30T14:17:30.572Z - Capturing Mobile screenshot (390x844) for https://raghadkids.com...
+[SUCCESS] 2026-07-30T14:17:41.706Z - Mobile screenshot saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\screenshots\mobile\homepage-mobile.png
+[INFO] 2026-07-30T14:17:41.713Z - Capturing console logs for https://raghadkids.com...
+[SUCCESS] 2026-07-30T14:17:51.545Z - Console log exported: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\console\console-homepage-errors.log (13 messages)
+[INFO] 2026-07-30T14:17:51.553Z - Capturing network HAR for https://raghadkids.com...
+[SUCCESS] 2026-07-30T14:17:58.158Z - Network HAR exported: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\network\network-homepage.har
+[INFO] 2026-07-30T14:17:58.479Z - Playwright browser session closed.
+[INFO] 2026-07-30T14:17:58.481Z - Launching Lighthouse environment for https://raghadkids.com...
+[INFO] 2026-07-30T14:17:58.482Z - Lighthouse using Playwright Chromium binary: C:\Users\m7mad\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe
+[INFO] 2026-07-30T14:17:58.483Z - Executing Lighthouse Mobile audit...
+[SUCCESS] 2026-07-30T14:18:19.269Z - Lighthouse Mobile HTML saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\performance\lighthouse-homepage-mobile.html
+[SUCCESS] 2026-07-30T14:18:19.270Z - Lighthouse Mobile JSON saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\performance\lighthouse-homepage-mobile.json
+[WARN] 2026-07-30T14:18:19.572Z - Chrome cleanup note: EPERM, Permission denied: \\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.67056943 '\\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.67056943'
+[INFO] 2026-07-30T14:18:19.574Z - Executing Lighthouse Desktop audit...
+[SUCCESS] 2026-07-30T14:18:40.902Z - Lighthouse Desktop HTML saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\performance\lighthouse-homepage-desktop.html
+[SUCCESS] 2026-07-30T14:18:40.903Z - Lighthouse Desktop JSON saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\performance\lighthouse-homepage-desktop.json
+[WARN] 2026-07-30T14:18:41.221Z - Chrome cleanup note: EPERM, Permission denied: \\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.80664369 '\\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.80664369'
+[SUCCESS] 2026-07-30T14:18:41.223Z - Evidence collection workflow finished.
+[SUCCESS] 2026-07-30T14:18:41.233Z - Technical manifest generated: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\manifest\manifest.json
+[INFO] 2026-07-30T14:18:41.234Z - ====================================================
+[SUCCESS] 2026-07-30T14:18:41.236Z -    COLLECTION COMPLETED WITH ZERO ERRORS (8 evidence artifacts)
+[INFO] 2026-07-30T14:18:41.238Z - ====================================================
+[INFO] 2026-07-30T14:18:41.240Z - ====================================================
+[INFO] 2026-07-30T14:18:41.242Z -    STRUCTURED METRICS ANALYZER V1 (AT-02)           
+[INFO] 2026-07-30T14:18:41.244Z - ====================================================
+[SUCCESS] 2026-07-30T14:18:41.411Z - Normalized analysis document written: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\analysis\analysis.json
+[SUCCESS] 2026-07-30T14:18:41.411Z - Structured Metrics Analysis complete.
+[INFO] 2026-07-30T14:18:41.412Z - ====================================================
+[INFO] 2026-07-30T14:18:41.414Z -    DETERMINISTIC RULE ENGINE V1 (AT-03)             
+[INFO] 2026-07-30T14:18:41.415Z - ====================================================
+[INFO] 2026-07-30T14:18:41.418Z - Evaluated 16 rules: 5 PASSED, 11 FAILED, 0 SKIPPED
+[SUCCESS] 2026-07-30T14:18:41.420Z - Deterministic rules document written: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\analysis\rules.json
+[SUCCESS] 2026-07-30T14:18:41.422Z - Rule Engine evaluation complete.
+[INFO] 2026-07-30T14:18:41.423Z - ====================================================
+[INFO] 2026-07-30T14:18:41.424Z -    AUDIT CONTEXT BUILDER V1 (AT-04)                 
+[INFO] 2026-07-30T14:18:41.425Z - ====================================================
+[SUCCESS] 2026-07-30T14:18:41.435Z - Audit context package written: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_14-17-15\WA-01_EVIDENCE\context\audit-package.json
+[SUCCESS] 2026-07-30T14:18:41.436Z - Audit Context Package assembled successfully.

@@ -1,0 +1,36 @@
+{
+  "run": {
+    "id": "2026-07-30_14-21-40",
+    "timestamp": "2026-07-30T14:23:07.660Z",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
+  "performance": {
+    "desktop": {
+      "performance": 0.4,
+      "accessibility": 0.92,
+      "bestPractices": 0.74,
+      "seo": 1
+    },
+    "mobile": {
+      "performance": 0.14,
+      "accessibility": 0.92,
+      "bestPractices": 0.75,
+      "seo": 1
+    },
+    "coreWebVitals": {
+      "lcp": 38697.61,
+      "cls": 0.7847,
+      "inp": 1315
+    }
+  },
+  "console": {
+    "errors": 11,
+    "warnings": 2
+  },
+  "network": {
+    "requests": 130,
+    "failedRequests": 13,
+    "transferredBytes": 13841584
+  }
+}

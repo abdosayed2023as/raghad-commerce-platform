@@ -1,0 +1,82 @@
+{
+  "toolVersion": "1.1.0",
+  "runId": "2026-07-30_06-24-33",
+  "timestamp": "2026-07-30T06:26:47.714Z",
+  "executionTimeMs": 134351,
+  "targetUrl": "https://raghadkids.com",
+  "environment": "production",
+  "browser": "Chromium",
+  "browserInfo": {
+    "type": "Playwright Chromium",
+    "path": "C:\\Users\\m7mad\\AppData\\Local\\ms-playwright\\chromium-1234\\chrome-win64\\chrome.exe",
+    "resolved": true,
+    "warning": null
+  },
+  "warnings": [],
+  "headless": true,
+  "maxRetries": 3,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "executionStatus": "SUCCESS",
+  "generatedArtifactsCount": 8,
+  "failedArtifactsCount": 0,
+  "generatedArtifacts": [
+    {
+      "category": "Technical (Console Log)",
+      "path": "console/console-homepage-errors.log",
+      "sizeBytes": 2923,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Network (HAR)",
+      "path": "network/network-homepage.har",
+      "sizeBytes": 23620359,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.html",
+      "sizeBytes": 841643,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.json",
+      "sizeBytes": 918870,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.html",
+      "sizeBytes": 847881,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.json",
+      "sizeBytes": 913129,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Desktop)",
+      "path": "screenshots/desktop/homepage-desktop.png",
+      "sizeBytes": 866279,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Mobile)",
+      "path": "screenshots/mobile/homepage-mobile.png",
+      "sizeBytes": 967337,
+      "status": "SUCCESS"
+    }
+  ],
+  "failedArtifacts": []
+}

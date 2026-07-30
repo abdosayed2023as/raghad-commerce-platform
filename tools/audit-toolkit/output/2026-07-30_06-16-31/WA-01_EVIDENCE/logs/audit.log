@@ -1,0 +1,32 @@
+[INFO] 2026-07-30T06:16:31.812Z - ====================================================
+[INFO] 2026-07-30T06:16:31.814Z -    AUDIT TOOLKIT — COLLECTOR V1.1.0                
+[INFO] 2026-07-30T06:16:31.815Z - ====================================================
+[INFO] 2026-07-30T06:16:31.816Z - Run ID / Timestamp: 2026-07-30_06-16-31
+[INFO] 2026-07-30T06:16:31.817Z - Loaded configuration for target: https://raghadkids.com
+[INFO] 2026-07-30T06:16:31.818Z - Environment: production | Headless: true | Max Retries: 3
+[INFO] 2026-07-30T06:16:31.819Z - Timestamped evidence directory: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE
+[INFO] 2026-07-30T06:16:31.820Z - Starting evidence collection for target: "https://raghadkids.com" (slug: "homepage")...
+[INFO] 2026-07-30T06:16:31.823Z - Launching Playwright Chromium browser (headless: true)...
+[INFO] 2026-07-30T06:16:32.034Z - Capturing Desktop screenshot (1440x900) for https://raghadkids.com...
+[SUCCESS] 2026-07-30T06:16:42.328Z - Desktop screenshot saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\screenshots\desktop\homepage-desktop.png
+[INFO] 2026-07-30T06:16:42.347Z - Capturing Mobile screenshot (390x844) for https://raghadkids.com...
+[SUCCESS] 2026-07-30T06:16:49.964Z - Mobile screenshot saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\screenshots\mobile\homepage-mobile.png
+[INFO] 2026-07-30T06:16:49.972Z - Capturing console logs for https://raghadkids.com...
+[SUCCESS] 2026-07-30T06:17:03.860Z - Console log exported: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\console\console-homepage.log (13 messages)
+[INFO] 2026-07-30T06:17:03.874Z - Capturing network HAR for https://raghadkids.com...
+[SUCCESS] 2026-07-30T06:17:17.022Z - Network HAR exported: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\network\network-homepage.har
+[INFO] 2026-07-30T06:17:17.305Z - Playwright browser session closed.
+[INFO] 2026-07-30T06:17:17.307Z - Launching Lighthouse environment for https://raghadkids.com...
+[INFO] 2026-07-30T06:17:17.309Z - Executing Lighthouse Mobile audit...
+[SUCCESS] 2026-07-30T06:17:41.308Z - Lighthouse Mobile HTML saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\performance\lighthouse-homepage-mobile.html
+[SUCCESS] 2026-07-30T06:17:41.310Z - Lighthouse Mobile JSON saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\performance\lighthouse-homepage-mobile.json
+[WARN] 2026-07-30T06:17:41.609Z - Chrome cleanup note: EPERM, Permission denied: \\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.14799805 '\\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.14799805'
+[INFO] 2026-07-30T06:17:41.610Z - Executing Lighthouse Desktop audit...
+[SUCCESS] 2026-07-30T06:18:05.449Z - Lighthouse Desktop HTML saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\performance\lighthouse-homepage-desktop.html
+[SUCCESS] 2026-07-30T06:18:05.450Z - Lighthouse Desktop JSON saved: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\performance\lighthouse-homepage-desktop.json
+[WARN] 2026-07-30T06:18:05.800Z - Chrome cleanup note: EPERM, Permission denied: \\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.17968204 '\\?\C:\Users\m7mad\AppData\Local\Temp\lighthouse.17968204'
+[SUCCESS] 2026-07-30T06:18:05.802Z - Evidence collection workflow finished.
+[SUCCESS] 2026-07-30T06:18:05.814Z - Technical manifest generated: C:\abdo\Raghad2\raghad-commerce-platform\tools\audit-toolkit\output\2026-07-30_06-16-31\WA-01_EVIDENCE\manifest\manifest.json
+[INFO] 2026-07-30T06:18:05.815Z - ====================================================
+[SUCCESS] 2026-07-30T06:18:05.816Z -    COLLECTION COMPLETED WITH ZERO ERRORS (9 artifacts)
+[INFO] 2026-07-30T06:18:05.817Z - ====================================================

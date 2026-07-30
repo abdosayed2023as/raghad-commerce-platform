@@ -1,0 +1,19 @@
+=== BROWSER CONSOLE LOG EXPORT ===
+Target: https://raghadkids.com
+Export Timestamp: 2026-07-30T06:18:27.226Z
+Total Messages Captured: 13
+==================================
+
+[2026-07-30T06:18:17.964Z] [WARNING] [Meta Pixel] - Multiple pixels with conflicting versions were detected on this page. (https://connect.facebook.net/en_US/fbevents.js:187)
+[2026-07-30T06:18:18.607Z] [WARNING] using deprecated parameters for the initialization function; pass a single object instead (https://cdn.easyorders.shop/_next/static/chunks/8522.a961f42b95a83c86.js:0)
+[2026-07-30T06:18:18.707Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/plugins/store-plugins/is-active/spam-blocker:0)
+[2026-07-30T06:18:18.708Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/plugins/store-plugins/is-active/remove-watermark:0)
+[2026-07-30T06:18:18.918Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/d50ad3eb-f2de-4f7b-8d0a-39756211f620:0)
+[2026-07-30T06:18:18.919Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/f415adca-e001-45a0-8c5a-c31a9228a770?join=products:0)
+[2026-07-30T06:18:18.920Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/30c3ab9c-106f-45cb-a02f-fbbb560f0f02?join=products:0)
+[2026-07-30T06:18:18.921Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/8b81f0c5-8fba-4787-a965-5a333b95483d?join=products:0)
+[2026-07-30T06:18:18.921Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/b9e38ecb-70c5-4ec0-9f33-0d12752422d2?join=products:0)
+[2026-07-30T06:18:18.921Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/d50ad3eb-f2de-4f7b-8d0a-39756211f620?join=products:0)
+[2026-07-30T06:18:20.036Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/d50ad3eb-f2de-4f7b-8d0a-39756211f620:0)
+[2026-07-30T06:18:22.108Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/d50ad3eb-f2de-4f7b-8d0a-39756211f620:0)
+[2026-07-30T06:18:26.335Z] [ERROR] Failed to load resource: the server responded with a status of 400 () (https://api.easy-orders.net/api/v1/categories/d50ad3eb-f2de-4f7b-8d0a-39756211f620:0)

@@ -1,0 +1,80 @@
+{
+  "toolVersion": "1.1.0",
+  "runId": "2026-07-30_06-16-31",
+  "timestamp": "2026-07-30T06:18:05.813Z",
+  "executionTimeMs": 93999,
+  "targetUrl": "https://raghadkids.com",
+  "environment": "production",
+  "browser": "Chromium",
+  "headless": true,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "executionStatus": "SUCCESS",
+  "generatedArtifactsCount": 9,
+  "failedArtifactsCount": 0,
+  "generatedArtifacts": [
+    {
+      "category": "Technical (Console Log)",
+      "path": "console/console-homepage.log",
+      "sizeBytes": 2731,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Logs",
+      "path": "logs/audit.log",
+      "sizeBytes": 3730,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Network (HAR)",
+      "path": "network/network-homepage.har",
+      "sizeBytes": 23628264,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.html",
+      "sizeBytes": 860601,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-desktop.json",
+      "sizeBytes": 936204,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.html",
+      "sizeBytes": 862239,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Performance (Lighthouse)",
+      "path": "performance/lighthouse-homepage-mobile.json",
+      "sizeBytes": 924005,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Desktop)",
+      "path": "screenshots/desktop/homepage-desktop.png",
+      "sizeBytes": 866519,
+      "status": "SUCCESS"
+    },
+    {
+      "category": "Visual (Mobile)",
+      "path": "screenshots/mobile/homepage-mobile.png",
+      "sizeBytes": 966062,
+      "status": "SUCCESS"
+    }
+  ],
+  "failedArtifacts": []
+}

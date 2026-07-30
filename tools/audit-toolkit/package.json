@@ -1,0 +1,24 @@
+{
+  "name": "audit-toolkit",
+  "version": "1.6.0",
+  "description": "6-tier evidence collection, analysis, rule evaluation, finding, context, and AI report pipeline for Audit Toolkit (AT-01..AT-06)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "audit": "node src/index.js"
+  },
+  "keywords": [
+    "audit",
+    "evidence",
+    "playwright",
+    "lighthouse",
+    "collector"
+  ],
+  "author": "Raghad World Engineering",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-launcher": "^1.1.2",
+    "lighthouse": "^12.4.0",
+    "playwright": "^1.51.0"
+  }
+}
