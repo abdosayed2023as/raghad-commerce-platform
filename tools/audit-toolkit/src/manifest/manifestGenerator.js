@@ -39,11 +39,19 @@ export function generateTechnicalManifest(config, folders, artifactTracker, star
     status = generatedArtifacts.length > 0 ? 'PARTIAL_FAILURE' : 'FAILURE';
   }
 
+  const timestampIso = new Date().toISOString();
+
   const manifestData = {
     schemaVersion: '1.0.0',
     toolVersion: getToolkitVersion(),
     runId: folders.runTimestamp,
-    timestamp: new Date().toISOString(),
+    run: {
+      runId: folders.runTimestamp,
+      timestamp: timestampIso,
+      target: config.target,
+      environment: config.environment
+    },
+    timestamp: timestampIso,
     executionTimeMs: endTime - startTime,
     targetUrl: config.target,
     environment: config.environment,

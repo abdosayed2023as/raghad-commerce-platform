@@ -3,6 +3,7 @@ import path from 'path';
 import { runRuleEngine } from './ruleEngine.js';
 import { writeRulesDocument } from './ruleWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 export async function runRuleEnginePipeline(folders) {
   logger.info('====================================================');
@@ -26,6 +27,8 @@ export async function runRuleEnginePipeline(folders) {
     logger.error(errorMsg);
     throw new Error(errorMsg);
   }
+
+  validateContract(analysisData, 'analysis.json', ['schemaVersion', 'run', 'performance', 'console', 'network']);
 
   const rulesResult = runRuleEngine(analysisData);
 

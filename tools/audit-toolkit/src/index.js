@@ -2,6 +2,7 @@ import path from 'path';
 import { loadConfig } from './utils/configLoader.js';
 import { logger } from './utils/logger.js';
 import { ensureFolderStructure } from './output/folderManager.js';
+import { validateFolderStructure } from './output/folderValidator.js';
 import { runAllCollectors } from './collector/index.js';
 import { generateTechnicalManifest } from './manifest/manifestGenerator.js';
 import { runAnalysis } from './analyzer/index.js';
@@ -46,6 +47,7 @@ async function main() {
   try {
     const config = loadConfig();
     const folders = ensureFolderStructure(config.outputDir);
+    validateFolderStructure(folders);
 
     const runLogFile = path.join(folders.logs, 'audit.log');
     const rootLogFile = path.resolve(process.cwd(), 'logs', 'audit.log');

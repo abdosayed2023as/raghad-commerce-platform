@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 /**
  * Helper to locate and load audit-package.json and report.json from a run directory or file path.
@@ -52,23 +53,6 @@ function loadJsonFile(filePath, contractName) {
 }
 
 /**
- * Validates contract schemaVersion and essential structure.
- */
-function validateContractSchema(contract, contractName) {
-  if (!contract) {
-    logger.warn(`[COMPARATOR LOADER] Skipping validation for missing contract "${contractName}".`);
-    return false;
-  }
-
-  if (!contract.schemaVersion) {
-    logger.warn(`[COMPARATOR LOADER] Contract "${contractName}" is missing mandatory "schemaVersion" field.`);
-    return false;
-  }
-
-  return true;
-}
-
-/**
  * Load baseline and target run outputs, validate schemas, and return normalized comparison context.
  *
  * @param {string|object} baselineInput Path to baseline run folder/files or pre-loaded object
@@ -99,23 +83,31 @@ export function loadComparisonContext(baselineInput, targetInput) {
     targetReport = targetInput.report || null;
   }
 
-  validateContractSchema(baselinePackage, 'baseline audit-package.json');
-  validateContractSchema(baselineReport, 'baseline report.json');
-  validateContractSchema(targetPackage, 'target audit-package.json');
-  validateContractSchema(targetReport, 'target report.json');
+  if (baselinePackage) {
+    validateContract(baselinePackage, 'baseline audit-package.json', ['schemaVersion', 'run', 'manifest', 'analysis', 'rules', 'findings', 'evidence']);
+  }
+  if (baselineReport) {
+    validateContract(baselineReport, 'baseline report.json', ['schemaVersion', 'executiveSummary', 'recommendations', 'traceability']);
+  }
+  if (targetPackage) {
+    validateContract(targetPackage, 'target audit-package.json', ['schemaVersion', 'run', 'manifest', 'analysis', 'rules', 'findings', 'evidence']);
+  }
+  if (targetReport) {
+    validateContract(targetReport, 'target report.json', ['schemaVersion', 'executiveSummary', 'recommendations', 'traceability']);
+  }
 
   const baselineRun = {
-    runId: baselinePackage?.run?.runId || baselinePackage?.analysis?.run?.id || 'baseline-run',
-    timestamp: baselinePackage?.run?.timestamp || baselinePackage?.analysis?.run?.timestamp || null,
-    target: baselinePackage?.run?.target || baselinePackage?.analysis?.run?.target || null,
-    environment: baselinePackage?.run?.environment || baselinePackage?.analysis?.run?.environment || null
+    runId: baselinePackage?.run?.runId || 'baseline-run',
+    timestamp: baselinePackage?.run?.timestamp || null,
+    target: baselinePackage?.run?.target || null,
+    environment: baselinePackage?.run?.environment || null
   };
 
   const targetRun = {
-    runId: targetPackage?.run?.runId || targetPackage?.analysis?.run?.id || 'target-run',
-    timestamp: targetPackage?.run?.timestamp || targetPackage?.analysis?.run?.timestamp || null,
-    target: targetPackage?.run?.target || targetPackage?.analysis?.run?.target || null,
-    environment: targetPackage?.run?.environment || targetPackage?.analysis?.run?.environment || null
+    runId: targetPackage?.run?.runId || 'target-run',
+    timestamp: targetPackage?.run?.timestamp || null,
+    target: targetPackage?.run?.target || null,
+    environment: targetPackage?.run?.environment || null
   };
 
   return {

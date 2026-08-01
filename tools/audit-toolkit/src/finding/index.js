@@ -3,6 +3,7 @@ import path from 'path';
 import { buildFindings } from './findingBuilder.js';
 import { writeFindingsDocument } from './findingWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 export async function runFindingBuilder(config, folders) {
   logger.info('====================================================');
@@ -26,6 +27,8 @@ export async function runFindingBuilder(config, folders) {
     logger.error(errorMsg);
     throw new Error(errorMsg);
   }
+
+  validateContract(rulesData, 'rules.json', ['schemaVersion', 'summary', 'rules']);
 
   const targetUrl = config?.target || 'https://raghadkids.com';
   const findingsResult = buildFindings(rulesData, targetUrl);

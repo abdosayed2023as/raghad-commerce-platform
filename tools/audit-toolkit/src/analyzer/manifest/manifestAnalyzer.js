@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { logger } from '../../utils/logger.js';
+import { validateContract } from '../../utils/contractValidator.js';
 
 export function analyzeManifest(folders) {
   const manifestPath = path.join(folders.manifest, 'manifest.json');
@@ -8,7 +9,7 @@ export function analyzeManifest(folders) {
   if (!fs.existsSync(manifestPath)) {
     logger.warn(`[ANALYZER] Manifest artifact missing: "${manifestPath}". Using fallback run metadata.`);
     return {
-      id: folders.runTimestamp || null,
+      runId: folders.runTimestamp || null,
       timestamp: new Date().toISOString(),
       target: null,
       environment: null
@@ -19,16 +20,20 @@ export function analyzeManifest(folders) {
     const content = fs.readFileSync(manifestPath, 'utf8');
     const manifest = JSON.parse(content);
 
+    validateContract(manifest, 'manifest.json', ['schemaVersion', 'runId', 'executionStatus']);
+
+    const runId = manifest.run?.runId || manifest.runId || folders.runTimestamp || null;
+
     return {
-      id: manifest.runId || folders.runTimestamp || null,
+      runId,
       timestamp: manifest.timestamp || null,
-      target: manifest.targetUrl || null,
-      environment: manifest.environment || null
+      target: manifest.targetUrl || manifest.run?.target || null,
+      environment: manifest.environment || manifest.run?.environment || null
     };
   } catch (err) {
     logger.warn(`[ANALYZER] Failed to parse manifest.json: ${err.message}`);
     return {
-      id: folders.runTimestamp || null,
+      runId: folders.runTimestamp || null,
       timestamp: new Date().toISOString(),
       target: null,
       environment: null

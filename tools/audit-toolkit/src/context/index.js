@@ -6,6 +6,7 @@ import { buildEvidenceIndex } from './evidenceIndexer.js';
 import { buildAuditPackage } from './packageBuilder.js';
 import { writeContextPackage } from './contextWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 export async function runContextBuilder(folders) {
   logger.info('====================================================');
@@ -16,6 +17,11 @@ export async function runContextBuilder(folders) {
   const analysisData = loadAnalysis(folders);
   const rulesData = loadRules(folders);
   const findingsData = loadFindings(folders);
+
+  validateContract(analysisData, 'analysis.json', ['schemaVersion', 'run', 'performance', 'console', 'network']);
+  validateContract(rulesData, 'rules.json', ['schemaVersion', 'summary', 'rules']);
+  validateContract(findingsData, 'findings.json', ['schemaVersion', 'summary', 'findings']);
+
   const evidenceIndex = buildEvidenceIndex(folders);
 
   const auditPackage = buildAuditPackage(

@@ -1,0 +1,369 @@
+{
+  "schemaVersion": "1.0.0",
+  "baselineRun": {
+    "runId": "2026-07-30_14-41-15",
+    "timestamp": "2026-07-30T14:43:04.528Z",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
+  "targetRun": {
+    "runId": "2026-08-01_13-05-06",
+    "timestamp": "2026-08-01T13:08:14.604Z",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
+  "summary": {
+    "metricsImproved": 2,
+    "metricsRegressed": 5,
+    "metricsUnchanged": 9,
+    "findingsResolved": 0,
+    "findingsAdded": 0,
+    "findingsUnchanged": 11,
+    "recommendationsResolved": 0,
+    "recommendationsAdded": 0,
+    "recommendationsUnchanged": 11
+  },
+  "metrics": [
+    {
+      "metric": "performance.desktop.performance",
+      "category": "Performance",
+      "title": "Desktop Performance Score",
+      "oldValue": 0.44,
+      "newValue": 0.12,
+      "status": "REGRESSION"
+    },
+    {
+      "metric": "performance.desktop.accessibility",
+      "category": "Accessibility",
+      "title": "Desktop Accessibility Score",
+      "oldValue": 0.92,
+      "newValue": 0.92,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.desktop.bestPractices",
+      "category": "Best Practices",
+      "title": "Desktop Best Practices Score",
+      "oldValue": 0.74,
+      "newValue": 0.74,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.desktop.seo",
+      "category": "SEO",
+      "title": "Desktop SEO Score",
+      "oldValue": 1,
+      "newValue": 1,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.mobile.performance",
+      "category": "Performance",
+      "title": "Mobile Performance Score",
+      "oldValue": 0.16,
+      "newValue": 0.1,
+      "status": "REGRESSION"
+    },
+    {
+      "metric": "performance.mobile.accessibility",
+      "category": "Accessibility",
+      "title": "Mobile Accessibility Score",
+      "oldValue": 0.92,
+      "newValue": 0.92,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.mobile.bestPractices",
+      "category": "Best Practices",
+      "title": "Mobile Best Practices Score",
+      "oldValue": 0.75,
+      "newValue": 0.75,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.mobile.seo",
+      "category": "SEO",
+      "title": "Mobile SEO Score",
+      "oldValue": 1,
+      "newValue": 1,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "performance.coreWebVitals.lcp",
+      "category": "Performance",
+      "title": "Largest Contentful Paint (LCP)",
+      "oldValue": 52949.64,
+      "newValue": 19477.03,
+      "status": "IMPROVED"
+    },
+    {
+      "metric": "performance.coreWebVitals.cls",
+      "category": "Performance",
+      "title": "Cumulative Layout Shift (CLS)",
+      "oldValue": 0.7724,
+      "newValue": 1.1341,
+      "status": "REGRESSION"
+    },
+    {
+      "metric": "performance.coreWebVitals.inp",
+      "category": "Performance",
+      "title": "Interaction to Next Paint (INP)",
+      "oldValue": 1061,
+      "newValue": 7025,
+      "status": "REGRESSION"
+    },
+    {
+      "metric": "console.errors",
+      "category": "Console",
+      "title": "Console Errors",
+      "oldValue": 11,
+      "newValue": 10,
+      "status": "IMPROVED"
+    },
+    {
+      "metric": "console.warnings",
+      "category": "Console",
+      "title": "Console Warnings",
+      "oldValue": 2,
+      "newValue": 2,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "network.requests",
+      "category": "Network",
+      "title": "Network Requests Count",
+      "oldValue": 130,
+      "newValue": 130,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "network.failedRequests",
+      "category": "Network",
+      "title": "Failed Network Requests",
+      "oldValue": 12,
+      "newValue": 12,
+      "status": "UNCHANGED"
+    },
+    {
+      "metric": "network.transferredBytes",
+      "category": "Network",
+      "title": "Network Transferred Bytes",
+      "oldValue": 13840962,
+      "newValue": 13842298,
+      "status": "REGRESSION"
+    }
+  ],
+  "findings": [
+    {
+      "findingId": "FIND-001",
+      "ruleId": "PERF_SCORE_DESKTOP_001",
+      "category": "Performance",
+      "title": "Desktop Performance Score",
+      "severity": "High",
+      "oldValue": 0.44,
+      "newValue": 0.12,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-002",
+      "ruleId": "PERF_SCORE_MOBILE_001",
+      "category": "Performance",
+      "title": "Mobile Performance Score",
+      "severity": "High",
+      "oldValue": 0.16,
+      "newValue": 0.1,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-003",
+      "ruleId": "BEST_PRACTICES_SCORE_DESKTOP_001",
+      "category": "Best Practices",
+      "title": "Desktop Best Practices Score",
+      "severity": "Medium",
+      "oldValue": 0.74,
+      "newValue": 0.74,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-004",
+      "ruleId": "BEST_PRACTICES_SCORE_MOBILE_001",
+      "category": "Best Practices",
+      "title": "Mobile Best Practices Score",
+      "severity": "Medium",
+      "oldValue": 0.75,
+      "newValue": 0.75,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-005",
+      "ruleId": "PERF_LCP_001",
+      "category": "Performance",
+      "title": "Largest Contentful Paint (LCP)",
+      "severity": "Critical",
+      "oldValue": 52949.64,
+      "newValue": 19477.03,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-006",
+      "ruleId": "PERF_CLS_001",
+      "category": "Performance",
+      "title": "Cumulative Layout Shift (CLS)",
+      "severity": "Critical",
+      "oldValue": 0.7724,
+      "newValue": 1.1341,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-007",
+      "ruleId": "PERF_INP_001",
+      "category": "Performance",
+      "title": "Interaction to Next Paint / TBT",
+      "severity": "High",
+      "oldValue": 1061,
+      "newValue": 7025,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-008",
+      "ruleId": "CONSOLE_ERRORS_001",
+      "category": "Console",
+      "title": "Browser Console Errors",
+      "severity": "High",
+      "oldValue": 11,
+      "newValue": 10,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-009",
+      "ruleId": "NETWORK_FAILED_REQUESTS_001",
+      "category": "Network",
+      "title": "Failed HTTP Requests",
+      "severity": "High",
+      "oldValue": 12,
+      "newValue": 12,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-010",
+      "ruleId": "NETWORK_TRANSFERRED_BYTES_001",
+      "category": "Network",
+      "title": "Network Transferred Bytes",
+      "severity": "Medium",
+      "oldValue": 13840962,
+      "newValue": 13842298,
+      "status": "UNCHANGED"
+    },
+    {
+      "findingId": "FIND-011",
+      "ruleId": "NETWORK_REQUEST_COUNT_001",
+      "category": "Network",
+      "title": "Total HTTP Request Count",
+      "severity": "Medium",
+      "oldValue": 130,
+      "newValue": 130,
+      "status": "UNCHANGED"
+    }
+  ],
+  "recommendations": [
+    {
+      "recommendationId": "REC-001",
+      "title": "Address Desktop Performance Score",
+      "priority": "High",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-001"
+      ]
+    },
+    {
+      "recommendationId": "REC-002",
+      "title": "Address Mobile Performance Score",
+      "priority": "High",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-002"
+      ]
+    },
+    {
+      "recommendationId": "REC-003",
+      "title": "Address Desktop Best Practices Score",
+      "priority": "Medium",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-003"
+      ]
+    },
+    {
+      "recommendationId": "REC-004",
+      "title": "Address Mobile Best Practices Score",
+      "priority": "Medium",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-004"
+      ]
+    },
+    {
+      "recommendationId": "REC-005",
+      "title": "Optimize Largest Contentful Paint (LCP)",
+      "priority": "Critical",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-005"
+      ]
+    },
+    {
+      "recommendationId": "REC-006",
+      "title": "Reduce Cumulative Layout Shift (CLS)",
+      "priority": "Critical",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-006"
+      ]
+    },
+    {
+      "recommendationId": "REC-007",
+      "title": "Address Interaction to Next Paint / TBT",
+      "priority": "High",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-007"
+      ]
+    },
+    {
+      "recommendationId": "REC-008",
+      "title": "Fix Unhandled Console Errors",
+      "priority": "High",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-008"
+      ]
+    },
+    {
+      "recommendationId": "REC-009",
+      "title": "Eliminate Failed HTTP Requests",
+      "priority": "High",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-009"
+      ]
+    },
+    {
+      "recommendationId": "REC-010",
+      "title": "Address Network Transferred Bytes",
+      "priority": "Medium",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-010"
+      ]
+    },
+    {
+      "recommendationId": "REC-011",
+      "title": "Address Total HTTP Request Count",
+      "priority": "Medium",
+      "status": "UNCHANGED",
+      "relatedFindingIds": [
+        "FIND-011"
+      ]
+    }
+  ]
+}

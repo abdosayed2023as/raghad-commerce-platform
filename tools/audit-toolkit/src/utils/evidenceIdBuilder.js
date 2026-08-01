@@ -1,6 +1,31 @@
 import { getPageSlug } from './configLoader.js';
 
 /**
+ * Derives the viewport string (desktop, mobile, or all) from a ruleId.
+ * @param {string} ruleId
+ * @returns {string} viewport
+ */
+export function deriveFindingViewport(ruleId) {
+  if (ruleId.includes('DESKTOP')) return 'desktop';
+  if (ruleId.includes('MOBILE') || ruleId.startsWith('PERF_LCP') || ruleId.startsWith('PERF_CLS') || ruleId.startsWith('PERF_INP')) return 'mobile';
+  return 'all';
+}
+
+/**
+ * Builds a deterministic stable Finding ID derived from ruleId, pageSlug, and viewport.
+ * Format: FIND_{ruleId}_{pageSlug}_{viewport}
+ *
+ * @param {string} ruleId
+ * @param {string} targetUrl
+ * @returns {string} Stable finding ID
+ */
+export function buildStableFindingId(ruleId, targetUrl) {
+  const pageSlug = getPageSlug(targetUrl || 'https://raghadkids.com');
+  const viewport = deriveFindingViewport(ruleId);
+  return `FIND_${ruleId}_${pageSlug}_${viewport}`;
+}
+
+/**
  * Generates dynamic Evidence IDs and relative source artifact paths based on rule ID and target URL.
  * @param {string} ruleId
  * @param {string} targetUrl

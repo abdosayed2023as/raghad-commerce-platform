@@ -17,6 +17,8 @@ export function buildGitHubIssues(specData) {
   const low = issues.filter(i => i.priority === 'Low').length;
 
   return {
+    schemaVersion: '1.0.0',
+    run: specData?.run || null,
     summary: {
       totalIssues: issues.length,
       critical,

@@ -21,6 +21,8 @@ export function runRuleEngine(analysisData) {
   });
 
   return {
+    schemaVersion: '1.0.0',
+    run: analysisData?.run || null,
     summary: {
       total: evaluatedRules.length,
       passed: passedCount,

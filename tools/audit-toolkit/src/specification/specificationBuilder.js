@@ -33,7 +33,15 @@ export function buildSpecifications(report, comparison = null) {
   const p2 = specifications.filter(s => s.priority === 'P2').length;
   const p3 = specifications.filter(s => s.priority === 'P3').length;
 
+  const runSection = report?.run || {
+    runId: report?.metadata?.runId || null,
+    target: report?.metadata?.target || null,
+    environment: report?.metadata?.environment || null
+  };
+
   return {
+    schemaVersion: '1.0.0',
+    run: runSection,
     summary: {
       totalSpecifications: specifications.length,
       p0,

@@ -3,16 +3,18 @@ import path from 'path';
 import { buildSpecifications } from './specificationBuilder.js';
 import { writeSpecificationsDocument } from './specificationWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 /**
  * Pipeline entry point for Specification Generator V1 (AT-08).
- * Consumes report.json (and optional comparison.json) to produce context/specifications.json.
+ * Consumes report.json (and optional comparison) to produce context/specifications.json.
  *
  * @param {object} configOrFolders Configuration object or folders object
  * @param {object} [foldersParam] Folders structure object
+ * @param {object} [options] Optional configuration options including comparison data or path
  * @returns {Promise<string>} Output file path
  */
-export async function runSpecificationGenerator(configOrFolders, foldersParam) {
+export async function runSpecificationGenerator(configOrFolders, foldersParam, options = {}) {
   logger.info('====================================================');
   logger.info('   SPECIFICATION GENERATOR V1 (AT-08)               ');
   logger.info('====================================================');
@@ -43,15 +45,22 @@ export async function runSpecificationGenerator(configOrFolders, foldersParam) {
     throw new Error(errorMsg);
   }
 
-  // Optionally load comparison.json if available
-  let comparison = null;
-  const compPath = path.resolve(process.cwd(), 'output', 'comparison', 'comparison.json');
-  if (fs.existsSync(compPath)) {
+  validateContract(report, 'report.json', ['schemaVersion', 'executiveSummary', 'recommendations', 'traceability']);
+
+  // Load comparison ONLY if explicitly passed via parameters or folders (no hardcoded global paths)
+  let comparison = options?.comparison || folders?.comparisonData || null;
+  const compPath = options?.comparisonPath || folders?.comparisonPath || null;
+
+  if (!comparison && compPath && fs.existsSync(compPath)) {
     try {
       comparison = JSON.parse(fs.readFileSync(compPath, 'utf8'));
-    } catch (_e) {
-      // Optional contract
+    } catch (err) {
+      logger.warn(`[SPECIFICATION GENERATOR] Provided comparisonPath could not be parsed: ${err.message}`);
     }
+  }
+
+  if (comparison) {
+    validateContract(comparison, 'comparison.json', ['schemaVersion', 'baselineRun', 'targetRun', 'summary', 'metrics', 'findings']);
   }
 
   const specData = buildSpecifications(report, comparison);

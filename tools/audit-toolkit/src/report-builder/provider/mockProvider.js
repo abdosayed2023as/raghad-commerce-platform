@@ -69,6 +69,12 @@ export class MockProvider extends ProviderInterface {
       reportVersion: "1.0.0",
       generatedAt: new Date().toISOString(),
       provider: "mock",
+      run: {
+        runId: run.runId || null,
+        timestamp: run.timestamp || null,
+        target: run.target || null,
+        environment: run.environment || null
+      },
       metadata: {
         target: run.target || null,
         environment: run.environment || null,

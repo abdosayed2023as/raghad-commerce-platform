@@ -1,7 +1,10 @@
 import { getMappingForRule } from './findingMappings.js';
+import { buildStableFindingId, deriveFindingViewport } from '../utils/evidenceIdBuilder.js';
+import { getPageSlug } from '../utils/configLoader.js';
 
 export function buildFindings(rulesData, targetUrl) {
   const rulesList = Array.isArray(rulesData?.rules) ? rulesData.rules : [];
+  const runSection = rulesData?.run || null;
 
   // Filter ONLY FAIL and SKIPPED rules (PASS rules are ignored)
   const targetRules = rulesList.filter(r => r.status === 'FAIL' || r.status === 'SKIPPED');
@@ -13,15 +16,17 @@ export function buildFindings(rulesData, targetUrl) {
   let lowCount = 0;
   let infoCount = 0;
 
-  targetRules.forEach((rule, index) => {
-    const sequenceNum = String(index + 1).padStart(3, '0');
-    const findingId = `FIND-${sequenceNum}`;
-
+  targetRules.forEach((rule) => {
+    const findingId = buildStableFindingId(rule.id, targetUrl);
     const mapping = getMappingForRule(rule.id, targetUrl);
+    const pageSlug = getPageSlug(targetUrl);
+    const viewport = deriveFindingViewport(rule.id);
 
     const finding = {
       findingId,
       ruleId: rule.id,
+      pageSlug,
+      viewport,
       category: rule.category,
       severity: rule.severity,
       status: rule.status,
@@ -47,6 +52,8 @@ export function buildFindings(rulesData, targetUrl) {
   });
 
   return {
+    schemaVersion: '1.0.0',
+    run: runSection,
     summary: {
       total: findings.length,
       critical: criticalCount,

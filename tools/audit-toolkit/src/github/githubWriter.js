@@ -26,6 +26,7 @@ export function writeGitHubIssuesDocument(folders, issueData) {
 
   const deterministicDoc = {
     schemaVersion: '1.0.0',
+    run: issueData.run || null,
     summary: issueData.summary || {
       totalIssues: 0,
       critical: 0,

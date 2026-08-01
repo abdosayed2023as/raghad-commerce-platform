@@ -1,5 +1,10 @@
 {
   "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "2026-08-01_13-05-06",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
   "summary": {
     "totalSpecifications": 11,
     "p0": 2,

@@ -26,6 +26,7 @@ export function writeSpecificationsDocument(folders, specData) {
 
   const deterministicDoc = {
     schemaVersion: '1.0.0',
+    run: specData.run || null,
     summary: specData.summary || {
       totalSpecifications: 0,
       p0: 0,

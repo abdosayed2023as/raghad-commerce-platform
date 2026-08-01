@@ -3,6 +3,7 @@ import path from 'path';
 import { buildGitHubIssues } from './githubTaskBuilder.js';
 import { writeGitHubIssuesDocument } from './githubWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 /**
  * Pipeline entry point for GitHub Task Generator V1 (AT-09).
@@ -42,6 +43,8 @@ export async function runGitHubTaskGenerator(configOrFolders, foldersParam) {
     logger.error(errorMsg);
     throw new Error(errorMsg);
   }
+
+  validateContract(specData, 'specifications.json', ['schemaVersion', 'summary', 'specifications']);
 
   const issueData = buildGitHubIssues(specData);
   const outputPath = writeGitHubIssuesDocument(folders, issueData);

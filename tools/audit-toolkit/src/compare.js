@@ -23,7 +23,7 @@ function parseArgs() {
   const args = process.argv.slice(2);
   let baseline = null;
   let target = null;
-  let output = 'output/comparison/comparison.json';
+  let output = null;
 
   const positional = [];
 

@@ -3,6 +3,7 @@ import path from 'path';
 import { buildReport } from './reportBuilder.js';
 import { writeReportDocument } from './reportWriter.js';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 export async function runReportBuilder(config, folders) {
   logger.info('====================================================');
@@ -27,7 +28,9 @@ export async function runReportBuilder(config, folders) {
     throw new Error(errorMsg);
   }
 
-  const providerName = config.reportProvider || 'mock';
+  validateContract(auditPackage, 'audit-package.json', ['schemaVersion', 'run', 'manifest', 'analysis', 'rules', 'findings', 'evidence']);
+
+  const providerName = config?.reportProvider || 'mock';
   const reportDoc = await buildReport(auditPackage, providerName);
 
   const recCount = Array.isArray(reportDoc.recommendations) ? reportDoc.recommendations.length : 0;

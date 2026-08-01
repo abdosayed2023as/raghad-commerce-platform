@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { logger } from '../utils/logger.js';
+import { validateContract } from '../utils/contractValidator.js';
 
 export function loadManifest(folders) {
   const manifestPath = path.join(folders.manifest, 'manifest.json');
@@ -15,11 +16,13 @@ export function loadManifest(folders) {
     const raw = fs.readFileSync(manifestPath, 'utf8');
     const manifest = JSON.parse(raw);
 
+    validateContract(manifest, 'manifest.json', ['schemaVersion', 'executionStatus']);
+
     const runSection = {
-      runId: manifest.runId || folders.runTimestamp || null,
-      timestamp: manifest.timestamp || null,
-      target: manifest.targetUrl || null,
-      environment: manifest.environment || null
+      runId: manifest.run?.runId || manifest.runId || folders.runTimestamp || null,
+      timestamp: manifest.timestamp || manifest.run?.timestamp || null,
+      target: manifest.targetUrl || manifest.run?.target || null,
+      environment: manifest.environment || manifest.run?.environment || null
     };
 
     const manifestSection = {
