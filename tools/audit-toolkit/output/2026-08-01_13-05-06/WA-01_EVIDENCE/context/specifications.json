@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "1.0.0",
+  "summary": {
+    "totalSpecifications": 11,
+    "p0": 2,
+    "p1": 5,
+    "p2": 4,
+    "p3": 0
+  },
+  "specifications": [
+    {
+      "specificationId": "SPEC-001",
+      "title": "Address Desktop Performance Score",
+      "priority": "P1",
+      "summary": "Address Desktop Performance Score.",
+      "problem": "Rule PERF_SCORE_DESKTOP_001 failed with metric value 0.12 vs threshold 0.9.",
+      "recommendation": "Address Desktop Performance Score",
+      "acceptanceCriteria": [
+        "performance.desktop.performance >= 0.9",
+        "Rule PERF_SCORE_DESKTOP_001 passes",
+        "Finding FIND-001 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-001"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-002",
+      "title": "Address Mobile Performance Score",
+      "priority": "P1",
+      "summary": "Address Mobile Performance Score.",
+      "problem": "Rule PERF_SCORE_MOBILE_001 failed with metric value 0.1 vs threshold 0.9.",
+      "recommendation": "Address Mobile Performance Score",
+      "acceptanceCriteria": [
+        "performance.mobile.performance >= 0.9",
+        "Rule PERF_SCORE_MOBILE_001 passes",
+        "Finding FIND-002 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-002"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-003",
+      "title": "Address Desktop Best Practices Score",
+      "priority": "P2",
+      "summary": "Address Desktop Best Practices Score.",
+      "problem": "Rule BEST_PRACTICES_SCORE_DESKTOP_001 failed with metric value 0.74 vs threshold 0.9.",
+      "recommendation": "Address Desktop Best Practices Score",
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Finding FIND-003 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-003"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "estimatedScope": "Small",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-004",
+      "title": "Address Mobile Best Practices Score",
+      "priority": "P2",
+      "summary": "Address Mobile Best Practices Score.",
+      "problem": "Rule BEST_PRACTICES_SCORE_MOBILE_001 failed with metric value 0.75 vs threshold 0.9.",
+      "recommendation": "Address Mobile Best Practices Score",
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Finding FIND-004 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-004"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "estimatedScope": "Small",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-005",
+      "title": "Optimize Largest Contentful Paint (LCP)",
+      "priority": "P0",
+      "summary": "Optimize Largest Contentful Paint (LCP).",
+      "problem": "Reduce LCP loading time (current: 19477.03ms) below the 2500ms threshold by optimizing main banner assets and critical render path CSS.",
+      "recommendation": "Optimize Largest Contentful Paint (LCP)",
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.lcp <= 2500",
+        "Rule PERF_LCP_001 passes",
+        "Finding FIND-005 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-005"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "High",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-006",
+      "title": "Reduce Cumulative Layout Shift (CLS)",
+      "priority": "P0",
+      "summary": "Reduce Cumulative Layout Shift (CLS).",
+      "problem": "Prevent layout instability (current CLS: 1.1341) by specifying explicit dimensions for image and ad containers.",
+      "recommendation": "Reduce Cumulative Layout Shift (CLS)",
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.cls <= 0.1",
+        "Rule PERF_CLS_001 passes",
+        "Finding FIND-006 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-006"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "High",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-007",
+      "title": "Address Interaction to Next Paint / TBT",
+      "priority": "P1",
+      "summary": "Address Interaction to Next Paint / TBT.",
+      "problem": "Rule PERF_INP_001 failed with metric value 7025 vs threshold 200.",
+      "recommendation": "Address Interaction to Next Paint / TBT",
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.inp <= 200",
+        "Rule PERF_INP_001 passes",
+        "Finding FIND-007 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-007"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-008",
+      "title": "Fix Unhandled Console Errors",
+      "priority": "P1",
+      "summary": "Fix Unhandled Console Errors.",
+      "problem": "Resolve 10 unhandled JavaScript/network errors captured in browser console.",
+      "recommendation": "Fix Unhandled Console Errors",
+      "acceptanceCriteria": [
+        "console.errors == 0",
+        "Rule CONSOLE_ERRORS_001 passes",
+        "Finding FIND-008 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-008"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-CNS-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-009",
+      "title": "Eliminate Failed HTTP Requests",
+      "priority": "P1",
+      "summary": "Eliminate Failed HTTP Requests.",
+      "problem": "Fix 12 HTTP network requests returning error status codes (>= 400).",
+      "recommendation": "Eliminate Failed HTTP Requests",
+      "acceptanceCriteria": [
+        "network.failedRequests == 0",
+        "Rule NETWORK_FAILED_REQUESTS_001 passes",
+        "Finding FIND-009 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-009"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "estimatedScope": "Medium",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-010",
+      "title": "Address Network Transferred Bytes",
+      "priority": "P2",
+      "summary": "Address Network Transferred Bytes.",
+      "problem": "Rule NETWORK_TRANSFERRED_BYTES_001 failed with metric value 13842298 vs threshold 3145728.",
+      "recommendation": "Address Network Transferred Bytes",
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Finding FIND-010 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-010"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "estimatedScope": "Small",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    },
+    {
+      "specificationId": "SPEC-011",
+      "title": "Address Total HTTP Request Count",
+      "priority": "P2",
+      "summary": "Address Total HTTP Request Count.",
+      "problem": "Rule NETWORK_REQUEST_COUNT_001 failed with metric value 130 vs threshold 100.",
+      "recommendation": "Address Total HTTP Request Count",
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Finding FIND-011 resolved"
+      ],
+      "relatedFindingIds": [
+        "FIND-011"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "estimatedScope": "Small",
+      "estimatedComplexity": "Medium",
+      "status": "OPEN"
+    }
+  ]
+}

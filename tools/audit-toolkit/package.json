@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "audit": "node src/index.js",
-    "compare": "node src/compare.js"
+    "compare": "node src/compare.js",
+    "spec": "node src/spec.js",
+    "github": "node src/github.js"
   },
   "keywords": [
     "audit",

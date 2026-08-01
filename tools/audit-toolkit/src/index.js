@@ -9,6 +9,8 @@ import { runRuleEnginePipeline } from './rules/index.js';
 import { runFindingBuilder } from './finding/index.js';
 import { runContextBuilder } from './context/index.js';
 import { runReportBuilder } from './report-builder/index.js';
+import { runSpecificationGenerator } from './specification/index.js';
+import { runGitHubTaskGenerator } from './github/index.js';
 
 class ArtifactTracker {
   constructor() {
@@ -57,7 +59,7 @@ async function main() {
     });
 
     logger.info('====================================================');
-    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V1 (AT-01..06) ');
+    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V1 (AT-01..09) ');
     logger.info('====================================================');
     logger.info(`Run ID / Timestamp: ${folders.runTimestamp}`);
     logger.info(`Loaded configuration for target: ${config.target}`);
@@ -96,6 +98,12 @@ async function main() {
 
     // 6. AI Report Builder (AT-06)
     await runReportBuilder(config, folders);
+
+    // 7. Specification Generator (AT-08)
+    await runSpecificationGenerator(config, folders);
+
+    // 8. GitHub Task Generator (AT-09)
+    await runGitHubTaskGenerator(config, folders);
 
     if (manifest.executionStatus === 'FAILURE') {
       process.exit(1);
