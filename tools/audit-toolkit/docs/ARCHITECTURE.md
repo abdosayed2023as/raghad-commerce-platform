@@ -1,14 +1,15 @@
-# Audit Toolkit Architecture Specification (AT-01..AT-06)
+# Audit Toolkit Architecture Specification (AT-01..AT-07)
 
 ## 1. Overview
 
-**Audit Toolkit V1** implements a 6-tier architectural pipeline:
+**Audit Toolkit V1** implements a 7-tier architectural pipeline:
 1. **AT-01 — Audit Toolkit Collector V1**: Captures raw visual, performance, network, and console evidence artifacts.
 2. **AT-02 — Structured Metrics Analyzer V1**: Parses raw evidence into a normalized machine-readable metrics document `analysis.json`.
 3. **AT-03 — Deterministic Rule Engine V1**: Evaluates `analysis.json` metrics against centralized threshold definitions, generating `rules.json`.
 4. **AT-04 — Finding Builder V1**: Converts `FAIL` and `SKIPPED` rules into traceable findings in `findings.json` using dynamic evidence ID generation (`EVD-{CATEGORY}-{VIEWPORT}-{SLUG}`).
 5. **AT-05 — Audit Context Builder V1**: Assembles all previous outputs into a single package `audit-package.json`.
 6. **AT-06 — AI Report Builder V1**: Consumes **ONLY** `audit-package.json` to produce a versioned audit report `report.json` with complete finding and evidence traceability.
+7. **AT-07 — Audit Comparator V1**: Standalone module consuming **ONLY** structured contracts (`audit-package.json`, `report.json`) across baseline and target runs to generate deterministic `comparison.json`.
 
 ---
 
@@ -49,14 +50,21 @@
 |                 AI REPORT BUILDER                     |  AT-06 AI Report Builder V1
 |                   (report.json)                       |  (Provider-Independent)
 +-------------------------------------------------------+
+
++-------------------------------------------------------+
+|                 AUDIT COMPARATOR                      |  AT-07 Audit Comparator V1
+|                 (comparison.json)                     |  (Standalone Execution)
++-------------------------------------------------------+
 ```
 
 ---
 
-## 3. Stabilization Specifications (AT-06.1)
+## 3. Stabilization & Refinement Specifications (AT-06.1 / AT-07.1)
 
 1. **Dynamic Evidence ID Builder**: Evidence IDs (`EVD-PRF-DESKTOP-HOMEPAGE`, `EVD-CNS-HOMEPAGE`, `EVD-NET-HOMEPAGE`) and source artifact paths are generated dynamically by `src/utils/evidenceIdBuilder.js` based on page slug and category, eliminating hardcoded values.
 2. **Single Source of Truth for Version**: All modules import `getToolkitVersion()` from `src/utils/version.js`, which reads `version` dynamically from `package.json`.
 3. **Correct Rule Categories**: Rule categories strictly conform to `"Performance"`, `"Accessibility"`, `"Best Practices"`, `"SEO"`, `"Console"`, and `"Network"`.
 4. **Contract Schema Versioning**: Every JSON contract output includes `schemaVersion: "1.0.0"`.
-5. **AT Numbering Consistency**: AT numbers strictly match execution order across codebase, CLI logs, and documentation (`AT-01` through `AT-06`).
+5. **AT Numbering Consistency**: AT numbers strictly match execution order across codebase, CLI logs, and documentation (`AT-01` through `AT-07`).
+6. **Prompt Serialization Optimization**: Duplicate metadata (e.g. `analysis.run`) is omitted from prompt string building to reduce token consumption.
+7. **Unified Artifact Loaders**: Shared context loader utilities reduce code duplication across context builder modules.

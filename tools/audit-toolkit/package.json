@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "audit": "node src/index.js"
+    "audit": "node src/index.js",
+    "compare": "node src/compare.js"
   },
   "keywords": [
     "audit",

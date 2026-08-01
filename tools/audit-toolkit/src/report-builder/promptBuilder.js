@@ -7,6 +7,9 @@ export function buildAuditPrompt(auditPackage) {
   const evidence = auditPackage.evidence || {};
   const metadata = auditPackage.metadata || {};
 
+  // Strip duplicated top-level run object and internal schemaVersion from analysis section in prompt
+  const { run: _analysisRun, schemaVersion: _sv, ...cleanAnalysis } = analysis;
+
   const promptSections = [
     `=== AUDIT REPORT CONTEXT PACKAGE ===`,
     `RUN METADATA:`,
@@ -21,7 +24,7 @@ export function buildAuditPrompt(auditPackage) {
     `- Warnings: ${JSON.stringify(manifest.warnings || [])}`,
     ``,
     `STRUCTURED METRICS:`,
-    JSON.stringify(analysis, null, 2),
+    JSON.stringify(cleanAnalysis, null, 2),
     ``,
     `EVALUATED RULES SUMMARY:`,
     `- Total: ${rules.summary?.total ?? 0}, Passed: ${rules.summary?.passed ?? 0}, Failed: ${rules.summary?.failed ?? 0}, Skipped: ${rules.summary?.skipped ?? 0}`,
