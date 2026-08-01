@@ -1,0 +1,820 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "2026-08-01_13-05-06",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
+  "summary": {
+    "totalPlans": 11,
+    "critical": 2,
+    "high": 5,
+    "medium": 4,
+    "low": 0
+  },
+  "plans": [
+    {
+      "planId": "PLAN_REC_FIND-005",
+      "recommendationId": "REC_FIND-005",
+      "relatedFindingId": "FIND-005",
+      "ruleId": "PERF_LCP_001",
+      "title": "Fix Plan: Optimize Largest Contentful Paint (LCP)",
+      "objective": "Reduce LCP duration below the 2500ms threshold for optimal rendering speed.",
+      "owner": "Frontend",
+      "priority": "Critical",
+      "estimatedEffort": "L",
+      "estimatedRisk": "High",
+      "estimatedDuration": "2-4 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Optimize LCP hero image asset",
+          "description": "Compress hero image, convert to WebP/AVIF format, and generate responsive breakpoints.",
+          "order": 1,
+          "stepType": "ModifyAsset",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Insert preload link header",
+          "description": "Add <link rel=\"preload\" as=\"image\" href=\"...\"> to document head for critical LCP asset.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Optimize critical rendering CSS",
+          "description": "Inline critical styles for LCP image container and eliminate render-blocking CSS.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "LCP Metric Audit",
+          "expectedResult": "Largest Contentful Paint (LCP) <= 2500ms"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Lighthouse Performance Test",
+          "expectedResult": "LCP metric displays green rating in Lighthouse performance report"
+        }
+      ],
+      "rollbackPlan": [
+        "Remove preload link tag from document head",
+        "Restore original hero image asset URL",
+        "Revert critical CSS modifications"
+      ],
+      "dependencies": [
+        "Image asset re-processing",
+        "CDN cache purge"
+      ],
+      "prerequisites": [
+        "Access to original high-res hero image source",
+        "CDN HTTP response header access"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "CSS",
+        "Images",
+        "CDN"
+      ],
+      "expectedOutcome": "Instant visual content rendering for arriving visitors, improving conversion rate.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-006",
+      "recommendationId": "REC_FIND-006",
+      "relatedFindingId": "FIND-006",
+      "ruleId": "PERF_CLS_001",
+      "title": "Fix Plan: Reduce Cumulative Layout Shift (CLS)",
+      "objective": "Eliminate visual layout instability below the 0.10 threshold.",
+      "owner": "Frontend",
+      "priority": "Critical",
+      "estimatedEffort": "S",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "1-2 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Set explicit image dimensions",
+          "description": "Add width and height attributes to all <img> and <video> elements.",
+          "order": 1,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Reserve ad/banner slot dimensions",
+          "description": "Define explicit CSS min-height container dimensions for dynamic asynchronous slots.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Configure web font display",
+          "description": "Apply font-display: swap and metric overrides to custom web font declarations.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "CLS Metric Audit",
+          "expectedResult": "Cumulative Layout Shift (CLS) <= 0.10"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Visual Shift Audit",
+          "expectedResult": "Zero unexpected layout shifts during full page render lifecycle"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert width/height attributes on media tags",
+        "Revert container CSS min-height rules"
+      ],
+      "dependencies": [
+        "UI component stylesheet re-build"
+      ],
+      "prerequisites": [
+        "Access to image and dynamic container CSS stylesheets"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "CSS",
+        "Images"
+      ],
+      "expectedOutcome": "Stable visual experience preventing accidental clicks and user frustration.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-001",
+      "recommendationId": "REC_FIND-001",
+      "relatedFindingId": "FIND-001",
+      "ruleId": "PERF_SCORE_DESKTOP_001",
+      "title": "Fix Plan: Optimize Desktop Performance Score",
+      "objective": "Improve desktop Lighthouse performance score above the 0.90 target threshold.",
+      "owner": "Frontend",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "2-4 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Analyze critical CSS rendering path",
+          "description": "Identify non-critical CSS stylesheets in head and extract critical above-the-fold inline CSS.",
+          "order": 1,
+          "stepType": "Analyze",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Defer non-essential JavaScript assets",
+          "description": "Add async or defer attributes to non-essential script tags in document head.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Minify and bundle assets",
+          "description": "Run production build pipeline to bundle and minify JavaScript and CSS assets.",
+          "order": 3,
+          "stepType": "Build",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Lighthouse Desktop Audit",
+          "expectedResult": "Desktop performance score >= 0.90"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Visual Layout Inspection",
+          "expectedResult": "Desktop rendering displays zero layout or styling regressions"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert CSS inline changes via Git commit",
+        "Restore original script loading tag order in HTML template"
+      ],
+      "dependencies": [
+        "Frontend build pipeline re-compilation"
+      ],
+      "prerequisites": [
+        "Local development environment configured",
+        "Access to CSS/JS build tools and bundler configuration"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Build Pipeline"
+      ],
+      "expectedOutcome": "Faster desktop page loads, reduced bounce rate, and improved core metric scores.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-desktop.json"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-002",
+      "recommendationId": "REC_FIND-002",
+      "relatedFindingId": "FIND-002",
+      "ruleId": "PERF_SCORE_MOBILE_001",
+      "title": "Fix Plan: Optimize Mobile Performance Score",
+      "objective": "Improve mobile Lighthouse performance score above the 0.90 target threshold.",
+      "owner": "Frontend",
+      "priority": "High",
+      "estimatedEffort": "L",
+      "estimatedRisk": "High",
+      "estimatedDuration": "1-2 days",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Optimize mobile image assets",
+          "description": "Convert all hero and content images to WebP/AVIF format with responsive srcset breakpoints.",
+          "order": 1,
+          "stepType": "ModifyAsset",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Tree-shake mobile JS bundles",
+          "description": "Reduce total mobile JavaScript payload by tree-shaking unused dependencies and splitting routes.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Apply native lazy loading",
+          "description": "Add loading=\"lazy\" attributes to all images below the initial mobile viewport.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Lighthouse Mobile Audit",
+          "expectedResult": "Mobile performance score >= 0.90"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Mobile Transferred Bytes Audit",
+          "expectedResult": "Total mobile transferred bytes within target threshold"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert image srcset template modifications",
+        "Restore previous JavaScript bundler entry configuration"
+      ],
+      "dependencies": [
+        "Image re-processing pipeline execution",
+        "CDN edge cache purge"
+      ],
+      "prerequisites": [
+        "Mobile device testing environment",
+        "Image optimization toolchain installed"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Images",
+        "CDN"
+      ],
+      "expectedOutcome": "Significantly faster mobile page interactive speeds and lower mobile user churn.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-007",
+      "recommendationId": "REC_FIND-007",
+      "relatedFindingId": "FIND-007",
+      "ruleId": "PERF_INP_001",
+      "title": "Fix Plan: Improve Interaction to Next Paint (INP)",
+      "objective": "Reduce interaction latency below 200ms for responsive UI feedback.",
+      "owner": "Frontend",
+      "priority": "High",
+      "estimatedEffort": "L",
+      "estimatedRisk": "High",
+      "estimatedDuration": "1-2 days",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Profile main thread long tasks",
+          "description": "Identify long tasks (> 50ms) executing during user page interactions.",
+          "order": 1,
+          "stepType": "Analyze",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Break up main thread execution",
+          "description": "Refactor heavy event handlers using requestIdleCallback or setTimeout scheduling.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "De-bounce interaction listeners",
+          "description": "De-bounce user input listeners and passive scroll/resize handlers.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "INP Metric Audit",
+          "expectedResult": "Interaction to Next Paint (INP) / TBT <= 200ms"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Interaction Latency Profiling",
+          "expectedResult": "Click and tap response latency <= 100ms"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert asynchronous task scheduling in event handlers",
+        "Restore original event listener logic"
+      ],
+      "dependencies": [
+        "JS bundle re-compilation",
+        "Regressive interaction testing"
+      ],
+      "prerequisites": [
+        "JavaScript profiling tooling (Chrome DevTools Performance panel)"
+      ],
+      "affectedComponents": [
+        "JS"
+      ],
+      "expectedOutcome": "Responsive UI feedback on button taps, inputs, and click events.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-008",
+      "recommendationId": "REC_FIND-008",
+      "relatedFindingId": "FIND-008",
+      "ruleId": "CONSOLE_ERRORS_001",
+      "title": "Fix Plan: Fix Unhandled Browser Console Errors",
+      "objective": "Eliminate JavaScript exceptions and network errors captured in browser console.",
+      "owner": "Frontend",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "2-4 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Trace console error origins",
+          "description": "Analyze error stack traces to pinpoint failing scripts or network endpoints.",
+          "order": 1,
+          "stepType": "Analyze",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Add defensive exception handlers",
+          "description": "Add null/undefined defensive checks and try-catch blocks around failing calls.",
+          "order": 2,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Fix broken script resources",
+          "description": "Update or remove broken external script URL references.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Manual"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Console Error Count Check",
+          "expectedResult": "Console errors count == 0 during page lifecycle"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Application Feature Testing",
+          "expectedResult": "Interactive UI functions operate without client-side exceptions"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert error handling JS code patches"
+      ],
+      "dependencies": [
+        "JS source code patch deployment"
+      ],
+      "prerequisites": [
+        "Browser dev console log file from target audit run"
+      ],
+      "affectedComponents": [
+        "JS",
+        "Server"
+      ],
+      "expectedOutcome": "Prevents client-side script crashes, broken UI interactions, and data loss.",
+      "relatedEvidenceIds": [
+        "EVD-CNS-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "console/console-homepage-errors.log"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-009",
+      "recommendationId": "REC_FIND-009",
+      "relatedFindingId": "FIND-009",
+      "ruleId": "NETWORK_FAILED_REQUESTS_001",
+      "title": "Fix Plan: Eliminate Failed HTTP Network Requests",
+      "objective": "Fix network HTTP requests returning error status codes (>= 400).",
+      "owner": "Backend",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "1-2 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Extract 4xx/5xx request URLs",
+          "description": "Filter network HAR log to identify all HTTP requests returning error status codes.",
+          "order": 1,
+          "stepType": "Analyze",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Deploy missing static assets",
+          "description": "Fix broken asset file paths or re-deploy missing files to server/CDN.",
+          "order": 2,
+          "stepType": "Deploy",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Adjust CORS and gateway routes",
+          "description": "Update server CORS headers and API gateway endpoint request handlers.",
+          "order": 3,
+          "stepType": "Deploy",
+          "automationLevel": "Manual"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Failed Request Count Check",
+          "expectedResult": "Failed HTTP network requests count == 0"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "HTTP Status Code Audit",
+          "expectedResult": "All network asset requests return HTTP 200 or 304 status codes"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert server route and static asset deployment configurations"
+      ],
+      "dependencies": [
+        "Backend service or CDN asset re-deployment"
+      ],
+      "prerequisites": [
+        "HAR network log from target audit run"
+      ],
+      "affectedComponents": [
+        "Server",
+        "CDN",
+        "JS"
+      ],
+      "expectedOutcome": "Restores missing page assets, API data endpoints, and backend connectivity.",
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "network/network-homepage.har"
+      ]
+    },
+    {
+      "planId": "PLAN_REC_FIND-003",
+      "recommendationId": "REC_FIND-003",
+      "relatedFindingId": "FIND-003",
+      "ruleId": "BEST_PRACTICES_SCORE_DESKTOP_001",
+      "title": "Fix Plan: Remediate Desktop Best Practices Issues",
+      "objective": "Resolve best practices audit failures to reach the 0.90 target score.",
+      "owner": "Frontend",
+      "priority": "Medium",
+      "estimatedEffort": "S",
+      "estimatedRisk": "Low",
+      "estimatedDuration": "1-2 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Replace deprecated API invocations",
+          "description": "Update legacy JavaScript function calls with modern Web API equivalents.",
+          "order": 1,
+          "stepType": "ModifyCode",
+          "automationLevel": "AI-Assisted"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Configure security headers",
+          "description": "Deploy Content-Security-Policy and Strict-Transport-Security server headers.",
+          "order": 2,
+          "stepType": "Deploy",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Specify image aspect ratios",
+          "description": "Set explicit width/height or aspect-ratio CSS properties on responsive images.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Lighthouse Best Practices Audit",
+          "expectedResult": "Desktop best practices score >= 0.90"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Browser Console Inspection",
+          "expectedResult": "Zero security header or API deprecation warnings in browser console"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert web server security header rule additions",
+        "Restore previous API function call implementations"
+      ],
+      "dependencies": [
+        "Web server configuration deployment"
+      ],
+      "prerequisites": [
+        "Access to web server HTTP response header rules"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "JS",
+        "Server"
+      ],
+      "expectedOutcome": "Improved browser compatibility, security posture, and runtime health.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "planId": "PLAN_REC_FIND-004",
+      "recommendationId": "REC_FIND-004",
+      "relatedFindingId": "FIND-004",
+      "ruleId": "BEST_PRACTICES_SCORE_MOBILE_001",
+      "title": "Fix Plan: Remediate Mobile Best Practices Issues",
+      "objective": "Resolve mobile best practices audit failures to reach the 0.90 target score.",
+      "owner": "Frontend",
+      "priority": "Medium",
+      "estimatedEffort": "S",
+      "estimatedRisk": "Low",
+      "estimatedDuration": "1 hour",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Enable paste on form inputs",
+          "description": "Remove onpaste=\"return false\" event preventers from password and text fields.",
+          "order": 1,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Clean production console output",
+          "description": "Strip debugging console.log statements from production JavaScript build.",
+          "order": 2,
+          "stepType": "Build",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Enforce HTTPS asset protocols",
+          "description": "Update all image and script URLs to use secure https:// scheme.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Mobile Best Practices Audit",
+          "expectedResult": "Mobile best practices score >= 0.90"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Form Paste Functional Test",
+          "expectedResult": "Password fields allow copy-paste on mobile devices"
+        }
+      ],
+      "rollbackPlan": [
+        "Restore original form input event handlers",
+        "Revert asset URL protocol changes"
+      ],
+      "dependencies": [
+        "Form component rebuild"
+      ],
+      "prerequisites": [
+        "Mobile form input testing environment"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "JS"
+      ],
+      "expectedOutcome": "Enhanced mobile browser compatibility and security standards.",
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "planId": "PLAN_REC_FIND-010",
+      "recommendationId": "REC_FIND-010",
+      "relatedFindingId": "FIND-010",
+      "ruleId": "NETWORK_TRANSFERRED_BYTES_001",
+      "title": "Fix Plan: Reduce Total Network Transferred Bytes",
+      "objective": "Decrease total network payload size below 3MB threshold.",
+      "owner": "DevOps",
+      "priority": "Medium",
+      "estimatedEffort": "M",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "2-4 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Enable HTTP text compression",
+          "description": "Configure Gzip or Brotli compression on server for text, CSS, and JS assets.",
+          "order": 1,
+          "stepType": "Deploy",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Configure Cache-Control headers",
+          "description": "Set Cache-Control: public, max-age=31536000, immutable for static resources.",
+          "order": 2,
+          "stepType": "Deploy",
+          "automationLevel": "Manual"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Minify and purge assets",
+          "description": "Ensure all CSS and JS bundles are minified and purged of unused code.",
+          "order": 3,
+          "stepType": "Build",
+          "automationLevel": "Automatic"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Transferred Bytes Audit",
+          "expectedResult": "Total network transferred bytes <= 3,145,728 bytes (3MB)"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Content-Encoding Verification",
+          "expectedResult": "Verify Content-Encoding: br or gzip header on text resources"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert server compression and HTTP header configuration files"
+      ],
+      "dependencies": [
+        "Web server / CDN configuration reload",
+        "Asset minification build"
+      ],
+      "prerequisites": [
+        "Server compression header access"
+      ],
+      "affectedComponents": [
+        "CSS",
+        "JS",
+        "Images",
+        "Server",
+        "CDN"
+      ],
+      "expectedOutcome": "Decreases bandwidth cost, accelerates mobile downloads, and reduces data usage.",
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "planId": "PLAN_REC_FIND-011",
+      "recommendationId": "REC_FIND-011",
+      "relatedFindingId": "FIND-011",
+      "ruleId": "NETWORK_REQUEST_COUNT_001",
+      "title": "Fix Plan: Reduce HTTP Network Request Count",
+      "objective": "Consolidate network traffic below 100 total HTTP requests.",
+      "owner": "Frontend",
+      "priority": "Medium",
+      "estimatedEffort": "M",
+      "estimatedRisk": "Medium",
+      "estimatedDuration": "2-4 hours",
+      "executionSteps": [
+        {
+          "stepId": "STEP-001",
+          "title": "Consolidate script/style bundles",
+          "description": "Reconfigure bundler to combine granular script files into fewer chunks.",
+          "order": 1,
+          "stepType": "Build",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-002",
+          "title": "Combine SVG icons into spritemap",
+          "description": "Merge individual SVG image requests into a single SVG spritemap.",
+          "order": 2,
+          "stepType": "ModifyAsset",
+          "automationLevel": "Automatic"
+        },
+        {
+          "stepId": "STEP-003",
+          "title": "Prune redundant third-party tags",
+          "description": "Remove duplicate or obsolete analytics and tracking scripts.",
+          "order": 3,
+          "stepType": "ModifyCode",
+          "automationLevel": "Manual"
+        }
+      ],
+      "validationSteps": [
+        {
+          "stepId": "VAL-001",
+          "title": "Request Count Audit",
+          "expectedResult": "Total HTTP network request count <= 100 requests"
+        },
+        {
+          "stepId": "VAL-002",
+          "title": "Page Functionality Audit",
+          "expectedResult": "All page components load and function correctly without asset errors"
+        }
+      ],
+      "rollbackPlan": [
+        "Revert bundler chunking settings",
+        "Restore original script inclusions"
+      ],
+      "dependencies": [
+        "Asset bundle re-building"
+      ],
+      "prerequisites": [
+        "Build tool bundler configuration access"
+      ],
+      "affectedComponents": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Build Pipeline"
+      ],
+      "expectedOutcome": "Reduces HTTP connection overhead and improves browser rendering concurrency.",
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    }
+  ]
+}

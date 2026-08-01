@@ -15,6 +15,9 @@ import { logger } from '../utils/logger.js';
  * @property {string} manifest - Path to technical manifest folder
  * @property {string} analysis - Path to metrics analysis folder
  * @property {string} context - Path to context package folder
+ * @property {string} recommendations - Path to recommendations folder
+ * @property {string} fixPlans - Path to fix plans folder
+ * @property {string} patches - Path to patches folder
  * @property {string} logs - Path to run logs folder
  */
 
@@ -31,6 +34,9 @@ export const ALL_FOLDER_KEYS = [
   'manifest',
   'analysis',
   'context',
+  'recommendations',
+  'fixPlans',
+  'patches',
   'logs'
 ];
 

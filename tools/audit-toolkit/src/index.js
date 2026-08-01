@@ -12,6 +12,9 @@ import { runContextBuilder } from './context/index.js';
 import { runReportBuilder } from './report-builder/index.js';
 import { runSpecificationGenerator } from './specification/index.js';
 import { runGitHubTaskGenerator } from './github/index.js';
+import { runRecommendationEngine } from './recommendation/index.js';
+import { runFixPlanner } from './plan/index.js';
+import { runAutoFixEngine } from './patch/index.js';
 
 class ArtifactTracker {
   constructor() {
@@ -61,7 +64,7 @@ async function main() {
     });
 
     logger.info('====================================================');
-    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V1 (AT-01..09) ');
+    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V2 (AT-01..12) ');
     logger.info('====================================================');
     logger.info(`Run ID / Timestamp: ${folders.runTimestamp}`);
     logger.info(`Loaded configuration for target: ${config.target}`);
@@ -107,11 +110,20 @@ async function main() {
     // 8. GitHub Task Generator (AT-09)
     await runGitHubTaskGenerator(config, folders);
 
+    // 9. Recommendation Intelligence Engine (AT-10)
+    await runRecommendationEngine(config, folders);
+
+    // 10. AI Fix Planner (AT-11)
+    await runFixPlanner(config, folders);
+
+    // 11. Auto Fix Engine (AT-12)
+    await runAutoFixEngine(config, folders);
+
     if (manifest.executionStatus === 'FAILURE') {
       process.exit(1);
     }
   } catch (err) {
-    logger.error('Fatal error executing Audit Toolkit Pipeline V1', err);
+    logger.error('Fatal error executing Audit Toolkit Pipeline V2', err);
     process.exit(1);
   }
 }

@@ -20,6 +20,9 @@ export function ensureFolderStructure(baseOutputDir = 'output') {
     manifest: path.join(runRoot, 'manifest'),
     analysis: path.join(runRoot, 'analysis'),
     context: path.join(runRoot, 'context'),
+    recommendations: path.join(runRoot, 'recommendations'),
+    fixPlans: path.join(runRoot, 'fix-plans'),
+    patches: path.join(runRoot, 'patches'),
     logs: path.join(runRoot, 'logs')
   };
 
@@ -36,6 +39,9 @@ export function ensureFolderStructure(baseOutputDir = 'output') {
     folders.manifest,
     folders.analysis,
     folders.context,
+    folders.recommendations,
+    folders.fixPlans,
+    folders.patches,
     folders.logs
   ];
 

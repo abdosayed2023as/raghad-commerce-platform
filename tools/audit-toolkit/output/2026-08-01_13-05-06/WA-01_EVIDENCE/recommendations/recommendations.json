@@ -1,0 +1,339 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "2026-08-01_13-05-06",
+    "target": "https://raghadkids.com",
+    "environment": "production"
+  },
+  "summary": {
+    "totalRecommendations": 11,
+    "critical": 2,
+    "high": 5,
+    "medium": 4,
+    "low": 0
+  },
+  "recommendations": [
+    {
+      "recommendationId": "REC_FIND-005",
+      "relatedFindingId": "FIND-005",
+      "ruleId": "PERF_LCP_001",
+      "title": "Optimize Largest Contentful Paint (LCP)",
+      "summary": "Reduce LCP duration below the 2500ms threshold for optimal rendering speed.",
+      "technicalReason": "Metric \"performance.coreWebVitals.lcp\" evaluated to 19477.03, failing target threshold (<= 2500).",
+      "expectedBenefit": "Instant visual content rendering for arriving visitors, improving conversion rate.",
+      "priority": "Critical",
+      "estimatedEffort": "L",
+      "estimatedImpact": "Critical",
+      "category": "Performance",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Compress hero image asset and convert to modern WebP/AVIF format",
+        "Add rel=\"preload\" link header for the critical LCP image resource",
+        "Eliminate client-side render-blocking CSS and heavy web fonts"
+      ],
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.lcp <= 2500",
+        "Rule PERF_LCP_001 evaluates to PASS",
+        "Finding FIND-005 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-006",
+      "relatedFindingId": "FIND-006",
+      "ruleId": "PERF_CLS_001",
+      "title": "Reduce Cumulative Layout Shift (CLS)",
+      "summary": "Eliminate visual layout instability below the 0.10 threshold.",
+      "technicalReason": "Metric \"performance.coreWebVitals.cls\" evaluated to 1.1341, failing target threshold (<= 0.1).",
+      "expectedBenefit": "Stable visual experience preventing accidental clicks and user frustration.",
+      "priority": "Critical",
+      "estimatedEffort": "S",
+      "estimatedImpact": "Critical",
+      "category": "Performance",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Set explicit width and height attributes on all img and video elements",
+        "Reserve layout dimension containers for dynamic ad or banner slots",
+        "Apply CSS font-display: swap with font metric overrides"
+      ],
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.cls <= 0.1",
+        "Rule PERF_CLS_001 evaluates to PASS",
+        "Finding FIND-006 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-001",
+      "relatedFindingId": "FIND-001",
+      "ruleId": "PERF_SCORE_DESKTOP_001",
+      "title": "Optimize Desktop Performance Score",
+      "summary": "Improve desktop Lighthouse performance score above the 0.90 target threshold.",
+      "technicalReason": "Metric \"performance.desktop.performance\" evaluated to 0.12, failing target threshold (>= 0.9).",
+      "expectedBenefit": "Faster desktop page loads, reduced bounce rate, and improved core metric scores.",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedImpact": "High",
+      "category": "Performance",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Optimize critical rendering path CSS and inline critical styles",
+        "Defer non-critical JavaScript execution until after initial paint",
+        "Eliminate render-blocking resources in document head"
+      ],
+      "acceptanceCriteria": [
+        "performance.desktop.performance >= 0.9",
+        "Rule PERF_SCORE_DESKTOP_001 evaluates to PASS",
+        "Finding FIND-001 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-desktop.json"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-002",
+      "relatedFindingId": "FIND-002",
+      "ruleId": "PERF_SCORE_MOBILE_001",
+      "title": "Optimize Mobile Performance Score",
+      "summary": "Improve mobile Lighthouse performance score above the 0.90 target threshold.",
+      "technicalReason": "Metric \"performance.mobile.performance\" evaluated to 0.1, failing target threshold (>= 0.9).",
+      "expectedBenefit": "Significantly faster mobile page interactive speeds and lower mobile user churn.",
+      "priority": "High",
+      "estimatedEffort": "L",
+      "estimatedImpact": "High",
+      "category": "Performance",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Reduce total mobile JavaScript bundle payload size",
+        "Optimize responsive image formats using WebP/AVIF",
+        "Implement native lazy loading for below-the-fold content"
+      ],
+      "acceptanceCriteria": [
+        "performance.mobile.performance >= 0.9",
+        "Rule PERF_SCORE_MOBILE_001 evaluates to PASS",
+        "Finding FIND-002 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-007",
+      "relatedFindingId": "FIND-007",
+      "ruleId": "PERF_INP_001",
+      "title": "Improve Interaction to Next Paint (INP)",
+      "summary": "Reduce interaction latency below 200ms for responsive UI feedback.",
+      "technicalReason": "Metric \"performance.coreWebVitals.inp\" evaluated to 7025, failing target threshold (<= 200).",
+      "expectedBenefit": "Responsive UI feedback on button taps, inputs, and click events.",
+      "priority": "High",
+      "estimatedEffort": "L",
+      "estimatedImpact": "High",
+      "category": "Performance",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Break up long JavaScript tasks (> 50ms) using requestIdleCallback",
+        "De-bounce and optimize heavy event listener event handlers",
+        "Reduce main-thread third-party script execution during page interaction"
+      ],
+      "acceptanceCriteria": [
+        "performance.coreWebVitals.inp <= 200",
+        "Rule PERF_INP_001 evaluates to PASS",
+        "Finding FIND-007 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "performance/lighthouse-homepage-mobile.json"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-008",
+      "relatedFindingId": "FIND-008",
+      "ruleId": "CONSOLE_ERRORS_001",
+      "title": "Fix Unhandled Browser Console Errors",
+      "summary": "Eliminate JavaScript exceptions and network errors captured in browser console.",
+      "technicalReason": "Metric \"console.errors\" evaluated to 10, failing target threshold (== 0).",
+      "expectedBenefit": "Prevents client-side script crashes, broken UI interactions, and data loss.",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedImpact": "High",
+      "category": "Console",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Resolve uncaught JavaScript runtime exceptions in application code",
+        "Fix broken or missing third-party script resource imports",
+        "Wrap asynchronous network calls in defensive try-catch error handlers"
+      ],
+      "acceptanceCriteria": [
+        "console.errors == 0",
+        "Rule CONSOLE_ERRORS_001 evaluates to PASS",
+        "Finding FIND-008 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-CNS-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "console/console-homepage-errors.log"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-009",
+      "relatedFindingId": "FIND-009",
+      "ruleId": "NETWORK_FAILED_REQUESTS_001",
+      "title": "Eliminate Failed HTTP Network Requests",
+      "summary": "Fix network HTTP requests returning error status codes (>= 400).",
+      "technicalReason": "Metric \"network.failedRequests\" evaluated to 12, failing target threshold (== 0).",
+      "expectedBenefit": "Restores missing page assets, API data endpoints, and backend connectivity.",
+      "priority": "High",
+      "estimatedEffort": "M",
+      "estimatedImpact": "High",
+      "category": "Network",
+      "ownerSuggestion": "Backend",
+      "implementationHints": [
+        "Fix broken 404 image/script paths and 500 server error endpoints",
+        "Verify CORS middleware headers and API gateway request routing rules",
+        "Ensure static CDN asset paths are correctly deployed"
+      ],
+      "acceptanceCriteria": [
+        "network.failedRequests == 0",
+        "Rule NETWORK_FAILED_REQUESTS_001 evaluates to PASS",
+        "Finding FIND-009 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": [
+        "network/network-homepage.har"
+      ]
+    },
+    {
+      "recommendationId": "REC_FIND-003",
+      "relatedFindingId": "FIND-003",
+      "ruleId": "BEST_PRACTICES_SCORE_DESKTOP_001",
+      "title": "Remediate Desktop Best Practices Issues",
+      "summary": "Resolve best practices audit failures to reach the 0.90 target score.",
+      "technicalReason": "Rule BEST_PRACTICES_SCORE_DESKTOP_001 failed audit evaluation criteria.",
+      "expectedBenefit": "Improved browser compatibility, security posture, and runtime health.",
+      "priority": "Medium",
+      "estimatedEffort": "S",
+      "estimatedImpact": "Medium",
+      "category": "Best Practices",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Avoid deprecated web APIs and legacy third-party dependencies",
+        "Serve images with correct natural aspect ratios",
+        "Configure HTTPS and modern Security Content Policy headers"
+      ],
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Rule BEST_PRACTICES_SCORE_DESKTOP_001 evaluates to PASS",
+        "Finding FIND-003 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-DESKTOP-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "recommendationId": "REC_FIND-004",
+      "relatedFindingId": "FIND-004",
+      "ruleId": "BEST_PRACTICES_SCORE_MOBILE_001",
+      "title": "Remediate Mobile Best Practices Issues",
+      "summary": "Resolve mobile best practices audit failures to reach the 0.90 target score.",
+      "technicalReason": "Rule BEST_PRACTICES_SCORE_MOBILE_001 failed audit evaluation criteria.",
+      "expectedBenefit": "Enhanced mobile browser compatibility and security standards.",
+      "priority": "Medium",
+      "estimatedEffort": "S",
+      "estimatedImpact": "Medium",
+      "category": "Best Practices",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Prevent password input fields from blocking paste operations",
+        "Ensure clean console log output in production environments",
+        "Use secure HTTPS protocol for all external assets"
+      ],
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Rule BEST_PRACTICES_SCORE_MOBILE_001 evaluates to PASS",
+        "Finding FIND-004 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-PRF-MOBILE-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "recommendationId": "REC_FIND-010",
+      "relatedFindingId": "FIND-010",
+      "ruleId": "NETWORK_TRANSFERRED_BYTES_001",
+      "title": "Reduce Total Network Transferred Bytes",
+      "summary": "Decrease total network payload size below 3MB threshold.",
+      "technicalReason": "Rule NETWORK_TRANSFERRED_BYTES_001 failed audit evaluation criteria.",
+      "expectedBenefit": "Decreases bandwidth cost, accelerates mobile downloads, and reduces data usage.",
+      "priority": "Medium",
+      "estimatedEffort": "M",
+      "estimatedImpact": "Medium",
+      "category": "Network",
+      "ownerSuggestion": "DevOps",
+      "implementationHints": [
+        "Enable Gzip or Brotli compression on HTTP web server headers",
+        "Set aggressive Cache-Control browser caching policies for static assets",
+        "Minify CSS, JavaScript, and inline SVG assets"
+      ],
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Rule NETWORK_TRANSFERRED_BYTES_001 evaluates to PASS",
+        "Finding FIND-010 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    },
+    {
+      "recommendationId": "REC_FIND-011",
+      "relatedFindingId": "FIND-011",
+      "ruleId": "NETWORK_REQUEST_COUNT_001",
+      "title": "Reduce HTTP Network Request Count",
+      "summary": "Consolidate network traffic below 100 total HTTP requests.",
+      "technicalReason": "Rule NETWORK_REQUEST_COUNT_001 failed audit evaluation criteria.",
+      "expectedBenefit": "Reduces HTTP connection overhead and improves browser rendering concurrency.",
+      "priority": "Medium",
+      "estimatedEffort": "M",
+      "estimatedImpact": "Medium",
+      "category": "Network",
+      "ownerSuggestion": "Frontend",
+      "implementationHints": [
+        "Bundle granular JavaScript modules and stylesheet files",
+        "Combine multiple icon graphics into unified SVG spritemaps",
+        "Audit and consolidate redundant third-party analytics and tracking tags"
+      ],
+      "acceptanceCriteria": [
+        "Metric threshold satisfied",
+        "Rule NETWORK_REQUEST_COUNT_001 evaluates to PASS",
+        "Finding FIND-011 resolved"
+      ],
+      "relatedEvidenceIds": [
+        "EVD-NET-HOMEPAGE"
+      ],
+      "relatedArtifacts": []
+    }
+  ]
+}
