@@ -23,6 +23,7 @@ export function ensureFolderStructure(baseOutputDir = 'output') {
     recommendations: path.join(runRoot, 'recommendations'),
     fixPlans: path.join(runRoot, 'fix-plans'),
     patches: path.join(runRoot, 'patches'),
+    applyResult: path.join(runRoot, 'apply-result'),
     logs: path.join(runRoot, 'logs')
   };
 
@@ -42,6 +43,7 @@ export function ensureFolderStructure(baseOutputDir = 'output') {
     folders.recommendations,
     folders.fixPlans,
     folders.patches,
+    folders.applyResult,
     folders.logs
   ];
 

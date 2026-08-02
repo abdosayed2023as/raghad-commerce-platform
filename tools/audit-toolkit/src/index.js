@@ -15,6 +15,7 @@ import { runGitHubTaskGenerator } from './github/index.js';
 import { runRecommendationEngine } from './recommendation/index.js';
 import { runFixPlanner } from './plan/index.js';
 import { runAutoFixEngine } from './patch/index.js';
+import { runPatchApplicator } from './apply/index.js';
 
 class ArtifactTracker {
   constructor() {
@@ -64,7 +65,7 @@ async function main() {
     });
 
     logger.info('====================================================');
-    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V2 (AT-01..12) ');
+    logger.info('   AUDIT TOOLKIT — COMPLETE PIPELINE V2 (AT-01..13A)');
     logger.info('====================================================');
     logger.info(`Run ID / Timestamp: ${folders.runTimestamp}`);
     logger.info(`Loaded configuration for target: ${config.target}`);
@@ -118,6 +119,9 @@ async function main() {
 
     // 11. Auto Fix Engine (AT-12)
     await runAutoFixEngine(config, folders);
+
+    // 12. Patch Applicator (AT-13A)
+    await runPatchApplicator(config, folders);
 
     if (manifest.executionStatus === 'FAILURE') {
       process.exit(1);

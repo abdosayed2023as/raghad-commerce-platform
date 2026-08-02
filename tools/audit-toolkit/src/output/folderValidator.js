@@ -37,6 +37,7 @@ export const ALL_FOLDER_KEYS = [
   'recommendations',
   'fixPlans',
   'patches',
+  'applyResult',
   'logs'
 ];
 

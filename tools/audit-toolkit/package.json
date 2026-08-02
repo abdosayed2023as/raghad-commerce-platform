@@ -1,7 +1,7 @@
 {
   "name": "audit-toolkit",
   "version": "2.0.0",
-  "description": "Integrated pipeline covering evidence collection, metrics analysis, rule evaluation, finding building, context packaging, AI reporting, audit comparing, spec generation, GitHub task generation, recommendation intelligence, AI fix planning, and auto fix engine (AT-01..AT-12)",
+  "description": "Integrated pipeline covering evidence collection, metrics analysis, rule evaluation, finding building, context packaging, AI reporting, audit comparing, spec generation, GitHub task generation, recommendation intelligence, AI fix planning, auto fix engine, and patch applicator (AT-01..AT-13A)",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -11,7 +11,8 @@
     "github": "node src/github.js",
     "recommend": "node src/recommend.js",
     "plan": "node src/plan.js",
-    "patch": "node src/patch.js"
+    "patch": "node src/patch.js",
+    "apply": "node src/apply.js"
   },
   "keywords": [
     "audit",
@@ -21,7 +22,8 @@
     "collector",
     "recommendations",
     "planner",
-    "autofix"
+    "autofix",
+    "applicator"
   ],
   "author": "Raghad World Engineering",
   "license": "ISC",
