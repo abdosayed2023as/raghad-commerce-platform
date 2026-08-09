@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.5.0] - 2026-08-10
+
+### Added
+- `docs/CURRENT_STATE.md` — "Live Business Baseline" section recording the operational store (`raghadkids.com`), first-year order data (≈143 orders, AOV ≈500 EGP), and current low-activity operating mode. Corrects the repository's greenfield-launch framing.
+
+### Changed
+- Meta-documentation consolidated: 12 redundant navigation/onboarding documents archived to `docs/archive/meta-consolidation-v2.5/`. Canonical set: `README.md` (human entry), `AI_CONTEXT.md` (AI entry), `README_FOR_AI.md` (AI policies), `docs/CURRENT_STATE.md` (state), plus the two decision ledgers.
+- Surviving documents' cross-links updated; root document version headers unified at 2.5.0.
+- `ADR-007` reference in CURRENT_STATE corrected from Draft to Approved & Locked.
+- Six enterprise-commerce scope-drift documents quarantined to `tools/audit-toolkit/docs/archive/scope-drift/` with explanatory banners.
+
+### Fixed
+- CHANGELOG 2.4.3 entry: phantom research file count corrected (six → five).
+
+### Removed
+- 13,661 `node_modules` files and generated logs/output untracked from git (files remain on disk; now covered by `.gitignore`).
+
 ## [2.4.3] - 2026-08-09
 
 ### Added
