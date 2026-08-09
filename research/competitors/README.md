@@ -9,7 +9,6 @@
 | File | Subject | Status |
 | :--- | :--- | :--- |
 | `README.md` | Category Index & Standards | Active |
-| `COMPETITOR_COUNTER_STRIKE.md` | Strategic counter-strike matrix vs Amazon/Noon, Raya Store, Raneen | Active (Source: Brand Book §7) |
 
 ---
 

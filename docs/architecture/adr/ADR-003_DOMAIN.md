@@ -3,7 +3,7 @@
 **Status:** Approved & Locked  
 **Date:** 2026-08-03  
 **Deciders:** Business Owner, Lead Strategist  
-**Decision ID:** BRAND-017, BRAND-019  
+**Decision ID:** BRAND-019  
 
 ---
 

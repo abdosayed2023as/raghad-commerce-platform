@@ -6,10 +6,8 @@
 
 ## Folder Structure & Index
 
-| Persona Profile | Target Segment | Primary Driving Force | Canonical Source |
-| :--- | :--- | :--- | :--- |
-| `PERSONA_YOUNG_MOTHER.md` | Young Mother (20-30 yrs) | Infant safety & authentic care tools | [`docs/brand/01_BRAND_BOOK.md`](../../docs/brand/01_BRAND_BOOK.md) §5 |
-| `PERSONA_BRIDE_AND_MOTHER.md` | Bride-to-be & Her Mother (18-27 yrs) | Bride: Elegance (*الشياكة*) / Mother: Durability | [`docs/brand/01_BRAND_BOOK.md`](../../docs/brand/01_BRAND_BOOK.md) §5 |
+_No persona profiles have been created yet. Persona definitions currently live in_
+_[`docs/brand/01_BRAND_BOOK.md`](../../docs/brand/01_BRAND_BOOK.md) §5._
 
 ---
 

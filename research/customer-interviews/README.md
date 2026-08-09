@@ -9,7 +9,6 @@
 | File | Subject | Status |
 | :--- | :--- | :--- |
 | `README.md` | Category Index & Standards | Active |
-| `FOUNDER_DISCOVERY_TRANSCRIPT.md` | Founder Q&A transcript from Brand Strategy Workshop | Active (Source: `docs/brand/02_WORKSHOP_TRANSCRIPT.md`) |
 
 ---
 

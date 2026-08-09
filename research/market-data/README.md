@@ -9,7 +9,6 @@
 | File | Subject | Status |
 | :--- | :--- | :--- |
 | `README.md` | Category Index & Standards | Active |
-| `DAMIETTA_SUPPLY_MOAT_DATA.md` | Direct factory sourcing cost structure & COGS analysis | Active |
 
 ---
 

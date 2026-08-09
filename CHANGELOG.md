@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.3] - 2026-08-09
+
+### Added
+- Root `.gitignore` — previously an empty file, which is why `node_modules` was tracked while project documentation was not.
+
+### Fixed
+- `AI_CONTEXT.md` — corrected five locked-decision IDs that pointed to the wrong decisions (name/tagline BRAND-011→BRAND-013, domain BRAND-017→BRAND-019, architecture BRAND-018→BRAND-020, archetype BRAND-013→BRAND-015). Verified against `docs/brand/03_DECISIONS.md`.
+- `docs/architecture/adr/ADR-003_DOMAIN.md` — removed incorrect `BRAND-017` reference; BRAND-017 is the Origin Story decision.
+- `docs/brand/01_BRAND_BOOK.md` §15 — resolved the dual `#2C2C30` / `#2C2230` secondary color to `#2C2230` via CR-002.
+- `docs/change_requests/CR-002_*.md` — status Draft → Approved & Implemented.
+- `research/competitors/`, `research/personas/`, `research/market-data/`, `research/customer-interviews/` README indexes — removed entries for six files that do not exist on disk and were being cited as available evidence.
+
+### Changed
+- Repository documentation placed under version control for the first time.
+
 ## [2.4.2] - 2026-08-09
 
 ### Changed

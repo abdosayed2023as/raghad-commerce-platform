@@ -5,7 +5,7 @@
 **Target Document / Decision:** `docs/brand/01_BRAND_BOOK.md` §15 / BRAND-021
 **Proposer Role:** Chief Brand Strategist / Quality Gate (Claude)
 **Date Submitted:** 2026-08-09
-**Status:** Draft
+**Status:** Approved & Implemented
 
 ---
 
@@ -49,9 +49,9 @@ This aligns the Brand Book source with every downstream reference already in eff
 ## 4. Decision & Approval Record
 
 - **Reviewer:** Business Owner
-- **Decision Verdict:** *(Pending — to be completed upon Business Owner review)*
-- **Approval Date:** *(Pending)*
-- **Notes & Conditions:** *(Pending)*
+- **Decision Verdict:** Approved
+- **Approval Date:** 2026-08-09
+- **Notes & Conditions:** Approved by Business Owner. Applied to 01_BRAND_BOOK.md §15.
 
 ---
 

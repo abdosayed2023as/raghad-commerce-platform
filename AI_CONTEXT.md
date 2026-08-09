@@ -53,11 +53,11 @@ The following core decisions are **LOCKED and IMMUTABLE**. No AI assistant may m
 
 | ID | Topic | Locked Value | Canonical Owner |
 | :--- | :--- | :--- | :--- |
-| **BRAND-011** | Master Brand Name | **رغد \| Raghad** | [`docs/brand/03_DECISIONS.md`](./docs/brand/03_DECISIONS.md) |
-| **BRAND-011** | Main Tagline | *"رغد... هتشتري وأنتي مغمضة"* | [`docs/brand/01_BRAND_BOOK.md`](./docs/brand/01_BRAND_BOOK.md) |
-| **BRAND-017** | Commercial Domain | `raghadworld.com` (Country TLD: `raghad.eg`) | [`docs/brand/06_BRAND_MEMORY.md`](./docs/brand/06_BRAND_MEMORY.md) |
-| **BRAND-018** | Architecture Model | Monolithic Branded House (1 site, 1 cart, 3 pillars) | [`docs/brand/01_BRAND_BOOK.md`](./docs/brand/01_BRAND_BOOK.md) |
-| **BRAND-013** | Brand Archetype | The Wise Older Sister (الأخت الكبرى الخبيرة) | [`docs/brand/06_BRAND_MEMORY.md`](./docs/brand/06_BRAND_MEMORY.md) |
+| **BRAND-013** | Master Brand Name | **رغد \| Raghad** | [`docs/brand/03_DECISIONS.md`](./docs/brand/03_DECISIONS.md) |
+| **BRAND-013** | Main Tagline | *"رغد... هتشتري وأنتي مغمضة"* | [`docs/brand/01_BRAND_BOOK.md`](./docs/brand/01_BRAND_BOOK.md) |
+| **BRAND-019** | Commercial Domain | `raghadworld.com` (Country TLD: `raghad.eg`) | [`docs/brand/06_BRAND_MEMORY.md`](./docs/brand/06_BRAND_MEMORY.md) |
+| **BRAND-020** | Architecture Model | Monolithic Branded House (1 site, 1 cart, 3 pillars) | [`docs/brand/01_BRAND_BOOK.md`](./docs/brand/01_BRAND_BOOK.md) |
+| **BRAND-015** | Brand Archetype | The Wise Older Sister (الأخت الكبرى الخبيرة) | [`docs/brand/06_BRAND_MEMORY.md`](./docs/brand/06_BRAND_MEMORY.md) |
 | **BRAND-004** | Media Mandate | 100% Real product photo & HD video clips (Zero AI deception) | [`docs/brand/03_DECISIONS.md`](./docs/brand/03_DECISIONS.md) |
 | **BRAND-010** | Risk Reversal | Pre-payment physical doorstep inspection guarantee | [`docs/brand/01_BRAND_BOOK.md`](./docs/brand/01_BRAND_BOOK.md) |
 

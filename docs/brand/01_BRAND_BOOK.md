@@ -189,7 +189,7 @@ graph TD
 - **اللون الرئيسي التوقيعي (Primary Brand Color):**  
   `#D48C80` (Warm Terracotta / Soft Rose) — يرمز للدفء العائلي والأنوثة الراقية.
 - **اللون الثانوي التبايني (Secondary Contrast Color):**  
-  `#2C2C30` / `#2C2230` (Premium Slate Plum) — يعطي الفخامة والوضوح للنصوص والأزرار التفاعلية.
+  `#2C2230` (Premium Slate Plum) — يعطي الفخامة والوضوح للنصوص والأزرار التفاعلية.
 - **خلفية الشاشة (Surface Canvas):**  
   `#FAFAFA` (Warm Silk White) — مريح للبصر ويبرز صور المنتجات الحقيقية.
 - **لون الثقة والمعاينة (Success/Trust Badge):**  
