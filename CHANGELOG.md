@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 - `docs/architecture/adr/ADR-003_DOMAIN.md` — removed incorrect `BRAND-017` reference; BRAND-017 is the Origin Story decision.
 - `docs/brand/01_BRAND_BOOK.md` §15 — resolved the dual `#2C2C30` / `#2C2230` secondary color to `#2C2230` via CR-002.
 - `docs/change_requests/CR-002_*.md` — status Draft → Approved & Implemented.
-- `research/competitors/`, `research/personas/`, `research/market-data/`, `research/customer-interviews/` README indexes — removed entries for six files that do not exist on disk and were being cited as available evidence.
+- `research/competitors/`, `research/personas/`, `research/market-data/`, `research/customer-interviews/` README indexes — removed entries for five files that do not exist on disk and were being cited as available evidence.
 
 ### Changed
 - Repository documentation placed under version control for the first time.
