@@ -2,6 +2,98 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.4.2] - 2026-08-09
+
+### Changed
+- `docs/design/COLOR_SYSTEM.md` — resolved all 3 WCAG AA accessibility failures via unified text-on-accent rule (`#2C2230` on all warm fills). No palette colors changed; no CR required.
+
+## [2.4.1] - 2026-08-09
+
+### Changed
+- `ADR-007` and `CR-001` (Social Media Channel Architecture) — approved by Business Owner, status updated from Draft/Proposed to Locked/Implemented.
+
+## [2.4.0] - 2026-08-08
+
+### Added
+- `docs/architecture/adr/ADR-007_SOCIAL_CHANNEL_ARCHITECTURE.md` — Social Media Channel Architecture decision (Draft, pending Business Owner approval).
+- `docs/change_requests/CR-001_SOCIAL_CHANNEL_ARCHITECTURE.md` — formal Change Request submission for ADR-007.
+
+### Changed
+- `docs/TRACEABILITY.md` — added ADR-007 to Project & Technical Decisions table.
+- `DECISION_TREE.md` — added ADR-007 branch to decision tree.
+- `docs/project/PROJECT_STATE.md`, `docs/PROJECT_MANIFEST.md` — updated ADR range references to reflect ADR-007 (Draft).
+
+## [2.3.0] - 2026-08-03
+
+### Added
+- `docs/PROJECT_MANIFEST.md` — Repository Purpose, Folder Structure, Reading Order, Document Priority, Version, and Canonical Document Registry.
+- `docs/architecture/adr/` — Architecture Decision Records system (`ADR-001` through `ADR-006`).
+- `docs/brand/VERSION_HISTORY.md` & `docs/brand/v1.0/` — Formal brand book version history and canonical release archive directory.
+- `research/` database subdirectories (`competitors/`, `customer-interviews/`, `market-data/`, `personas/`, `surveys/`, `sources/`).
+- `docs/TRACEABILITY.md` — End-to-end decision traceability matrix mapping decisions to origin phase, empirical evidence, supporting files, and ADRs.
+- `docs/context/AI_CONTEXT.md` — Concise 2-page AI system context & onboarding protocol.
+- `docs/CURRENT_STATE.md` — Master real-time operational status, sprint priorities, and risk register.
+- `docs/change_requests/` — Change Request governance system (`README.md` & `CR-000_TEMPLATE.md`).
+
+### Changed
+- Synchronized `docs/project/PROJECT_STATE.md` with `docs/CURRENT_STATE.md`.
+
+## [2.2.0] - 2026-08-03
+
+### Added
+- `INDEX.md` (root) — Master repository navigation index organized into 8 layers.
+- `SESSION_HANDOFF.md` (root) — AI-optimized 60-second project orientation document for future sessions.
+- `DOCUMENT_MAP.md` (root) — Full document relationship map, ownership hierarchy, anti-duplication rules, and archive registry.
+- `DECISION_TREE.md` (root) — Visual map of all 29 decisions (BRAND-001–021 and TECH/OPS-0001–0008) with rationale and authority matrix.
+- `DEPENDENCIES.md` (root) — Document dependency graph, impact analysis, update responsibilities, and locked document policy.
+
+### Changed
+- `docs/project/GLOSSARY.md` — Expanded from 30 generic technical terms to 60+ entries covering Arabic brand vocabulary, strategic brand terms, supply chain terms, personas, governance terms, and platform terms. Version bumped to 2.0.0.
+- `docs/project/PROJECT_CONTEXT.md` — Fixed critical brand name inconsistency ("Raghad World" → "رغد | Raghad / RCP"). Updated Vision and Mission to match approved Brand Book statements. Updated Brand Personality to reflect approved Archetype. Updated Brand Promise to reflect official tagline. Updated Long-Term Vision to reflect Monolithic Branded House model. Updated Out of Scope section to reflect actual current phase. Version bumped to 2.0.0.
+- `docs/project/PROJECT_RULES.md` — Fixed legacy "Raghad World" brand name reference. Updated Last Updated date.
+- `docs/project/PROJECT_WORKFLOW.md` — Fixed legacy "Raghad World" brand name reference. Replaced hardcoded AI product names (Gemini, Claude, ChatGPT) with role-based designations (Implementation Engineer, Code Reviewer, Strategist) for tool-agnostic professional governance.
+- `docs/project/ROADMAP.md` — Complete rebuild. Superseded the severely outdated Sprint 1/2/3 structure (which incorrectly showed Brand Strategy as "Active Remaining Epic"). Restructured as Phase 1–8 with accurate completion states aligned with PROJECT_STATE.md. Version bumped to 2.0.0.
+- `docs/brand/07_SESSION_HANDOFF.md` — Fixed hardcoded absolute Windows paths to relative paths. Added pointer to comprehensive root-level SESSION_HANDOFF.md.
+
+## [2.1.0] - 2026-08-03
+
+
+### Added
+- `AI_CONTEXT.md` (root) — concise 2-page AI entry point & instant onboarding protocol.
+- `README_FOR_AI.md` (root) — operational manual for AI assistants (reading order, SSOT rules, archive & update policies).
+- `PROJECT_INDEX.md` (root) — master navigation index for the entire repository.
+- `docs/design/` — new design system directory with 6 scaffolded specifications (`LOGO_GUIDELINES.md`, `COLOR_SYSTEM.md`, `TYPOGRAPHY.md`, `DESIGN_SYSTEM.md`, `ICONOGRAPHY.md`, `UI_COMPONENTS.md`).
+
+### Changed
+- `docs/brand-workshop/` → renamed to `docs/brand/` (canonical folder name).
+- `docs/brand/02_WORKSHOP_TRANSCRIPT.md` — added historical Q&A archive banner to reduce transcript dependency.
+- `docs/brand/03_DECISIONS.md` — standardized decision IDs with `BRAND-XXX` prefixes (mapping legacy `DEC-XXX`).
+- `docs/project/PROJECT_DECISIONS.md` — standardized project decision IDs with `TECH-` and `OPS-` prefixes.
+- `docs/project/PROJECT_CHARTER.md` — eliminated empty placeholders by cross-referencing canonical brand & project documents.
+- `README.md` & `PROJECT_STATE.md` — updated all paths and navigation maps to point to `docs/brand/` and `docs/design/`.
+
+## [2.0.0] - 2026-08-03
+
+### Added
+- `docs/archive/` — new archive directory preserving all superseded documents with full content (no information deleted).
+- `docs/archive/brand-workshop-pre-refactor/` — 30 legacy/stub/phase files from brand-workshop preserved here.
+- `docs/brand-workshop/01_BRAND_BOOK.md` — official Enterprise Brand Book (moved from `docs/raghad-brand-book.md` and given canonical numbering).
+- `docs/brand-workshop/07_SESSION_HANDOFF.md` — filename normalized to uppercase.
+
+### Changed
+- `docs/project/PROJECT_STATE.md` — updated from stale Sprint 2 state to reflect current reality: brand strategy 100% complete, next phase is Visual Identity.
+- `README.md` — complete rewrite to reflect current project phase, brand identity quick reference, and clean navigation for all canonical files.
+- `docs/brand-workshop/` — reduced from 42 files to 8 canonical files (zero information loss; all content preserved or archived).
+
+### Removed (Archived)
+- `docs/brand/BRAND_BOOK.md` — v1.0 brand book with old "عالم رغد | Raghad World" name. Superseded. Archived to `docs/archive/BRAND_BOOK_v1.0_SUPERSEDED.md`.
+- `docs/MASTER_REVIEW.md` — duplicate of `docs/brand-workshop/05_MASTER_REVIEW.md`. Archived.
+- `docs/raghad-brand-book.md` — moved to `docs/brand-workshop/01_BRAND_BOOK.md`.
+- `docs/raghad-brand-book.zip` — binary asset with no documentation value. Removed.
+- `gpt-chat.md` (root) — 113KB raw AI chat log with no structured documentation value. Removed.
+- 7 empty directories: `docs/branding/`, `docs/business/`, `docs/cro/`, `docs/decisions/`, `docs/easyorders/`, `docs/ui/`, `docs/ux/`.
+- 30 legacy brand-workshop files (stubs, phase-xx files, early session logs) — all archived to `docs/archive/brand-workshop-pre-refactor/`.
+
 ## [1.0.0] - 2026-07-29
 
 ### Added

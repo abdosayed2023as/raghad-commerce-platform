@@ -1,9 +1,9 @@
 # Project Context
 
-Version: 1.0.0
+Version: 2.0.0
 Status: Approved
 Owner: Business Owner
-Last Updated: 29-07-2026
+Last Updated: 2026-08-03
 
 ---
 
@@ -19,7 +19,7 @@ This document explains what the project is, why it exists, where it is going, an
 
 # Project Name
 
-Raghad World
+Raghad Commerce Platform (RCP) — **رغد | Raghad**
 
 ---
 
@@ -43,17 +43,17 @@ Scalable Commerce Platform
 
 # Vision
 
-Build one of the most trusted lifestyle brands for Egyptian families.
+> *"أن نصبح خلال 7 سنوات الوجهة الإلكترونية والتجربة العائلية الأولى الأكثر ثقة في مصر، عبر المنصة الرائدة وسلسلة الفروع التفاعلية التي تُرسي 'المعيار الذهبي للشفافية والجودة'، وتلغي الخديعة من تجربة الشراء المصرية."*
 
-Raghad World starts with children's products and gradually expands into home essentials and bridal essentials while maintaining a consistent customer experience centered around trust.
+**Canonical Source:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) — Section 2.
 
 ---
 
 # Mission
 
-Create an online shopping experience where customers feel completely confident purchasing carefully selected products for their family.
+> *"مهمتنا اليومية في 'رغد' هي تقديم تجربة تسوق موثوقة وعملية للمرأة المصرية، عبر انتقاء منتجات عالية الجودة تحل مشكلاتها الواقعية، وتوثيقها بصرياً بدقة وصدق تام، وخضوع كل طلب لفحص دقيق ومباشر قبل الشحن لضمان سلامته ومطابقته المطلقة."*
 
-Every product should reflect quality, transparency, and trust.
+**Canonical Source:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) — Section 3.
 
 ---
 
@@ -87,30 +87,31 @@ Trust is the foundation of every customer interaction.
 
 Design, content, customer service, marketing, and product presentation should all reinforce trust.
 
+## Research Rules
+
+Competitor analysis must focus on learning rather than copying.
+
+Best practices should always be adapted to fit the **رغد | Raghad** brand.
+
 ---
 
 # Brand Personality
 
-Raghad is:
+**Archetype:** "The Wise Older Sister" (الأخت الكبرى الخبيرة والموثوقة)
 
-- Friendly
-- Kind
-- Helpful
-- Elegant
-- Respectful
-- Close to people
-- Gives honest advice
-- Wants the best for customers
+Raghad is: candid, stylish, protective, caring, and non-pushy in sales. Customers should feel they are talking to a trusted older sister who has done the research for them.
 
-Customers should feel they are talking to a trusted person rather than a sales representative.
+**Canonical Source:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) — Section 12.
 
 ---
 
 # Brand Promise
 
-Customers should feel:
+**Main Tagline:** *"رغد... هتشتري وأنتي مغمضة"*
 
-"I can buy anything from Raghad with confidence."
+**Sub-Promise:** *"صورة حقيقية 100% | معاينة كاملة قبل الدفع | جودة تعيش معكِ ومع عائلتكِ"*
+
+**Canonical Source:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) — Section 10.
 
 ---
 
@@ -133,22 +134,15 @@ The architecture of the website must support future expansion from day one.
 
 # Long-Term Vision
 
-Raghad World is intended to become a complete family lifestyle brand rather than a children's store.
+Raghad is a complete family lifestyle brand built on a Monolithic Branded House model — three pillars, one domain, one checkout:
 
-Future product categories include:
+1. **رغد كيدز (Raghad Kids)** — Newborn care & infant gear (0–3 yrs)
+2. **رغد هوم (Raghad Home)** — Premium cookware (Neoflam standard) & home organization
+3. **رغد العروسة (Raghad Bridal)** — Trousseau bundles & wedding prep essentials
 
-- Baby & Kids
-- Home
-- Bridal Essentials
+Future services include: Loyalty Program ("Raghad Family Club"), Physical Showrooms (Greater Cairo), and expanded catalog.
 
-Future services may include:
-
-- Private Label
-- Loyalty Program
-- AI Shopping Assistant
-- Mobile Application
-- Educational Content
-- Community Platform
+**Canonical Source:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) — Sections 5 & 9.
 
 ---
 
@@ -217,16 +211,17 @@ Success is measured not only by revenue but also by customer trust, loyalty, and
 
 ---
 
-# Out of Scope
+# Current Phase Scope
 
-This phase does not include:
+**Active Phase:** Visual Identity & Design System Execution
 
-- Theme implementation
-- UI development
-- Coding
-- Visual identity creation
+- ✅ Brand Strategy: Completed (All 19 phases approved)
+- ✅ Platform Research: Completed (RS-01A through RS-06)
+- 🔵 Visual Identity: Logo, typography, color tokens, UI components (Active)
+- ⬜ UX/UI Design & Wireframes: Pending
+- ⬜ Easy Orders Custom Theme Implementation: Pending design approval
 
-Those activities begin only after strategy and documentation are approved.
+*See [`PROJECT_STATE.md`](./PROJECT_STATE.md) for current sprint details.*
 
 ---
 

@@ -1,43 +1,38 @@
-# Project Decisions
+# Project Governance & Technical Decisions (`PROJECT_DECISIONS.md`)
 
-Version: 1.0.0
-
-Status: Active
-
-Owner: Product Architect
-
-Last Updated: 29-07-2026
+Version: 2.0.0  
+Status: Active  
+Owner: Product Architect  
+Last Updated: 2026-08-03  
 
 ---
 
-## Purpose
+## Decision ID Standard
 
-Maintain a chronological log of approved project decisions.
-
----
-
-## Decision Log
-
-| Decision ID | Title | Status | Date | Owner | Summary | Related ADR | Related Spec | Implementation Status |
-| ----------- | ----- | ------ | ---- | ----- | ------- | ----------- | ------------ | --------------------- |
-| DEC-0001 | Repository Architecture RFC v2 Implementation | Approved | 29-07-2026 | Business Owner | Approved addition of state, decisions, and ADR template documentation. Deferred qa/ and monorepo structures. | N/A | N/A | Implemented |
-| DEC-0002 | Foundation Refinement After External Review | Approved | 29-07-2026 | Business Owner | Record the official decision to perform a post-foundation refinement before entering Sprint 2. | N/A | N/A | Implemented |
-| DEC-0003 | Sprint 2 Research Governance Update | Approved | 29-07-2026 | Business Owner | Approved addition of Focused Research and Research Continuity principles to standards. | N/A | N/A | Implemented |
-| DEC-0004 | Sprint 2 Template & Standards Enhancement | Approved | 29-07-2026 | Business Owner | Approved enhancements to SESSION_TEMPLATE and addition of Reusable Knowledge, Traceability, and Historical Integrity principles. | N/A | N/A | Implemented |
-| DEC-0005 | Sprint 2 RFC: Knowledge Management System (KMS) | Approved | 29-07-2026 | Business Owner | Approved design and integration of an official Knowledge Management System into project governance. | N/A | N/A | Implemented |
-| DEC-0006 | Sprint 2 RFC: Reference Library System (RLS) | Approved | 29-07-2026 | Business Owner | Approved design and integration of the Reference Library System to provide reusable knowledge lookup. | N/A | N/A | Implemented |
-| DEC-0007 | Sprint 2 RFC: Governance Finalization & Framework Freeze | Approved | 29-07-2026 | Business Owner | Approved finalization of governance framework and introduced Framework Freeze principle. | N/A | N/A | Implemented |
-| DEC-0008 | Sprint 2 Framework Refinement v2.2 | Approved | 30-07-2026 | Business Owner | Approved refinements to SESSION_TEMPLATE and RESEARCH_STANDARDS to include scope, architectural relationships, and stricter open question policies. | N/A | N/A | Implemented |
+Decisions in this ledger use categorical prefixes for clear domain ownership:
+- **`BUS-XXX`** → Business & strategic decisions
+- **`TECH-XXX`** → Technical & architectural infrastructure
+- **`DESIGN-XXX`** → Design system & UI specifications
+- **`OPS-XXX`** → Operational & research governance
+- **`BRAND-XXX`** → Brand strategy decisions (See [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md))
 
 ---
 
-## Related Documents
+## Canonical Project Decision Ledger
 
-### Depends On
+| Canonical ID | Legacy ID | Category | Decision Title | Status | Date | Owner | Summary | Implementation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **TECH-0001** | DEC-0001 | Architecture | Repository Architecture RFC v2 Implementation | Approved | 2026-07-29 | Business Owner | Approved state, decisions, and ADR template structure. | Implemented |
+| **OPS-0002** | DEC-0002 | Governance | Foundation Refinement After External Review | Approved | 2026-07-29 | Business Owner | Official decision to perform post-foundation refinement before Sprint 2. | Implemented |
+| **OPS-0003** | DEC-0003 | Governance | Sprint 2 Research Governance Update | Approved | 2026-07-29 | Business Owner | Approved Focused Research & Continuity principles in standards. | Implemented |
+| **OPS-0004** | DEC-0004 | Standards | Sprint 2 Template & Standards Enhancement | Approved | 2026-07-29 | Business Owner | Enhanced SESSION_TEMPLATE & added Reusable Knowledge principles. | Implemented |
+| **TECH-0005** | DEC-0005 | Knowledge | Sprint 2 RFC: Knowledge Management System (KMS) | Approved | 2026-07-29 | Business Owner | Integrated Knowledge Management System into project governance. | Implemented |
+| **TECH-0006** | DEC-0006 | Architecture | Sprint 2 RFC: Reference Library System (RLS) | Approved | 2026-07-29 | Business Owner | Integrated Reference Library System for reusable code lookup. | Implemented |
+| **OPS-0007** | DEC-0007 | Governance | Governance Finalization & Framework Freeze | Approved | 2026-07-29 | Business Owner | Finalized governance framework and introduced Framework Freeze rule. | Implemented |
+| **OPS-0008** | DEC-0008 | Standards | Sprint 2 Framework Refinement v2.2 | Approved | 2026-07-30 | Business Owner | Refined SESSION_TEMPLATE and RESEARCH_STANDARDS for scope & open questions. | Implemented |
 
-- [Project Workflow](./PROJECT_WORKFLOW.md)
+---
 
-### Related
+## Related Decision Ledgers
 
-- [Project State](./PROJECT_STATE.md)
-- [ADR Template](./templates/ADR_TEMPLATE.md)
+- **Brand Strategy Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md) (BRAND-001 through BRAND-021)

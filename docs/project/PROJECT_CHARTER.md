@@ -1,46 +1,53 @@
 # Project Charter
 
-Version: 1.0.0
-Status: Draft
+Version: 2.0.0
+Status: Approved
 Owner: Business Owner
-Last Updated: 29-07-2026
+Last Updated: 2026-08-03
 
 ---
 
-## Vision
-[Placeholder]
+## 1. Project Overview & Scope
 
-## Mission
-[Placeholder]
+The **Raghad Commerce Platform (RCP)** is an enterprise e-commerce platform custom-built for **رغد | Raghad**.
 
-## Milestones
-- **Research Infrastructure Complete**: The governance framework, documentation systems, and research standards are operational. This milestone marks the transition from **Building the Framework** to **Building Knowledge**. Future work focuses primarily on Research, Business Analysis, UX, UI, Technical Specifications, and Implementation, rather than expanding governance.
+- **Master Brand:** رغد | Raghad
+- **Canonical Brand Guidelines:** See [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md)
+- **Business Context & Philosophy:** See [`PROJECT_CONTEXT.md`](./PROJECT_CONTEXT.md)
+- **Current Operational State:** See [`PROJECT_STATE.md`](./PROJECT_STATE.md)
 
-## Objectives
-[Placeholder]
+---
 
-## Scope
-[Placeholder]
+## 2. Core Project Milestones
 
-## Out of Scope
-[Placeholder]
+- **Milestone 1: Governance & Research Infrastructure** — ✅ Completed (2026-07-29)
+- **Milestone 2: Brand Strategy Discovery Workshop** — ✅ Completed (2026-08-03 — Score 92/100)
+- **Milestone 3: Repository Architecture Refactor** — ✅ Completed (2026-08-03 — SSOT Enforced)
+- **Milestone 4: Visual Identity & Design System Specs** — 🔵 Active
+- **Milestone 5: Easy Orders Custom Theme Build** — Pending Design Specs Approval
 
-## KPIs
-[Placeholder]
+---
 
-## Project Principle
+## 3. Core Project Principle
 
-**Conversations are temporary. Documentation is permanent.**
+> **"Conversations are temporary. Documentation is permanent."**
 
-This principle means that discussions, chats, or slack threads are volatile memory. No feature, architecture change, or rule exists unless it is written into the repository's official documentation.
+Discussions, chat logs, and transient prompts have zero governance authority. No feature, architecture change, design directive, or business rule exists unless written into the repository's official documentation.
 
-## Stakeholders
-[Placeholder]
+---
+
+## 4. Key Stakeholder Roles
+
+- **Business Owner:** Overall business vision, strategic approval, brand alignment.
+- **Product Architect:** Repository architecture, workflow enforcement, technical governance.
+- **Documentation Owner:** Documentation standards, cross-link integrity, SSOT enforcement.
+- **Implementation Engineer:** Theme development & custom component execution.
 
 ---
 
 ## Related Documents
 
-### Related
-
 - [Project Context](./PROJECT_CONTEXT.md)
+- [Project Rules](./PROJECT_RULES.md)
+- [Project Workflow](./PROJECT_WORKFLOW.md)
+- [Official Brand Book](../brand/01_BRAND_BOOK.md)

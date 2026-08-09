@@ -18,6 +18,7 @@ This document tracks all officially frozen production baseline modules across th
 | **AT-12 Auto Fix Engine** | `2.0.0` | Frozen | 2026-08-01 | `patch-package.json` |
 | **AT-13A Patch Applicator** | **`2.0.0`** | **Frozen** | **2026-08-02** | **`apply-result.json`** |
 | **PSC-001 Product Service Contract** | **`1.0.1`** | **Frozen** | **2026-08-02** | **Product Service Contract Spec** |
+| **PSC-002 Product Provider Contract** | **`1.0.1`** | **Frozen** | **2026-08-02** | **Product Provider Contract Spec** |
 
 ---
 

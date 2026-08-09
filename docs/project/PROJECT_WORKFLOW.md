@@ -6,13 +6,13 @@ Status: Approved
 
 Owner: Product Architect
 
-Last Updated: 29-07-2026
+Last Updated: 2026-08-03
 
 ---
 
 # Purpose
 
-This document defines the official workflow used throughout the Raghad World project.
+This document defines the official workflow used throughout the **رغد | Raghad** (Raghad Commerce Platform) project.
 
 Every feature, document, design, and implementation must follow this workflow.
 
@@ -248,7 +248,7 @@ No coding should begin before approval.
 
 Responsible
 
-Gemini
+Implementation Engineer (AI or Human)
 
 Responsibilities
 
@@ -257,7 +257,7 @@ Responsibilities
 - Refactoring
 - Documentation updates
 
-Gemini must never invent business requirements.
+The Implementation Engineer must never invent business requirements.
 
 ---
 
@@ -265,7 +265,7 @@ Gemini must never invent business requirements.
 
 Responsible
 
-Claude
+Code Reviewer (AI or Human)
 
 Responsibilities
 
@@ -276,7 +276,7 @@ Responsibilities
 - Best practices
 - Specification compliance
 
-Claude reviews implementation only.
+The Code Reviewer reviews implementation only.
 
 Business decisions remain unchanged.
 
@@ -311,7 +311,7 @@ Only then may changes be merged.
 
 # AI Collaboration Workflow
 
-ChatGPT
+Strategist (ChatGPT/Claude/Gemini)
 
 ↓
 
@@ -327,7 +327,7 @@ Specification
 
 ↓
 
-Gemini
+Implementation Engineer
 
 ↓
 
@@ -335,7 +335,7 @@ Implementation
 
 ↓
 
-Claude
+Code Reviewer
 
 ↓
 

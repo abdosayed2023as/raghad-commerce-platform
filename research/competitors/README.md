@@ -1,8 +1,20 @@
-# Competitors Research
+# Research Database: Competitor Analysis (`research/competitors/`)
 
-Version: 1.0.0
-Status: Active
-Owner: Documentation Engineer
+**Purpose:** Store structured competitive research, counter-strike mapping, and market vulnerability audits.
 
-## Purpose
-This directory stores all competitor analysis, industry benchmarks, and market observations to inform our strategy without directly copying competitors.
+---
+
+## Folder Structure & Index
+
+| File | Subject | Status |
+| :--- | :--- | :--- |
+| `README.md` | Category Index & Standards | Active |
+| `COMPETITOR_COUNTER_STRIKE.md` | Strategic counter-strike matrix vs Amazon/Noon, Raya Store, Raneen | Active (Source: Brand Book §7) |
+
+---
+
+## Research Guidelines
+
+1. Focus on empirical evidence rather than opinions.
+2. Highlight competitor vulnerabilities (e.g., reliance on AI mockups, lack of pre-payment doorstep inspection).
+3. Do not duplicate strategy content — link back to [`docs/brand/01_BRAND_BOOK.md`](../../docs/brand/01_BRAND_BOOK.md).

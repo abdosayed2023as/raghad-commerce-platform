@@ -6,13 +6,13 @@ Status: Approved
 
 Owner: Product Architect
 
-Last Updated: 29-07-2026
+Last Updated: 2026-08-03
 
 ---
 
 # Purpose
 
-This document defines the mandatory rules that govern every activity within the Raghad World project.
+This document defines the mandatory rules that govern every activity within the **رغد | Raghad** (Raghad Commerce Platform) project.
 
 These rules apply to all contributors, including AI assistants, developers, designers, reviewers, and future team members.
 
