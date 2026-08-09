@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.5.1] - 2026-08-10
+
+### Fixed
+- `README.md` — removed the empty "Repository Architecture Documents" table and its self-referencing note (leftover from the v2.5.0 consolidation); added the live store and `docs/CURRENT_STATE.md` to the status block.
+- `README_FOR_AI.md` — remaining two references to `PROJECT_STATE.md` as state owner updated to `docs/CURRENT_STATE.md`.
+- `docs/architecture/adr/ADR-003_DOMAIN.md` — removed duplicate Related Documents link produced by the link sweep.
+- `docs/CURRENT_STATE.md` — §7 retitled as a historical record instead of "Latest Repository Changes (v2.4.2)".
+
 ## [2.5.0] - 2026-08-10
 
 ### Added

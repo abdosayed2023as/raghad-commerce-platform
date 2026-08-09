@@ -23,7 +23,7 @@ graph TD
 ## 2. Single Source of Truth (SSOT) & Documentation Rules
 
 1. **Every Fact Has Exactly ONE Owner Document:**
-   - Business & governance state → `docs/project/PROJECT_STATE.md`
+   - Business & governance state → `docs/CURRENT_STATE.md`
    - Master Brand Guidelines → `docs/brand/01_BRAND_BOOK.md`
    - Brand Memory & DNA → `docs/brand/06_BRAND_MEMORY.md`
    - Brand Decision Ledger → `docs/brand/03_DECISIONS.md`
@@ -78,6 +78,6 @@ Always log new project decisions using standardized ID prefixes:
 - [ ] Am I updating existing documents cleanly instead of creating duplicate files?
 
 ### After Completing Work:
-- [ ] Did I update `docs/project/PROJECT_STATE.md`?
+- [ ] Did I update `docs/CURRENT_STATE.md`?
 - [ ] Did I record the change in `CHANGELOG.md`?
 - [ ] Did I verify no broken file links remain?

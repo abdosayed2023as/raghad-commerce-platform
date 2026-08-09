@@ -85,7 +85,7 @@
 
 ---
 
-## 7. Latest Repository Changes (v2.4.2)
+## 7. Repository Changes (v2.3.0 – v2.4.2, historical)
 
 - Added [`docs/PROJECT_MANIFEST.md`](./PROJECT_MANIFEST.md) as the primary repository manifest.
 - Implemented Architecture Decision Records system (`docs/architecture/adr/ADR-001..006`).

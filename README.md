@@ -20,7 +20,9 @@ It hosts all project governance, brand strategy, technical research, architectur
 - **Current Phase:** Visual Identity & Design System Execution
 - **Brand Strategy:** ✅ 100% Completed (19/19 phases approved — Audit Score: 92/100)
 - **Platform Research:** ✅ Completed (RS-01A through RS-06)
-- **Implementation Status:** No code or theme implementation has started yet.
+- **Live Store:** [`raghadkids.com`](https://raghadkids.com) — operational on Easy Orders (see [`docs/CURRENT_STATE.md`](docs/CURRENT_STATE.md) §2)
+- **Implementation Status:** No theme code has been written in this repository yet.
+- **Real-time operational state:** [`docs/CURRENT_STATE.md`](docs/CURRENT_STATE.md)
 
 ---
 
@@ -48,15 +50,6 @@ It hosts all project governance, brand strategy, technical research, architectur
 
 ---
 
-## Repository Architecture Documents
-
-> **New to this repository?** Start with [`README.md`](README.md) for the full navigation map.
-
-| File | Purpose |
-| :--- | :--- |
-
----
-
 ## Core Navigation
 
 ### Brand Strategy (`docs/brand/`)
@@ -80,7 +73,7 @@ The complete brand strategy DNA — fully approved, founder-validated, audit sco
 | File | Purpose |
 | :--- | :--- |
 | [`PROJECT_CONTEXT.md`](docs/project/PROJECT_CONTEXT.md) | Business vision, philosophy, target audience |
-| [`PROJECT_STATE.md`](docs/project/PROJECT_STATE.md) | **Current phase**, active epics, upcoming roadmap |
+| [`PROJECT_STATE.md`](docs/project/PROJECT_STATE.md) | Sprint governance summary (defers to [`docs/CURRENT_STATE.md`](docs/CURRENT_STATE.md)) |
 | [`PROJECT_DECISIONS.md`](docs/project/PROJECT_DECISIONS.md) | Infrastructure/governance decisions (DEC-0001–DEC-0008) |
 | [`PROJECT_RULES.md`](docs/project/PROJECT_RULES.md) | Non-negotiable principles for all contributors |
 | [`PROJECT_WORKFLOW.md`](docs/project/PROJECT_WORKFLOW.md) | Feature lifecycle & Task Completion Protocol |
