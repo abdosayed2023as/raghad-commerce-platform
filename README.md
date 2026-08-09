@@ -1,9 +1,9 @@
 # Raghad Commerce Platform (RCP)
 
-Version: 2.2.0
+Version: 2.5.0
 Status: Active
 Owner: Product Architect
-Last Updated: 2026-08-03
+Last Updated: 2026-08-10
 
 ---
 
@@ -50,15 +50,10 @@ It hosts all project governance, brand strategy, technical research, architectur
 
 ## Repository Architecture Documents
 
-> **New to this repository?** Start with [`INDEX.md`](INDEX.md) for the full navigation map.
+> **New to this repository?** Start with [`README.md`](README.md) for the full navigation map.
 
 | File | Purpose |
 | :--- | :--- |
-| [`INDEX.md`](INDEX.md) | **Master repository navigation** — 8-layer organized index |
-| [`SESSION_HANDOFF.md`](SESSION_HANDOFF.md) | AI-optimized 60-second project orientation |
-| [`DOCUMENT_MAP.md`](DOCUMENT_MAP.md) | How every document relates to every other |
-| [`DECISION_TREE.md`](DECISION_TREE.md) | Visual map of all 29 strategic decisions |
-| [`DEPENDENCIES.md`](DEPENDENCIES.md) | Document dependency graph & impact analysis |
 
 ---
 
@@ -113,14 +108,8 @@ The complete brand strategy DNA — fully approved, founder-validated, audit sco
 
 ```text
 raghad-commerce-platform/
-├── INDEX.md                    # Master repository navigation (START HERE)
-├── SESSION_HANDOFF.md          # AI-optimized 60-second project orientation
-├── DOCUMENT_MAP.md             # Document relationship & ownership map
-├── DECISION_TREE.md            # Visual map of all strategic decisions
-├── DEPENDENCIES.md             # Document dependency graph
 ├── AI_CONTEXT.md               # AI system entry point & protocol
 ├── README_FOR_AI.md            # AI execution manual
-├── PROJECT_INDEX.md            # Detailed navigation index
 ├── README.md                   # [This file] Human-facing overview
 ├── CHANGELOG.md                # Semantic version history
 ├── FREEZE_MODULE_PROMPT.md     # Release management freeze prompt template
@@ -129,7 +118,6 @@ raghad-commerce-platform/
 │   ├── project/            # Governance, workflow, rules, state, decisions
 │   ├── design/             # Visual identity & design system specs (scaffolded)
 │   └── archive/            # Historical archive (preserved, never deleted)
-├── prompts/                # AI collaboration bootstrap files
 ├── research/               # Platform research, KMS, Reference Library
 │   ├── easyorders/         # Easy Orders research sessions (RS-01A to RS-06)
 │   ├── reference/          # Approved Reference Library lookup documents

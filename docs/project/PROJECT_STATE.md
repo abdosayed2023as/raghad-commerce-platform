@@ -25,12 +25,12 @@
 - **Brand Strategy Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md) (BRAND-001 through BRAND-021)
 - **Project Infrastructure Ledgers:** [`docs/project/PROJECT_DECISIONS.md`](./PROJECT_DECISIONS.md) (TECH/OPS-0001 through OPS-0008)
 - **Architecture Decision Records:** [`docs/architecture/adr/`](../architecture/adr/) (ADR-001 through ADR-007 Locked)
-- **Decision Traceability Matrix:** [`docs/TRACEABILITY.md`](../TRACEABILITY.md)
+- **Decision Traceability Matrix:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md)
 
 ---
 
 ## Related Documents
 
 - **Master State:** [`docs/CURRENT_STATE.md`](../CURRENT_STATE.md)
-- **Project Manifest:** [`docs/PROJECT_MANIFEST.md`](../PROJECT_MANIFEST.md)
+- **Project Manifest:** [`README.md`](../../README.md)
 - **Roadmap:** [`docs/project/ROADMAP.md`](./ROADMAP.md)

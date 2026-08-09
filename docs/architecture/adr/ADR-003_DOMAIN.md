@@ -42,4 +42,4 @@ Securing domain infrastructure in Egypt requires balancing global commercial acc
 
 - **Brand Book:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) (Section 1)
 - **Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-019)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)

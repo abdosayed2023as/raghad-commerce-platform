@@ -11,7 +11,7 @@ When initializing a new session or context window, read files in this exact sequ
 ```mermaid
 graph TD
     A["1. AI_CONTEXT.md (Instant Onboarding)"] --> B["2. README_FOR_AI.md (Execution Protocol)"]
-    B --> C["3. docs/project/PROJECT_STATE.md (Current Sprint)"]
+    B --> C["3. docs/CURRENT_STATE.md (Current Sprint)"]
     C --> D["4. docs/project/PROJECT_RULES.md (Engineering Rules)"]
     D --> E["5. docs/brand/06_BRAND_MEMORY.md (Consolidated Brand DNA)"]
     E --> F["6. docs/brand/03_DECISIONS.md (Locked Brand Decisions)"]
@@ -52,7 +52,7 @@ graph TD
 
 When completing any significant task or milestone, perform the following updates before ending your response:
 
-1. **Update `docs/project/PROJECT_STATE.md`:** Update active phase, completed work, and current sprint.
+1. **Update `docs/CURRENT_STATE.md`:** Update active phase, completed work, and current sprint.
 2. **Update `CHANGELOG.md`:** Add a new entry under the unreleased or current semantic version following [Keep a Changelog](https://keepachangelog.com/) format.
 3. **Audit Cross-Links:** Verify that file references remain valid and unbroken.
 

@@ -59,4 +59,4 @@ This aligns the Brand Book source with every downstream reference already in eff
 
 - **Affected Document:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) §15
 - **Related Brand Decision:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md) (BRAND-021)
-- **Traceability Matrix:** [`docs/TRACEABILITY.md`](../TRACEABILITY.md)
+- **Traceability Matrix:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md)

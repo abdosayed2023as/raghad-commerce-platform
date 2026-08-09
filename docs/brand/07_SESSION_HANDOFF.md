@@ -1,6 +1,6 @@
 # Brand Session Handoff (07_SESSION_HANDOFF.md)
 
-> **Note:** The comprehensive AI-optimized session handoff is now at [`SESSION_HANDOFF.md`](../../SESSION_HANDOFF.md) (repository root). This document covers brand-specific context only.
+> **Note:** The comprehensive AI-optimized session handoff is now at [`AI_CONTEXT.md`](../../AI_CONTEXT.md) (repository root). This document covers brand-specific context only.
 
 
 **Current Status:** All 19 Strategy Discovery Workshop Phases 100% Completed & Approved.  

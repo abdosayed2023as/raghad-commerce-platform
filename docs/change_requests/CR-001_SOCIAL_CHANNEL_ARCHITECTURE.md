@@ -36,4 +36,4 @@ Add `ADR-007_SOCIAL_CHANNEL_ARCHITECTURE.md`, recommending one unified Facebook 
 ## Related Documents
 
 - **Affected ADR:** [`docs/architecture/adr/ADR-007_SOCIAL_CHANNEL_ARCHITECTURE.md`](../architecture/adr/ADR-007_SOCIAL_CHANNEL_ARCHITECTURE.md)
-- **Traceability Matrix:** [`docs/TRACEABILITY.md`](../TRACEABILITY.md)
+- **Traceability Matrix:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md)

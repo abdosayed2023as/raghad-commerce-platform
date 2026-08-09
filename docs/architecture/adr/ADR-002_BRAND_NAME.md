@@ -42,4 +42,4 @@ Adopt **رغد | Raghad** as the official, clean master brand name. Discard "Rag
 
 - **Brand Book:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) (Section 10)
 - **Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-013, BRAND-019)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)

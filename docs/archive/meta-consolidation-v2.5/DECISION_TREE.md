@@ -1,3 +1,9 @@
+> **⚠️ ARCHIVED — 2026-08-10 (v2.5.0 meta-documentation consolidation).**
+> This document is preserved for historical reference and is NO LONGER MAINTAINED.
+> Canonical sources: navigation → `README.md` · AI entry → `AI_CONTEXT.md` ·
+> state → `docs/CURRENT_STATE.md` · decisions → `docs/brand/03_DECISIONS.md` and
+> `docs/project/PROJECT_DECISIONS.md`.
+
 # DECISION_TREE.md — Raghad Commerce Platform: Strategic Decision Map
 
 **Version:** 1.0.0  

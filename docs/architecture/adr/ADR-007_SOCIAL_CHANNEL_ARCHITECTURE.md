@@ -48,4 +48,4 @@ This decision should be revisited, not treated as permanent, if any of the follo
 - **Parent Decision:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-020)
 - **Parent ADR:** [`ADR-001_BRANDED_HOUSE.md`](./ADR-001_BRANDED_HOUSE.md)
 - **Change Request:** [`docs/change_requests/CR-001_SOCIAL_CHANNEL_ARCHITECTURE.md`](../../change_requests/CR-001_SOCIAL_CHANNEL_ARCHITECTURE.md)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)

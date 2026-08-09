@@ -3,8 +3,8 @@
 **Repository:** Raghad Commerce Platform (`raghad-commerce-platform`)  
 **Master Brand:** رغد | Raghad  
 **Primary Domain:** `raghadworld.com`  
-**Current Version:** 2.2.0  
-**Last Updated:** 2026-08-03  
+**Current Version:** 2.5.0  
+**Last Updated:** 2026-08-10  
 
 ---
 
@@ -39,7 +39,7 @@ Any AI assistant or contributor joining this project MUST consume documents in t
 
 1. 📄 [`AI_CONTEXT.md`](./AI_CONTEXT.md) *(This file — instant onboarding)*
 2. 📄 [`README_FOR_AI.md`](./README_FOR_AI.md) *(AI execution guidelines & rules)*
-3. 📄 [`docs/project/PROJECT_STATE.md`](./docs/project/PROJECT_STATE.md) *(Current sprint & roadmap)*
+3. 📄 [`docs/CURRENT_STATE.md`](./docs/CURRENT_STATE.md) *(Current sprint & roadmap)*
 4. 📄 [`docs/project/PROJECT_RULES.md`](./docs/project/PROJECT_RULES.md) *(Non-negotiable engineering & business rules)*
 5. 📄 [`docs/brand/06_BRAND_MEMORY.md`](./docs/brand/06_BRAND_MEMORY.md) *(Consolidated Brand DNA & Memory)*
 6. 📄 [`docs/brand/03_DECISIONS.md`](./docs/brand/03_DECISIONS.md) *(Locked brand strategy decisions DEC-001..021)*
@@ -79,22 +79,20 @@ The following core decisions are **LOCKED and IMMUTABLE**. No AI assistant may m
 
 ```text
 raghad-commerce-platform/
-├── INDEX.md                    # Master repository navigation (START HERE)
-├── SESSION_HANDOFF.md          # AI-optimized 60-second project orientation
-├── DOCUMENT_MAP.md             # Document relationship & ownership map
-├── DECISION_TREE.md            # Visual map of all strategic decisions
-├── DEPENDENCIES.md             # Document dependency graph
+├── README.md                   # Human-facing project overview & navigation (START HERE)
 ├── AI_CONTEXT.md               # [THIS FILE] AI onboarding & core protocol
 ├── README_FOR_AI.md            # AI execution guidelines, reading order & policies
-├── PROJECT_INDEX.md            # Complete navigation map for all repository docs
-├── README.md                   # Human-facing project overview
 ├── CHANGELOG.md                # Semantic versioning changelog
 ├── docs/
+│   ├── CURRENT_STATE.md        # Single source of truth for real-time project state
 │   ├── brand/                  # Authoritative brand strategy (8 canonical files)
 │   ├── project/                # Project governance, rules, state & decisions
 │   ├── design/                 # Visual identity & design system specifications (scaffolded)
+│   ├── architecture/adr/       # Architecture Decision Records (ADR-001..007)
+│   ├── change_requests/        # Formal change request system (CR-000..002)
 │   └── archive/                # Historical archive (preserved, never deleted)
 ├── research/                   # Platform research, KMS & Reference Library (RLS)
 ├── specs/                      # Architectural & UI specs (scaffolded)
-└── theme/                      # Easy Orders custom theme code (scaffolded)
+├── theme/                      # Easy Orders custom theme code (scaffolded)
+└── tools/                      # Audit toolkit & supporting utilities
 ```

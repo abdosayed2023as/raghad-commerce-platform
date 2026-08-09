@@ -42,4 +42,4 @@ Detailed description of the exact change requested, including proposed replaceme
 ## Related Documents
 
 - **Affected ADR:** [`docs/architecture/adr/`](../architecture/adr/)
-- **Traceability Matrix:** [`docs/TRACEABILITY.md`](../TRACEABILITY.md)
+- **Traceability Matrix:** [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md)

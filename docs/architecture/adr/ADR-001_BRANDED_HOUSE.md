@@ -46,4 +46,4 @@ We adopt the **Monolithic Branded House** model under the unified brand identity
 
 - **Brand Book:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) (Section 9)
 - **Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-020)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)

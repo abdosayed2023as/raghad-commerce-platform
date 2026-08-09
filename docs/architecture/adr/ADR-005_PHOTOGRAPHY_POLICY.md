@@ -43,4 +43,4 @@ Enforce a strict **100% Real Product Media Mandate**:
 
 - **Brand Book:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) (Section 3)
 - **Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-004)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)

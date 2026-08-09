@@ -40,4 +40,4 @@ Physical showrooms allow brides and mothers to experience product curation first
 
 - **Brand Book:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) (Section 2)
 - **Decision Ledger:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md) (BRAND-006)
-- **Traceability:** [`docs/TRACEABILITY.md`](../../TRACEABILITY.md)
+- **Traceability:** [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)
