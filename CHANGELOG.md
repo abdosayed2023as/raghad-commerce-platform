@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.6.0] - 2026-08-10
+
+### Added
+- `docs/design/logo-concepts/` — logo design brief (`LOGO_DESIGN_BRIEF.md` v1.1) and three raster concept studies (Embrace, Modern Clarity, Seal).
+
+### Changed
+- Logo brief Part B upgraded from "AI is exploration only" to an approved AI vector-production workflow: final mark derived from shaped Cairo glyph outlines (SIL OFL) with five staged quality gates. Direction locked by Business Owner: seal architecture × softened calligraphic letterforms.
+
 ## [2.5.1] - 2026-08-10
 
 ### Fixed
