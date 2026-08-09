@@ -1,3 +1,10 @@
+> **⚠️ ARCHIVED — SCOPE DRIFT (2026-08-10).** Produced during a period of scope
+> inflation in this toolkit's development. Describes an enterprise commerce system
+> (orders / inventory / product services) that is NOT part of the Raghad Commerce
+> Platform architecture — Raghad's commerce backend is the Easy Orders platform.
+> Preserved for reference only. Do not treat as intended architecture.
+> (Business Owner statement, 2026-08-09.)
+
 # Architecture & Contract Freeze Declaration — PSC-001 Product Service Contract
 
 **Document / Module Name**: PSC-001 — Product Service Contract Specification  

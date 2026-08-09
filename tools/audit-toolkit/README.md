@@ -1,5 +1,10 @@
 # Audit Toolkit V1.9.1 (AT-01..AT-09)
 
+> **Scope Note (2026-08-10):** This toolkit's intended purpose is (1) auditing the live
+> Raghad storefront, (2) before/after comparison across site changes, and (3) competitor
+> website analysis. Documents describing order/inventory/enterprise-commerce domains were
+> scope drift and are archived in `docs/archive/scope-drift/`.
+
 A stateless, configuration-driven, vendor-independent website evidence collector, metrics parser, rule evaluator, finding builder, context packager, AI report builder, audit comparator, developer specification generator, and GitHub task payload generator built with Node.js, Playwright, and Google Lighthouse.
 
 ---
