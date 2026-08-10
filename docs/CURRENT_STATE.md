@@ -49,25 +49,26 @@
 | **Brand Strategy Workshop** | 19 Strategy phases approved, Enterprise Brand Book v2.0 | 2026-08-03 | ✅ Passed (92/100) |
 | **Documentation Architecture** | Manifest, ADR system (ADR-001..006), Traceability Matrix | 2026-08-03 | ✅ Passed (v2.3.0) |
 | **Logo System** | Approved Version A masters + guidelines + production export | 2026-08-10 | ✅ Locked |
+| **Visual Identity Tokens** | Typography · Color · UI Components · Design System foundation | 2026-08-10 | ✅ Locked |
 
 ---
 
 ## 4. Immediate Next Steps & Sprint Priorities
 
 1. 🔵 **Visual Identity Specs (`docs/design/`):**
-   - ✅ **Logo system approved & exported** — [`docs/design/logo/`](./design/logo/) · [`LOGO_GUIDELINES.md`](./design/LOGO_GUIDELINES.md).
-   - ✅ **Logo deployed** to live channels by Business Owner (2026-08-10) — social avatars + store header/favicon.
-   - ✅ Accessibility contrast rule finalized — see [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
-   - ✅ **Typography locked** — [`TYPOGRAPHY.md`](./design/TYPOGRAPHY.md) (Cairo-only; Owner approved 2026-08-10).
-   - ✅ **Color tokens locked** — [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md) (Owner approved 2026-08-10).
-   - 🔵 **UI Components draft ready for Owner sign-off** — [`UI_COMPONENTS.md`](./design/UI_COMPONENTS.md) (Trust Shield as primary PDP system).
-   - ✅ Foundation tokens — [`DESIGN_SYSTEM.md`](./design/DESIGN_SYSTEM.md) (radius, spacing, breakpoints, motion).
+   - ✅ **Logo system** — approved, exported, deployed live.
+   - ✅ **Typography locked** — [`TYPOGRAPHY.md`](./design/TYPOGRAPHY.md).
+   - ✅ **Color tokens locked** — [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
+   - ✅ **UI Components locked** — [`UI_COMPONENTS.md`](./design/UI_COMPONENTS.md) (Trust Shield primary on PDP).
+   - ✅ **Foundation tokens** — [`DESIGN_SYSTEM.md`](./design/DESIGN_SYSTEM.md).
+   - 🔵 **Next:** PDP / Home information architecture & Easy Orders theme specification (pre-code).
 
-2. ⬜ **UX/UI Wireframes & Page Specifications:**
-   - Define Information Architecture & PDP / PLP wireframe requirements.
+2. ⬜ **UX/UI Wireframes & Theme Spec:**
+   - PDP + Home + PLP wireframe requirements mapped to Easy Orders sections.
+   - Theme implementation spec for coding agents (Liquid constraints from `research/easyorders/`).
 
 3. ⬜ **Easy Orders Custom Theme Implementation:**
-   - Begin Liquid theme coding in `theme/` after remaining design specifications approval.
+   - Begin Liquid theme coding in `theme/` after theme specification approval.
 
 ---
 

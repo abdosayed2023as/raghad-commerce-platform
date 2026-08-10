@@ -1,6 +1,6 @@
 # UI Component Specifications (`UI_COMPONENTS.md`)
 
-**Status:** Approved — Pending Business Owner sign-off  
+**Status:** Approved & Locked — Business Owner 2026-08-10  
 **Version:** 1.0.0  
 **Date:** 2026-08-10  
 **Category:** Component Architecture & Theme Specs  
@@ -230,7 +230,7 @@ The previous scaffold listed items that are **out of brand** and must not be bui
 - [ ] Product cards use real images only; radius 12px
 - [ ] Footer color is plum `#2C2230`
 - [ ] No glassmorphism, no `#0F172A`, no fake urgency patterns
-- [ ] Owner sign-off
+- [x] Owner sign-off
 
 ---
 

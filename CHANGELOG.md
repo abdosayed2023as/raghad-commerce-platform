@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.0] - 2026-08-10
+
+### Changed
+- Visual identity core **complete and Owner-locked**: Logo · Typography · Color · UI Components · Design System foundation.
+- `docs/design/UI_COMPONENTS.md` — status Locked.
+- `docs/CURRENT_STATE.md` — next phase is PDP/Home theme specification (pre-code), then Easy Orders Liquid implementation.
+
 ## [2.7.3] - 2026-08-10
 
 ### Added
