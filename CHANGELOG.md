@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.6.1] - 2026-08-10
+
+### Added
+- `tools/logo-pipeline/` — reproducible vector-construction pipeline (fontkit shaping of Cairo glyph outlines + SVG assembly + PNG rendering).
+- `docs/design/logo-concepts/vector/` — Stage 3 masters: baseline wordmarks (700/800), seal drafts, and v2 iteration (circular terracotta Ghain dot per Business Owner preference for concepts 2×3) including a stacked lockup with Latin caption.
+
+### Changed
+- Direction refined per Business Owner Stage 4 feedback: geometric-soft letterforms (concept 2) with seal architecture (concept 3); heavy calligraphic treatment dropped.
+
 ## [2.6.0] - 2026-08-10
 
 ### Added
