@@ -1,0 +1,15 @@
+<nav class="rg-breadcrumbs" aria-label="مسار التنقل">
+  <ol>
+    <li>
+      <a href="/">{{ home_text }}</a>
+      <span class="rg-breadcrumbs__sep" aria-hidden="true">‹</span>
+    </li>
+    {% for crumb in categories %}
+      <li>
+        <a href="/collections/{{ crumb.slug }}">{{ crumb.name }}</a>
+        <span class="rg-breadcrumbs__sep" aria-hidden="true">‹</span>
+      </li>
+    {% endfor %}
+    <li aria-current="page">{{ product_name }}</li>
+  </ol>
+</nav>

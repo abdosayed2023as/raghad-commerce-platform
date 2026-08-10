@@ -1,0 +1,53 @@
+{%- assign trust_line = theme_data.trust_micro_line -%}
+{%- if trust_line == blank or trust_line == "" -%}
+  {%- assign trust_line = "معاينة قبل الدفع · فيديو حقيقي · استبدال 48س" -%}
+{%- endif -%}
+
+<div class="rg-fixed-buy" role="region" aria-label="شراء سريع">
+  <div class="rg-fixed-buy__inner">
+    <p class="rg-fixed-buy__trust">{{ trust_line }}</p>
+
+    <div class="rg-fixed-buy__row">
+      {% if thumb and thumb != "" %}
+        <img class="rg-fixed-buy__thumb" src="{{ thumb }}" alt="{{ product_name }}" width="48" height="48" />
+      {% endif %}
+
+      <div class="rg-fixed-buy__meta">
+        <span class="rg-fixed-buy__name">{{ product_name }}</span>
+        {% if sale_price and sale_price < price %}
+          <span class="rg-fixed-buy__price">{{ sale_price }} {{ currency }}</span>
+        {% else %}
+          <span class="rg-fixed-buy__price">{{ price }} {{ currency }}</span>
+        {% endif %}
+      </div>
+
+      {% unless hide_quantity %}
+        <div class="rg-qty" aria-label="الكمية">
+          <button
+            type="button"
+            class="rg-qty__btn"
+            aria-label="تقليل الكمية"
+            onclick="this.dispatchEvent(new CustomEvent('decrement-quantity',{bubbles:true}))"
+          >−</button>
+          <span class="rg-qty__value">{{ quantity }}</span>
+          <button
+            type="button"
+            class="rg-qty__btn"
+            aria-label="زيادة الكمية"
+            {% if increase_disabled %}disabled{% endif %}
+            onclick="this.dispatchEvent(new CustomEvent('increment-quantity',{bubbles:true}))"
+          >+</button>
+        </div>
+      {% endunless %}
+
+      <button
+        type="button"
+        class="rg-btn rg-btn--primary rg-fixed-buy__cta"
+        {% if disabled %}disabled{% endif %}
+        onclick="event.preventDefault();this.dispatchEvent(new CustomEvent('buy-now',{bubbles:true}))"
+      >
+        {{ buy_now_text }}
+      </button>
+    </div>
+  </div>
+</div>

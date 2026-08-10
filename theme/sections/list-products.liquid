@@ -1,0 +1,17 @@
+{%- comment -%} Minimal stub for theme validity. {%- endcomment -%}
+<section class="rg-stub">
+  {% if section_title %}<h2 class="rg-stub__title">{{ section_title }}</h2>{% endif %}
+  <div class="rg-products-grid">
+    {% for product in products %}
+      <a href="/products/{{ product.slug }}" class="rg-product-card">
+        <div class="rg-product-card__media">
+          {% if product.thumb %}<img src="{{ product.thumb }}" alt="{{ product.name }}" loading="lazy" />{% endif %}
+        </div>
+        <div class="rg-product-card__info">
+          <h3 class="rg-product-card__name">{{ product.name }}</h3>
+          <span class="rg-product-card__price">{{ product.price }} {{ currency }}</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

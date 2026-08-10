@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.9.0] - 2026-08-10
+
+### Added
+- `theme/` — Easy Orders custom theme: PDP sections with Trust Shield, sticky buy bar, gallery video support, design tokens; fake scarcity sections neutralized; Home/PLP minimal stubs for valid upload tree.
+
+### Changed
+- `docs/CURRENT_STATE.md` — PDP implementation accepted pending live EO verification.
+
 ## [2.8.2] - 2026-08-10
 
 ### Changed

@@ -1,0 +1,11 @@
+{%- comment -%} Minimal categories stub. {%- endcomment -%}
+<section class="rg-stub">
+  <div class="rg-categories">
+    {% for category in categories %}
+      <a class="rg-category-card" href="/collections/{{ category.slug }}">
+        {% if category.thumb %}<img src="{{ category.thumb }}" alt="" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;margin-bottom:8px" loading="lazy" />{% endif %}
+        {{ category.name }}
+      </a>
+    {% endfor %}
+  </div>
+</section>

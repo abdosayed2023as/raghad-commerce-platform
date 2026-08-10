@@ -70,8 +70,10 @@
    - PDP implementation prompt ready for coding agent.
 
 3. 🔵 **Easy Orders Custom Theme Implementation:**
-   - PDP sections may begin in `theme/` per locked PDP_THEME_SPEC (Owner approved 2026-08-10).
-   - Home/PLP coding waits for their specs.
+   - ✅ **PDP sections implemented** under `theme/` (Director review 2026-08-10 — accepted with ops notes).
+   - ⬜ Live verify `buy-now` / cart via Easy Orders CLI + store upload (credentials required).
+   - ⬜ Set `has_real_video` per SKU when a real clip exists; upload approved logo in EO dashboard.
+   - Home/PLP remain minimal stubs — full specs next before polish.
 
 ---
 

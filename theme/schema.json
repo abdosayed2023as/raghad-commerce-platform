@@ -1,0 +1,23 @@
+[
+  {
+    "name": "trust_micro_line",
+    "type": "string",
+    "description": "Compact trust line used above sticky buy CTA",
+    "default": "معاينة قبل الدفع · فيديو حقيقي · استبدال 48س",
+    "group": "Trust"
+  },
+  {
+    "name": "show_wishlist_on_pdp",
+    "type": "boolean",
+    "description": "Show wishlist control on product details",
+    "default": false,
+    "group": "PDP"
+  },
+  {
+    "name": "show_compare_on_pdp",
+    "type": "boolean",
+    "description": "Show compare control on product details",
+    "default": false,
+    "group": "PDP"
+  }
+]

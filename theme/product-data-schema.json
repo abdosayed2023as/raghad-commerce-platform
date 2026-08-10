@@ -1,0 +1,9 @@
+[
+  {
+    "name": "has_real_video",
+    "type": "boolean",
+    "description": "Product has a real unedited video clip (dims Trust Shield video chip when false and no .mp4 in gallery)",
+    "default": false,
+    "group": "Trust"
+  }
+]

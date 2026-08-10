@@ -1,0 +1,71 @@
+{%- comment -%}
+  Real media gallery — images + .mp4 videos from `images`. Client-side only.
+{%- endcomment -%}
+
+<div
+  class="rg-gallery rg-pdp__gallery"
+  data-rg-gallery
+  data-product-name="{{ product_name }}"
+  role="region"
+  aria-label="{{ product_name }} — معرض الصور"
+>
+  <div class="rg-gallery__main" data-gallery-main>
+    {% if mainImage and mainImage != "" %}
+      {% if mainImage contains '.mp4' or mainImage contains '.webm' or mainImage contains '.mov' %}
+        <video
+          src="{{ mainImage }}"
+          controls
+          playsinline
+          muted
+          autoplay
+          preload="metadata"
+          aria-label="{{ product_name }}"
+        ></video>
+      {% else %}
+        <img id="gallery-main-image" src="{{ mainImage }}" alt="{{ product_name }}" />
+      {% endif %}
+    {% else %}
+      <div class="rg-gallery__placeholder">لا توجد صورة</div>
+    {% endif %}
+
+    {% if images.size > 1 %}
+      <button type="button" class="rg-gallery__nav rg-gallery__nav--prev" data-gallery-prev aria-label="السابق">‹</button>
+      <button type="button" class="rg-gallery__nav rg-gallery__nav--next" data-gallery-next aria-label="التالي">›</button>
+    {% endif %}
+  </div>
+
+  {% if images.size > 1 %}
+    <div class="rg-gallery__thumbs" role="tablist" aria-label="صور المنتج">
+      {% for image in images %}
+        <button
+          type="button"
+          class="rg-gallery__thumb"
+          role="tab"
+          aria-selected="{% if image == mainImage %}true{% else %}false{% endif %}"
+          aria-label="عرض الوسائط {{ forloop.index }}"
+          data-gallery-thumb
+          data-src="{{ image }}"
+        >
+          {% if image contains '.mp4' or image contains '.webm' or image contains '.mov' %}
+            <video src="{{ image }}" muted playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="rg-gallery__play" aria-hidden="true">▶</span>
+          {% else %}
+            <img src="{{ image }}" alt="{{ product_name }}" loading="lazy" />
+          {% endif %}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="rg-gallery__dots">
+      {% for image in images %}
+        <button
+          type="button"
+          class="rg-gallery__dot"
+          data-gallery-dot
+          {% if image == mainImage %}aria-current="true"{% endif %}
+          aria-label="الشريحة {{ forloop.index }}"
+        ></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

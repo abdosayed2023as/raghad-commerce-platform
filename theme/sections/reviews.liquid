@@ -1,0 +1,34 @@
+<section class="rg-reviews">
+  <div class="rg-reviews__header">
+    <div>
+      <h2 class="rg-reviews__title">{{ t_users_reviews }}</h2>
+      {% if reviews_count > 0 %}
+        <p class="rg-reviews__meta">{{ average_rating_display }} · {{ reviews_count }} {{ t_reviews }}</p>
+      {% endif %}
+    </div>
+    <button data-review-open type="button" class="rg-btn rg-btn--secondary">
+      {{ t_share_your_review }}
+    </button>
+  </div>
+
+  {% if reviews.size == 0 %}
+    <p class="rg-reviews__empty">{{ t_no_reviews }}</p>
+  {% else %}
+    {% for review in reviews %}
+      <article class="rg-review-card">
+        <div class="rg-details__stars" aria-label="تقييم {{ review.rating }} من 5">
+          {% for i in (1..5) %}
+            {% if i <= review.rating %}★{% else %}☆{% endif %}
+          {% endfor %}
+        </div>
+        {% if review.user_name and review.user_name != "" %}
+          <h3 class="rg-review-card__name">{{ review.user_name }}</h3>
+        {% endif %}
+        <p class="rg-review-card__comment">{{ review.comment }}</p>
+        {% if review.image and review.image != "" %}
+          <img class="rg-review-card__image" src="{{ review.image }}" alt="" loading="lazy" />
+        {% endif %}
+      </article>
+    {% endfor %}
+  {% endif %}
+</section>

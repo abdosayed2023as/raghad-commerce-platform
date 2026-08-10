@@ -1,0 +1,113 @@
+{%- comment -%}
+  Minimal layout shell for valid theme upload. PDP inherits this header.
+  Required IDs: header-cart-count (+ compare/wishlist/lang/register hooks).
+{%- endcomment -%}
+
+{% if announcement_config and announcement_config.text.size > 0 %}
+  <div class="rg-announce">
+    {% for item in announcement_config.text %}
+      <span>{{ item }}</span>{% unless forloop.last %} · {% endunless %}
+    {% endfor %}
+  </div>
+{% elsif announcement_text and announcement_text != "" %}
+  <div class="rg-announce">{{ announcement_text }}</div>
+{% endif %}
+
+<header class="rg-header">
+  <div class="rg-header__inner">
+    <button type="button" id="rg-menu-btn" class="rg-icon-btn" aria-label="القائمة" style="display:none">☰</button>
+
+    <a href="/" class="rg-header__logo">
+      {% if logo and logo != "" %}
+        <img src="{{ logo }}" alt="{{ store_name }}" />
+      {% else %}
+        <span class="rg-header__logo-text">{{ store_name }}</span>
+      {% endif %}
+    </a>
+
+    <nav class="rg-header__nav" aria-label="الأقسام">
+      {% for category in categories %}
+        <a href="{{ category.url }}">{{ category.name }}</a>
+      {% endfor %}
+    </nav>
+
+    <div class="rg-header__actions">
+      <a href="/search" class="rg-icon-btn search-btn" aria-label="بحث">⌕</a>
+
+      <a href="/wishlist" class="rg-icon-btn" aria-label="المفضلة">
+        ♡
+        <span id="header-wishlist-count" class="rg-badge"{% if wishlist_count == 0 %} hidden{% endif %}>{{ wishlist_count }}</span>
+      </a>
+
+      <button
+        type="button"
+        class="rg-icon-btn"
+        aria-label="مقارنة"
+        onclick="this.dispatchEvent(new CustomEvent('compare-click',{bubbles:true}))"
+      >
+        ⇄
+        <span id="header-compare-count" class="rg-badge"{% if compare_count == 0 %} hidden{% endif %}>{{ compare_count }}</span>
+      </button>
+
+      {% if is_register_active %}
+        <button
+          type="button"
+          id="header-register"
+          class="rg-icon-btn register-btn"
+          aria-label="تسجيل"
+          onclick="this.dispatchEvent(new CustomEvent('register-click',{bubbles:true}))"
+        >☺</button>
+      {% endif %}
+
+      <button
+        type="button"
+        id="header-lang-btn"
+        class="rg-icon-btn lang-btn"
+        aria-label="اللغة"
+        hidden
+        onclick="this.dispatchEvent(new CustomEvent('lang-click',{bubbles:true}))"
+      >ع</button>
+
+      <button
+        type="button"
+        class="rg-icon-btn cart-btn"
+        aria-label="السلة"
+        onclick="this.dispatchEvent(new CustomEvent('cart-click',{bubbles:true}))"
+      >
+        🛒
+        <span id="header-cart-count" class="rg-badge"{% if cart_count == 0 %} hidden{% endif %}>{{ cart_count }}</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="rg-mobile-overlay" hidden style="position:fixed;inset:0;background:var(--color-overlay);z-index:60"></div>
+<div id="rg-mobile-menu" hidden style="position:fixed;inset-block:0;inset-inline-start:0;width:min(100%,320px);background:var(--color-surface);z-index:61;padding:var(--space-4);overflow:auto">
+  <button type="button" id="rg-mobile-close" class="rg-btn rg-btn--secondary" aria-label="إغلاق">إغلاق</button>
+  <nav style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4)">
+    {% for category in categories %}
+      <a href="{{ category.url }}">{{ category.name }}</a>
+    {% endfor %}
+    <button
+      type="button"
+      id="header-lang-mobile"
+      class="lang-btn"
+      hidden
+      onclick="this.dispatchEvent(new CustomEvent('lang-click',{bubbles:true}))"
+    >اللغة</button>
+    {% if is_register_active %}
+      <button
+        type="button"
+        id="header-register-mobile"
+        class="register-btn rg-btn rg-btn--secondary"
+        onclick="this.dispatchEvent(new CustomEvent('register-click',{bubbles:true}))"
+      >تسجيل</button>
+    {% endif %}
+  </nav>
+</div>
+
+<style>
+  @media (max-width: 767px) {
+    #rg-menu-btn { display: inline-flex !important; }
+  }
+</style>

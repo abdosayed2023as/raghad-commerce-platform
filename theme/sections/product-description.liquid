@@ -1,0 +1,32 @@
+<div class="rg-desc">
+  {% if description != "" %}
+    <div class="rg-desc__item" data-open="true">
+      <button class="rg-desc__toggle" type="button" aria-expanded="true">
+        <span>{{ description_label }}</span>
+        <span class="rg-desc__chevron" aria-hidden="true"></span>
+      </button>
+      <div class="rg-desc__panel">
+        <div class="rg-desc__content product_description">
+          <div class="ql-editor" style="text-align:start" dir="auto">{{ description }}</div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% for policy in policies %}
+    <div class="rg-desc__item">
+      <button class="rg-desc__toggle" type="button" aria-expanded="false">
+        <span class="rg-desc__toggle-label">
+          {% if policy.icon and policy.icon != "" %}
+            <img src="{{ policy.icon }}" alt="" class="rg-desc__icon" width="20" height="20" />
+          {% endif %}
+          <span>{{ policy.title }}</span>
+        </span>
+        <span class="rg-desc__chevron" aria-hidden="true"></span>
+      </button>
+      <div class="rg-desc__panel">
+        <div class="rg-desc__content">{{ policy.content }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

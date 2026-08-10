@@ -1,0 +1,85 @@
+<footer class="rg-footer">
+  <div class="rg-footer__inner">
+    <div>
+      <a href="/" class="rg-header__logo">
+        {% if logo != "" %}
+          <img src="{{ logo }}" alt="{{ store_name }}" style="height:40px;filter:brightness(0) invert(1)" />
+        {% else %}
+          <span class="rg-header__logo-text" style="color:var(--color-ink-inverse)">{{ store_name }}</span>
+        {% endif %}
+      </a>
+      {% if has_contact %}
+        <div style="margin-top:var(--space-3);font-size:var(--text-body-sm)">
+          {% if phone != "" %}<div dir="ltr">{{ phone }}</div>{% endif %}
+          {% if email != "" %}<div>{{ email }}</div>{% endif %}
+          {% if address != "" %}<div>{{ address }}</div>{% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if categories.size > 0 %}
+      <div>
+        <h4 class="rg-footer__heading">{{ shop_label }}</h4>
+        <ul class="rg-footer__links">
+          {% for cat in categories %}
+            <li><a href="/collections/{{ cat.slug }}">{{ cat.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if pages.size > 0 %}
+      <div>
+        <h4 class="rg-footer__heading">{{ help_label }}</h4>
+        <ul class="rg-footer__links">
+          {% for page in pages %}
+            <li><a href="/pages/{{ page.slug }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <div>
+      <h4 class="rg-footer__heading">{{ subscribe_label }}</h4>
+      <form
+        class="rg-footer-subscribe"
+        novalidate
+        onsubmit="
+          event.preventDefault();
+          if (!this.checkValidity()) { this.reportValidity(); return; }
+          var input = this.elements.email;
+          var email = input && input.value ? String(input.value).trim() : '';
+          this.dispatchEvent(new CustomEvent('footer-subscribe',{bubbles:true,detail:{email:email}}));
+          this.reset();
+        "
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="{{ email_placeholder }}"
+          autocomplete="email"
+          inputmode="email"
+          maxlength="254"
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+          required
+          aria-required="true"
+        />
+        <button type="submit">OK</button>
+      </form>
+
+      {% if social.size > 0 %}
+        <p style="margin:var(--space-4) 0 var(--space-2);font-size:var(--text-caption)">{{ follow_label }}</p>
+        <div style="display:flex;gap:var(--space-2)">
+          {% for item in social %}
+            <a href="{{ item.url }}" target="_blank" rel="noreferrer" aria-label="{{ item.label }}">{{ item.label }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <p class="rg-footer__copy">© {{ year }} {{ store_name }}. {{ rights_label }}</p>
+  {% if show_powered %}
+    <p class="rg-footer__copy">Powered by EasyOrders</p>
+  {% endif %}
+</footer>

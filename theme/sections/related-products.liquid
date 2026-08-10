@@ -1,0 +1,47 @@
+<section class="rg-related">
+  {% if section_title %}
+    <h2 class="rg-related__title">{{ section_title }}</h2>
+  {% endif %}
+
+  <div class="rg-related__track">
+    {% for product in products %}
+      <article class="rg-product-card">
+        <a href="/products/{{ product.slug }}" class="rg-product-card__media">
+          {% if product.thumb and product.thumb != "" %}
+            <img src="{{ product.thumb }}" alt="{{ product.name }}" loading="lazy" />
+          {% endif %}
+        </a>
+        <div class="rg-product-card__info">
+          <a href="/products/{{ product.slug }}" style="text-decoration:none;color:inherit">
+            <h3 class="rg-product-card__name">{{ product.name }}</h3>
+          </a>
+          <div>
+            {% if product.sale_price and product.sale_price < product.price %}
+              <span class="rg-product-card__price">{{ product.sale_price }} {{ currency }}</span>
+              <span class="rg-product-card__compare">{{ product.price }} {{ currency }}</span>
+            {% else %}
+              <span class="rg-product-card__price">{{ product.price }} {{ currency }}</span>
+            {% endif %}
+          </div>
+          <p class="rg-product-card__trust">معاينة قبل الدفع</p>
+        </div>
+        <div class="rg-product-card__actions">
+          <button
+            type="button"
+            class="rg-btn rg-btn--primary"
+            onclick="event.preventDefault();event.stopPropagation();this.dispatchEvent(new CustomEvent('quick-add',{bubbles:true,detail:{productId:'{{ product.id }}'}}))"
+          >
+            {{ add }}
+          </button>
+          <button
+            type="button"
+            class="rg-btn rg-btn--secondary"
+            onclick="event.preventDefault();event.stopPropagation();this.dispatchEvent(new CustomEvent('quick-view',{bubbles:true,detail:{productId:'{{ product.id }}'}}))"
+          >
+            {{ shop_now }}
+          </button>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

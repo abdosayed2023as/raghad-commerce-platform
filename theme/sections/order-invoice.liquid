@@ -1,0 +1,26 @@
+{%- comment -%} Minimal order invoice stub. {%- endcomment -%}
+<section class="rg-invoice">
+  {% if logo and logo != "" %}
+    <img src="{{ logo }}" alt="{{ store_name }}" style="height:48px;margin:0 auto var(--space-4)" />
+  {% endif %}
+  <h1 class="rg-stub__title">{{ store_name }}</h1>
+  {% if order %}
+    <p>طلب #{{ order.id }}</p>
+    {% if order_notes and order_notes != "" %}<p>{{ order_notes }}</p>{% endif %}
+    {% if tracking_link and tracking_link != "" %}
+      <button
+        type="button"
+        class="rg-btn rg-btn--secondary"
+        onclick="this.dispatchEvent(new CustomEvent('copy-tracking-link',{bubbles:true,detail:{link:'{{ tracking_link }}'}}))"
+      >
+        نسخ رابط التتبع
+      </button>
+    {% endif %}
+  {% endif %}
+  {% if has_contact %}
+    <p style="margin-top:var(--space-4);font-size:var(--text-body-sm)">
+      {% if contact_phone != "" %}<span dir="ltr">{{ contact_phone }}</span>{% endif %}
+      {% if contact_email != "" %} · {{ contact_email }}{% endif %}
+    </p>
+  {% endif %}
+</section>

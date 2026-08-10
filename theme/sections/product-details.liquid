@@ -1,0 +1,86 @@
+{%- comment -%}
+  Raghad PDP — name, price, Trust Shield (mandatory), optional wishlist/compare.
+  Trust Shield sits after price and before secondary actions.
+{%- endcomment -%}
+
+{%- assign has_gallery_video = false -%}
+{%- if product_theme_data.has_real_video -%}
+  {%- assign has_gallery_video = true -%}
+{%- endif -%}
+
+<div class="rg-details rg-pdp__details">
+  <h1 class="rg-details__name">{{ product_name }}</h1>
+
+  <div class="rg-details__price-row">
+    {% if sale_price and sale_price < price %}
+      <span class="rg-details__price">{{ sale_price }} {{ currency }}</span>
+      <span class="rg-details__price--compare">{{ price }} {{ currency }}</span>
+    {% else %}
+      <span class="rg-details__price">{{ price }} {{ currency }}</span>
+    {% endif %}
+  </div>
+
+  {% if rating > 0 %}
+    <div class="rg-details__rating">
+      <span class="rg-details__stars" aria-hidden="true">
+        {% assign full_stars = rating | floor %}
+        {% for i in (1..5) %}
+          {% if i <= full_stars %}★{% else %}☆{% endif %}
+        {% endfor %}
+      </span>
+      <span>{{ rating }} · {{ reviews_count }}</span>
+    </div>
+  {% endif %}
+
+  {%- comment -%} ★ Trust Shield — locked Arabic labels; above purchase intent {%- endcomment -%}
+  <div class="rg-trust-shield" role="region" aria-label="ضمانات الشراء">
+    <ul class="rg-trust-shield__list">
+      <li class="rg-trust-shield__item">
+        <svg class="rg-trust-shield__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>معاينة كاملة قبل الدفع</span>
+      </li>
+      <li class="rg-trust-shield__item{% unless has_gallery_video %} rg-trust-shield__item--dim{% endunless %}">
+        <svg class="rg-trust-shield__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <span>فيديو حقيقي 100%</span>
+      </li>
+      <li class="rg-trust-shield__item">
+        <svg class="rg-trust-shield__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>
+        </svg>
+        <span>استبدال مجاني خلال 48 ساعة</span>
+      </li>
+    </ul>
+  </div>
+
+  {% if description and description != "" %}
+    <p class="rg-details__short">{{ description }}</p>
+  {% endif %}
+
+  {% if theme_data.show_wishlist_on_pdp or theme_data.show_compare_on_pdp %}
+    <div class="rg-details__actions">
+      {% if theme_data.show_wishlist_on_pdp %}
+        <button
+          type="button"
+          class="rg-btn rg-btn--secondary"
+          onclick="event.preventDefault();event.stopPropagation();this.dispatchEvent(new CustomEvent('toggle-wishlist',{bubbles:true,detail:{productId:'{{ product_id }}'}}))"
+        >
+          المفضلة
+        </button>
+      {% endif %}
+      {% if theme_data.show_compare_on_pdp %}
+        <button
+          type="button"
+          class="rg-btn rg-btn--secondary"
+          onclick="event.preventDefault();event.stopPropagation();this.dispatchEvent(new CustomEvent('toggle-compare',{bubbles:true,detail:{productId:'{{ product_id }}'}}))"
+        >
+          مقارنة
+        </button>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

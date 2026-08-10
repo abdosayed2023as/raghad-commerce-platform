@@ -1,0 +1,18 @@
+{%- comment -%} Minimal thank-you stub. {%- endcomment -%}
+<section class="rg-thanks">
+  <h1 class="rg-stub__title">{{ thanks_title }}</h1>
+  <p>{{ thanks_message }}</p>
+  {% if phone_message and phone_message != "" %}<p>{{ phone_message }}</p>{% endif %}
+  {% if content and content != "" %}<div>{{ content }}</div>{% endif %}
+  {% if show_home_button %}
+    <button
+      type="button"
+      class="rg-btn rg-btn--primary"
+      style="margin-top:var(--space-4)"
+      onclick="this.dispatchEvent(new CustomEvent('go-home',{bubbles:true}))"
+    >
+      {{ go_home_text }}
+    </button>
+  {% endif %}
+  {% if offers_text and offers_text != "" %}<p style="margin-top:var(--space-3)">{{ offers_text }}</p>{% endif %}
+</section>

@@ -1,0 +1,23 @@
+{%- comment -%} Minimal home stub — out of PDP scope; required for valid EO theme upload. {%- endcomment -%}
+<section class="rg-stub">
+  {% if section_title %}<h2 class="rg-stub__title">{{ section_title }}</h2>{% endif %}
+  <div class="rg-products-grid">
+    {% for product in products %}
+      <a href="/products/{{ product.slug }}" class="rg-product-card">
+        <div class="rg-product-card__media">
+          {% if product.thumb %}<img src="{{ product.thumb }}" alt="{{ product.name }}" loading="lazy" />{% endif %}
+        </div>
+        <div class="rg-product-card__info">
+          <h3 class="rg-product-card__name">{{ product.name }}</h3>
+          <span class="rg-product-card__price">
+            {% if product.sale_price and product.sale_price < product.price %}
+              {{ product.sale_price }} {{ currency }}
+            {% else %}
+              {{ product.price }} {{ currency }}
+            {% endif %}
+          </span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
