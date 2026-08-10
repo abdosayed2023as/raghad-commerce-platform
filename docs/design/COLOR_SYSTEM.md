@@ -1,71 +1,174 @@
 # Color System & Palette Tokens (`COLOR_SYSTEM.md`)
 
-**Status:** Accessibility Fixes Approved — Token Generation Pending  
+**Status:** Approved & Locked — Business Owner pending final sign-off on token expansion  
+**Version:** 1.1.0  
+**Date:** 2026-08-10  
 **Category:** Visual Identity & Design System  
-**Canonical Brand References:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md), [`docs/brand/06_BRAND_MEMORY.md`](../brand/06_BRAND_MEMORY.md)  
+**Canonical Brand References:** [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md) §15 · BRAND-021 · [`docs/brand/06_BRAND_MEMORY.md`](../brand/06_BRAND_MEMORY.md)  
+**Related:** [`TYPOGRAPHY.md`](./TYPOGRAPHY.md) · [`LOGO_GUIDELINES.md`](./LOGO_GUIDELINES.md)
+
+> Core hex values are locked under BRAND-021. This document expands them into **implementable CSS tokens**. It does not change the brand palette.
 
 ---
 
-## Approved Palette Summary (from Brand Strategy)
+## 1. Locked Brand Palette (do not alter)
 
-- **Primary Accent:** `#D48C80` (Warm Terracotta / Soft Rose)
-- **Secondary Contrast:** `#2C2230` (Slate Plum)
-- **Surface Canvas:** `#FAFAFA` (Warm Silk White)
-- **Trust Badge:** `#10B981` (Forest Emerald)
-- **Deposit Warning:** `#F59E0B` (Amber Gold)
-- **Text-on-Accent Rule:** `#2C2230` is the only approved text/icon color on top of Primary Accent, Trust Badge, or Deposit Warning fills (see Resolved Accessibility Fix Decision below).
-
----
-
-## Overview
-
-This specification will define HSL scale variations, CSS custom properties, WCAG contrast ratios, and dark/light surface tokens for Easy Orders liquid themes.
-
-*Detailed HSL scale variations, CSS custom properties, and dark/light surface tokens will be populated during the Token Generation phase.*
-
----
-
-## Accessibility (WCAG 2.1) Contrast Audit
-
-**Audit Date:** 2026-08-09  
-**Standard:** WCAG 2.1 Level AA — Normal text ≥ 4.5:1 · Large text / UI components ≥ 3:1  
-**Method:** Relative luminance per WCAG 1.4.3 formula (sRGB linearisation → L = 0.2126R + 0.7152G + 0.0722B)
-
-| # | Foreground | Background / Context | Contrast Ratio | AA Normal Text | AA Large / UI | Result |
-| :---: | :--- | :--- | :---: | :---: | :---: | :---: |
-| 1 | `#2C2230` text | `#FAFAFA` background (body copy) | **14.60 : 1** | ✅ Pass | ✅ Pass | ✅ **PASS** |
-| 2 | `#FAFAFA` text | `#2C2230` background (dark sections / footer) | **14.60 : 1** | ✅ Pass | ✅ Pass | ✅ **PASS** |
-| 3 | `#FAFAFA` text | `#D48C80` button fill (primary CTA) | **2.56 : 1** | ❌ Fail | ❌ Fail | ❌ **FAIL** |
-| 4 | `#10B981` icon / badge | `#FAFAFA` background (trust badge) | **2.43 : 1** | ❌ Fail | ❌ Fail | ❌ **FAIL** |
-| 5 | `#F59E0B` icon / badge | `#FAFAFA` background (deposit warning) | **2.06 : 1** | ❌ Fail | ❌ Fail | ❌ **FAIL** |
-
-### Luminance Reference
-
-| Color | Hex | Relative Luminance (L) |
-| :--- | :---: | :---: |
-| Premium Slate Plum | `#2C2230` | 0.01892 |
-| Warm Silk White | `#FAFAFA` | 0.95610 |
-| Warm Terracotta / Primary CTA | `#D48C80` | 0.34338 |
-| Forest Emerald / Trust Badge | `#10B981` | 0.36453 |
-| Amber Gold / Deposit Warning | `#F59E0B` | 0.43859 |
-
----
-
-## Resolved — Accessibility Fix Decision (Approved 2026-08-09)
-
-**Decision:** All three failing pairings (`OI-COLOR-001`, `OI-COLOR-002`, `OI-COLOR-003`) are resolved by a single unified rule, not three separate color changes:
-
-> **Text and icons placed on any of the three warm accent colors (`#D48C80` Terracotta, `#10B981` Emerald, `#F59E0B` Amber) must use `#2C2230` (Slate Plum), never white or the raw palette color, and never used as text/icon color directly against `#FAFAFA`.**
-
-This is a **Design System / component-usage decision**, not a brand palette change — all three locked `BRAND-021` hex values remain exactly as approved. No Change Request is required.
-
-| Component | Fix | Verified Ratio | Result |
+| Role | Name | Hex | RGB |
 | :--- | :--- | :---: | :---: |
-| Primary CTA button (`#D48C80` fill) | `#2C2230` text/icon on top | **5.7 : 1** | ✅ PASS |
-| Trust Badge (`#10B981` fill) | `#2C2230` text/icon on top | **6.01 : 1** | ✅ PASS |
-| Deposit Warning (`#F59E0B` fill) | `#2C2230` text/icon on top | **7.09 : 1** | ✅ PASS |
+| Primary accent | Warm Terracotta | `#D48C80` | 212, 140, 128 |
+| Secondary contrast | Slate Plum | `#2C2230` | 44, 34, 48 |
+| Surface canvas | Warm Silk White | `#FAFAFA` | 250, 250, 250 |
+| Trust / success | Forest Emerald | `#10B981` | 16, 185, 129 |
+| Warning / deposit | Amber Gold | `#F59E0B` | 245, 158, 11 |
 
-**Correction to prior analysis:** The original `OI-COLOR-002` note suggesting that swapping foreground/background roles would improve the `#10B981`/`#FAFAFA` ratio was incorrect — contrast ratio is symmetric between two colors regardless of which is treated as foreground or background (both orderings equal 2.43:1, which fails even the 3:1 UI-component threshold). The fix above (a third color, `#2C2230`, as text on the `#10B981` fill) is what resolves it, not reordering the original pair.
+### Text-on-Accent Rule (Locked 2026-08-09)
 
-**Approved by:** Business Owner  
-**Approval Date:** 2026-08-09
+> Text and icons on `#D48C80`, `#10B981`, or `#F59E0B` fills **must** use `#2C2230` — never white, never the raw accent as text on `#FAFAFA`.
+
+| Pairing | Ratio | AA |
+| :--- | :---: | :---: |
+| `#2C2230` on `#FAFAFA` | 14.60 : 1 | ✅ |
+| `#FAFAFA` on `#2C2230` | 14.60 : 1 | ✅ |
+| `#2C2230` on `#D48C80` | 5.70 : 1 | ✅ |
+| `#2C2230` on `#10B981` | 6.01 : 1 | ✅ |
+| `#2C2230` on `#F59E0B` | 7.09 : 1 | ✅ |
+
+---
+
+## 2. Semantic Tokens (what components use)
+
+Use **semantic names** in theme CSS — never hard-code hex in Liquid except via these variables.
+
+| Token | Value | Use |
+| :--- | :---: | :--- |
+| `--color-canvas` | `#FAFAFA` | Page background |
+| `--color-surface` | `#FFFFFF` | Cards, drawers, modals |
+| `--color-surface-muted` | `#F3F1F2` | Alternating bands, input fill |
+| `--color-ink` | `#2C2230` | Primary text / icons |
+| `--color-ink-muted` | `rgba(44, 34, 48, 0.70)` | Secondary text |
+| `--color-ink-subtle` | `rgba(44, 34, 48, 0.45)` | Placeholders, disabled |
+| `--color-ink-inverse` | `#FAFAFA` | Text on plum/dark bands |
+| `--color-brand` | `#D48C80` | Primary accent, logo seal, key CTAs |
+| `--color-brand-hover` | `#C4786C` | Hover on brand fills |
+| `--color-brand-pressed` | `#B56A5F` | Active/pressed |
+| `--color-brand-soft` | `#F6E4E0` | Soft brand wash (chips, selected row) |
+| `--color-trust` | `#10B981` | Trust / success fills |
+| `--color-trust-soft` | `#D1FAE5` | Soft success background |
+| `--color-warning` | `#F59E0B` | Deposit / caution fills |
+| `--color-warning-soft` | `#FEF3C7` | Soft warning background |
+| `--color-danger` | `#DC2626` | Errors / destructive only |
+| `--color-danger-soft` | `#FEE2E2` | Error backgrounds |
+| `--color-border` | `rgba(44, 34, 48, 0.12)` | Default borders |
+| `--color-border-strong` | `rgba(44, 34, 48, 0.24)` | Inputs focus ring base / dividers |
+| `--color-focus` | `#2C2230` | Focus outline |
+| `--color-overlay` | `rgba(44, 34, 48, 0.45)` | Drawer/modal scrim |
+| `--color-footer` | `#2C2230` | Footer / dark band (**not** `#0F172A`) |
+
+### Pillar accent tints (secondary only — master brand stays terracotta)
+
+Under BRAND-020 pillars do not get separate logos. Optional section tints:
+
+| Pillar | Soft tint | Use |
+| :--- | :---: | :--- |
+| Kids | `#F6E4E0` (brand-soft) | Section wash / nav chip |
+| Home | `#EDE8EA` (plum-tint) | Section wash / nav chip |
+| Bridal | `#F3E6E3` (warm blend) | Section wash / nav chip |
+
+Terracotta remains the only primary CTA and logo color across all pillars.
+
+---
+
+## 3. CSS Custom Properties (ready to paste)
+
+```css
+:root {
+  /* Brand core */
+  --color-brand: #D48C80;
+  --color-brand-hover: #C4786C;
+  --color-brand-pressed: #B56A5F;
+  --color-brand-soft: #F6E4E0;
+
+  --color-plum: #2C2230;
+  --color-plum-tint: #EDE8EA;
+
+  --color-canvas: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F3F1F2;
+
+  --color-ink: #2C2230;
+  --color-ink-muted: rgba(44, 34, 48, 0.70);
+  --color-ink-subtle: rgba(44, 34, 48, 0.45);
+  --color-ink-inverse: #FAFAFA;
+
+  --color-trust: #10B981;
+  --color-trust-soft: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-soft: #FEF3C7;
+  --color-danger: #DC2626;
+  --color-danger-soft: #FEE2E2;
+
+  --color-border: rgba(44, 34, 48, 0.12);
+  --color-border-strong: rgba(44, 34, 48, 0.24);
+  --color-focus: #2C2230;
+  --color-overlay: rgba(44, 34, 48, 0.45);
+  --color-footer: #2C2230;
+
+  /* On-accent text (locked a11y rule) */
+  --color-on-accent: #2C2230;
+}
+```
+
+---
+
+## 4. Component Color Contracts
+
+| Component | Background | Text / icon | Border |
+| :--- | :--- | :--- | :--- |
+| Page | `--color-canvas` | `--color-ink` | — |
+| Product card | `--color-surface` | `--color-ink` | `--color-border` |
+| Primary CTA | `--color-brand` | `--color-on-accent` | none |
+| Primary CTA hover | `--color-brand-hover` | `--color-on-accent` | none |
+| Secondary CTA | `--color-surface` | `--color-ink` | `--color-border-strong` |
+| Trust badge / shield chip | `--color-trust` | `--color-on-accent` | none |
+| Deposit notice | `--color-warning` | `--color-on-accent` | none |
+| Soft trust callout | `--color-trust-soft` | `--color-ink` | transparent |
+| Footer / dark band | `--color-footer` | `--color-ink-inverse` | — |
+| Input default | `--color-surface` | `--color-ink` | `--color-border` |
+| Input focus | `--color-surface` | `--color-ink` | `--color-focus` (2px) |
+| Error text | transparent | `--color-danger` | — |
+
+---
+
+## 5. Do Not
+
+- Use white text on terracotta / emerald / amber fills.
+- Use emerald or amber as body text on `#FAFAFA`.
+- Reintroduce `#0F172A`, `#2C2C30`, or any superseded v1.0 neutrals.
+- Create pillar-specific primary CTA colors.
+- Add purple gradients, glows, or glassmorphic color overlays.
+
+---
+
+## 6. Accessibility Audit Log (retained)
+
+**Audit Date:** 2026-08-09 · WCAG 2.1 AA  
+
+Original failing pairs (white on terracotta; emerald/amber as icons on canvas) were resolved by the Text-on-Accent rule — see section 1. Full luminance table preserved in git history under CHANGELOG `[2.4.2]`.
+
+---
+
+## 7. Acceptance Checklist
+
+- [ ] Theme CSS uses semantic tokens only (no stray hex in components)
+- [ ] Primary CTA = terracotta fill + plum text
+- [ ] Trust chips = emerald fill + plum text
+- [ ] Footer = plum (`#2C2230`), not slate-navy leftovers
+- [ ] Owner sign-off on this token expansion
+
+---
+
+## Related Documents
+
+- Brand Book §15: [`docs/brand/01_BRAND_BOOK.md`](../brand/01_BRAND_BOOK.md)
+- Typography: [`TYPOGRAPHY.md`](./TYPOGRAPHY.md)
+- Decisions: [`docs/brand/03_DECISIONS.md`](../brand/03_DECISIONS.md) (BRAND-021)

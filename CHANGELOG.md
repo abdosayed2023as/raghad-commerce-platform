@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.2] - 2026-08-10
+
+### Added
+- `docs/design/COLOR_SYSTEM.md` v1.1 — semantic CSS color tokens, component color contracts, pillar soft tints; BRAND-021 hex values unchanged.
+
+### Changed
+- `docs/design/TYPOGRAPHY.md` — status Locked (Business Owner approved).
+- `docs/CURRENT_STATE.md` — typography locked; color tokens awaiting sign-off; UI components next.
+
 ## [2.7.1] - 2026-08-10
 
 ### Added

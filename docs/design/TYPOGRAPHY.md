@@ -1,6 +1,6 @@
 # Typography System (`TYPOGRAPHY.md`)
 
-**Status:** Approved — Pending Business Owner sign-off  
+**Status:** Approved & Locked — Business Owner 2026-08-10  
 **Version:** 1.0.0  
 **Date:** 2026-08-10  
 **Category:** Visual Identity & UI System  
