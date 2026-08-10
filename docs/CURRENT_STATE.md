@@ -56,11 +56,11 @@
 
 1. 🔵 **Visual Identity Specs (`docs/design/`):**
    - ✅ **Logo system approved & exported** — [`docs/design/logo/`](./design/logo/) · [`LOGO_GUIDELINES.md`](./design/LOGO_GUIDELINES.md).
+   - ✅ **Logo deployed** to live channels by Business Owner (2026-08-10) — social avatars + store header/favicon.
    - ✅ Accessibility contrast rule finalized — see [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
+   - ✅ **Typography draft ready for Owner sign-off** — [`TYPOGRAPHY.md`](./design/TYPOGRAPHY.md) (Cairo-only; DM Sans / Playfair removed).
    - Populate `COLOR_SYSTEM.md` remaining CSS/HSL token scales.
-   - Populate `TYPOGRAPHY.md` with Cairo font hierarchy specifications.
    - Finalize `UI_COMPONENTS.md` card & button token contracts (trust shield as primary PDP system).
-   - **Deploy approved logo** to `raghadkids.com` header + social avatars (Owner-scheduled).
 
 2. ⬜ **UX/UI Wireframes & Page Specifications:**
    - Define Information Architecture & PDP / PLP wireframe requirements.

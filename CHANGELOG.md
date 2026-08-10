@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.1] - 2026-08-10
+
+### Added
+- `docs/design/TYPOGRAPHY.md` v1.0 — Cairo-only type system (scale, weights, CSS tokens, component mapping). Removes superseded DM Sans / Playfair Display drift.
+
+### Changed
+- `docs/design/logo/README.md` — added practical “where to use each file” guide (header, Facebook, WhatsApp, favicon, print).
+- `docs/CURRENT_STATE.md` — logo live deployment marked complete; typography pending Owner sign-off.
+
 ## [2.7.0] - 2026-08-10
 
 ### Added
