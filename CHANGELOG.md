@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.1] - 2026-08-10
+
+### Added
+- `specs/theme/PDP_THEME_SPEC.md` — Product Detail Page pre-code specification mapped to Easy Orders product sections; Trust Shield hosted in `product-details.liquid`; sticky buy bar contract; rejects fake social-proof utilities.
+
+### Changed
+- `docs/design/UI_COMPONENTS.md` — status Locked (Business Owner approved).
+- `docs/CURRENT_STATE.md` — visual identity core complete; PDP spec awaiting sign-off.
+
 ## [2.8.0] - 2026-08-10
 
 ### Changed

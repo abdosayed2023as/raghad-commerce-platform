@@ -61,14 +61,16 @@
    - ✅ **Color tokens locked** — [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
    - ✅ **UI Components locked** — [`UI_COMPONENTS.md`](./design/UI_COMPONENTS.md) (Trust Shield primary on PDP).
    - ✅ **Foundation tokens** — [`DESIGN_SYSTEM.md`](./design/DESIGN_SYSTEM.md).
-   - 🔵 **Next:** PDP / Home information architecture & Easy Orders theme specification (pre-code).
+   - 🔵 **Next:** Home + PLP theme specs (after PDP Owner sign-off).
+   - 🔵 **PDP Theme Spec draft** — [`specs/theme/PDP_THEME_SPEC.md`](../specs/theme/PDP_THEME_SPEC.md) (maps Trust Shield to Easy Orders sections).
 
 2. ⬜ **UX/UI Wireframes & Theme Spec:**
-   - PDP + Home + PLP wireframe requirements mapped to Easy Orders sections.
-   - Theme implementation spec for coding agents (Liquid constraints from `research/easyorders/`).
+   - ✅ PDP specification drafted (awaiting Owner sign-off).
+   - Home + PLP + Cart specs next.
+   - Coding-agent implementation prompt after PDP approval.
 
 3. ⬜ **Easy Orders Custom Theme Implementation:**
-   - Begin Liquid theme coding in `theme/` after theme specification approval.
+   - Begin Liquid in `theme/` only after PDP (then Home/PLP) specs are approved.
 
 ---
 
