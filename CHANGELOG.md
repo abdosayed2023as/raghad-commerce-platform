@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.0] - 2026-08-10
+
+### Added
+- `docs/design/logo/` — **approved production logo system** (Version A): SVG masters, full-color PNGs, monochrome variants, favicons 16/32/48/180.
+- `tools/logo-pipeline/export-final.js` — reproducible production export (seal word locked at 70% of inner ring diameter).
+- `docs/design/LOGO_GUIDELINES.md` — usage rules, clear space, minimum sizes, approved variants.
+- `docs/archive/logo-exploration-pre-approval/` — archived concept studies and Stage 3 drafts.
+
+### Changed
+- Logo direction locked by Business Owner: geometric seal + circular terracotta Ghain accent (concepts 2 × 3). Exploration and draft vectors removed from the active design path.
+
 ## [2.6.1] - 2026-08-10
 
 ### Added

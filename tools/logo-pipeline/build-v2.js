@@ -124,12 +124,14 @@ console.log('dot found:', !!W.dot, W.dot);
 }
 
 // V2 seal: white letters + white circular dot on terracotta.
+// Word fills ~70% of usable inner diameter (was 60% — too timid for avatar use).
 {
   const D = 1000, r = D / 2;
-  const scale = (D * 0.6) / W.advance;
-  const glyphH = (W.ascent - W.descent) * scale;
-  const baseY = r + glyphH * 0.5 - Math.abs(W.descent) * scale - glyphH * 0.06;
-  const startX = (D - W.advance * scale) / 2;
+  const inkW = W.ink.maxX - W.ink.minX, inkH = W.ink.maxY - W.ink.minY;
+  const innerUsable = D * 0.93; // diameter of white ring (r*0.93*2 = D*0.93)
+  const scale = (innerUsable * 0.70) / inkW;
+  const startX = (D - inkW * scale) / 2 - W.ink.minX * scale;
+  const baseY = r - (inkH * scale) / 2 + W.ink.maxY * scale;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${D} ${D}">
   <circle cx="${r}" cy="${r}" r="${r}" fill="${TERRACOTTA}"/>
   <circle cx="${r}" cy="${r}" r="${r * 0.93}" fill="none" stroke="#FFFFFF" stroke-width="${D * 0.008}"/>
@@ -139,6 +141,7 @@ console.log('dot found:', !!W.dot, W.dot);
   </g>
 </svg>`;
   render('raghad-seal-v2', svg, [1200, 64]);
+  console.log(`seal scale: word = ${((inkW * scale) / (r * 0.93 * 2) * 100).toFixed(1)}% of inner diameter`);
 }
 
 // V2 stacked lockup: seal above, wordmark below, RAGHAD caption beneath.
@@ -164,10 +167,9 @@ console.log('dot found:', !!W.dot, W.dot);
 
   const ch = capBase + 60;
 
-  // Seal inner placement, also ink-driven.
-  const sScale = (1000 * 0.60) / inkW;
+  // Seal inner placement — match standalone seal at 70% of inner diameter.
+  const sScale = (1000 * 0.93 * 0.70) / inkW;
   const sX = (1000 - inkW * sScale) / 2 - W.ink.minX * sScale;
-  const sBase = 500 + (inkH * sScale) / 2 - (-W.ink.minY) * sScale * 0 + W.ink.maxY * sScale - inkH * sScale + (inkH * sScale) * 0; // baseline so ink is vertically centered
   const sBaseline = 500 - (inkH * sScale) / 2 + W.ink.maxY * sScale;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${cw} ${ch}">

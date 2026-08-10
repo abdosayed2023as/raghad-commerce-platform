@@ -1,6 +1,6 @@
 # Current Project State (`docs/CURRENT_STATE.md`)
 
-**Version:** 2.5.0  
+**Version:** 2.7.0  
 **Status:** Active  
 **Owner:** Product Architect  
 **Last Updated:** 2026-08-10  
@@ -29,7 +29,7 @@
 > the repository previously described a greenfield launch, while an operational store
 > already exists.
 
-- **Live store:** `raghadkids.com` — Easy Orders platform, operational. Currently displays the superseded "عالم رغد" branding; to be replaced upon new logo deployment (per ADR-002 / BRAND-013).
+- **Live store:** `raghadkids.com` — Easy Orders platform, operational. Currently displays the superseded "عالم رغد" branding; **approved logo system ready for deployment** (see [`docs/design/logo/`](./design/logo/)).
 - **Planned domain:** `raghadworld.com` (BRAND-019) — registration in progress by Business Owner. Migration deferred until Home pillar launch readiness.
 - **First operating year (≈2025 → 2026-08):** ≈143 orders · AOV ≈500 EGP · ≈71,500 EGP gross revenue.
 - **Trust signals:** door refusal ≈0.7% (1/143) · returns ≈9.1% (13/143 — composition under investigation).
@@ -48,23 +48,25 @@
 | **Easy Orders Platform Audit** | Research sessions RS-01A to RS-06, Reference Library | 2026-07-30 | ✅ Passed |
 | **Brand Strategy Workshop** | 19 Strategy phases approved, Enterprise Brand Book v2.0 | 2026-08-03 | ✅ Passed (92/100) |
 | **Documentation Architecture** | Manifest, ADR system (ADR-001..006), Traceability Matrix | 2026-08-03 | ✅ Passed (v2.3.0) |
+| **Logo System** | Approved Version A masters + guidelines + production export | 2026-08-10 | ✅ Locked |
 
 ---
 
 ## 4. Immediate Next Steps & Sprint Priorities
 
 1. 🔵 **Visual Identity Specs (`docs/design/`):**
-   - Populate `COLOR_SYSTEM.md` with palette tokens (`#D48C80`, `#2C2230`, `#FAFAFA`, `#10B981`, `#F59E0B`).
+   - ✅ **Logo system approved & exported** — [`docs/design/logo/`](./design/logo/) · [`LOGO_GUIDELINES.md`](./design/LOGO_GUIDELINES.md).
    - ✅ Accessibility contrast rule finalized — see [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
+   - Populate `COLOR_SYSTEM.md` remaining CSS/HSL token scales.
    - Populate `TYPOGRAPHY.md` with Cairo font hierarchy specifications.
-   - Define `LOGO_GUIDELINES.md` visual mark directions.
-   - Finalize `UI_COMPONENTS.md` card & button token contracts.
+   - Finalize `UI_COMPONENTS.md` card & button token contracts (trust shield as primary PDP system).
+   - **Deploy approved logo** to `raghadkids.com` header + social avatars (Owner-scheduled).
 
 2. ⬜ **UX/UI Wireframes & Page Specifications:**
    - Define Information Architecture & PDP / PLP wireframe requirements.
 
 3. ⬜ **Easy Orders Custom Theme Implementation:**
-   - Begin Liquid theme coding in `theme/` after design specifications approval.
+   - Begin Liquid theme coding in `theme/` after remaining design specifications approval.
 
 ---
 

@@ -1,8 +1,8 @@
 # رغد | Raghad — Logo Design Brief
 
-**Version:** 1.1
+**Version:** 1.2
 **Date:** 2026-08-10
-**Status:** Approved — AI vector-production workflow authorized by Business Owner (2026-08-10)
+**Status:** Locked — Production logo system approved by Business Owner (2026-08-10). Assets: `docs/design/logo/`
 **Owner:** Project Director / Chief Brand Strategist
 **Canonical sources:** [`docs/brand/01_BRAND_BOOK.md`](../../brand/01_BRAND_BOOK.md) · [`docs/brand/06_BRAND_MEMORY.md`](../../brand/06_BRAND_MEMORY.md) · [`docs/brand/03_DECISIONS.md`](../../brand/03_DECISIONS.md)
 
@@ -47,15 +47,15 @@ So the word renders visually as **ر + غد** (a standalone Reh followed by the 
 
 ## 5. Concept Directions Explored
 
-Three AI-generated concept studies exist in this folder as mood references (they are **directional studies, not drafts to trace**):
+Three AI concept studies and all Stage 3 drafts are archived at [`docs/archive/logo-exploration-pre-approval/`](../../archive/logo-exploration-pre-approval/).
 
-| File | Direction | Idea |
-| :--- | :--- | :--- |
-| `logo-concept-1-embrace.png` | **الاحتضان (The Embrace)** | Calligraphic terracotta wordmark; the tail curve sweeps beneath the word like a protective arm — the older-sister archetype drawn literally |
-| `logo-concept-2-clarity.png` | **الوضوح (Modern Clarity)** | Geometric rounded Kufi in plum; the Ghain dot becomes a single terracotta circle — a quiet "lens of truth" nod to the real-photography mandate |
-| `logo-concept-3-seal.png` | **الخاتم (The Seal)** | Terracotta circular seal beside the wordmark, evoking a quality-inspection stamp — tying the mark to the pre-payment inspection promise |
+| Direction explored | Outcome |
+| :--- | :--- |
+| **الاحتضان (The Embrace)** | Explored; not selected for production |
+| **الوضوح (Modern Clarity)** | Selected (geometric letterforms + circular Ghain accent) |
+| **الخاتم (The Seal)** | Selected (seal architecture) |
 
-**Recommended direction (Director's note):** the Seal's *architecture* with the Embrace's *letterforms* — a seal-plus-wordmark lockup where the seal contains a compact calligraphic رغد and doubles as the standalone avatar/favicon mark.
+**Locked direction:** Seal architecture × geometric Cairo-derived wordmark with circular terracotta Ghain accent. Seal word scale **70%** of inner ring diameter. Production masters: [`docs/design/logo/`](../logo/).
 
 ## 6. Deliverables
 
@@ -106,16 +106,16 @@ Because the letterforms are inherited from a professionally designed Arabic type
 | Stage | Work | Output | Gate (who approves) |
 | :--- | :--- | :--- | :--- |
 | **1. Raster exploration** | Image-model concept studies (prompts in Appendix) | Direction candidates | Director shortlist — ✅ complete |
-| **2. Direction lock** | Business Owner selects a direction | Locked creative direction | **Business Owner** — ✅ hybrid locked (seal architecture × softened calligraphic letterforms), 2026-08-10 |
-| **3. Vector construction** | Extract shaped outlines of رغد from Cairo (proper Arabic shaping so positional forms are correct: standalone ر, initial غـ, final ـد); apply direction modifications — terminal softening, tail/embrace extension, Ghain-dot geometry, seal construction; assemble lockups | Master SVG candidates in `vector/` | Director technical review |
-| **4. Letterform & taste gate** | Verify §4 anatomy; judge brand feel against archetype | Approved master mark | **Business Owner** (Arabic-literate final eye) |
-| **5. Production export** | Programmatic export from approved masters | SVG masters · PNG 1x/2x/4x · favicon 16/32/48 · monochrome plum/white/black · horizontal/stacked/standalone-seal lockups | Director QA: 16px test, circle-crop test, mono test |
+| **2. Direction lock** | Business Owner selects a direction | Locked creative direction | **Business Owner** — ✅ Version A (concepts 2 × 3), 2026-08-10 |
+| **3. Vector construction** | Extract shaped outlines of رغد from Cairo; circular Ghain dot; seal @ 70% fill; assemble lockups | Masters via `tools/logo-pipeline` | Director technical review — ✅ |
+| **4. Letterform & taste gate** | Verify §4 anatomy; judge brand feel against archetype | Approved master mark | **Business Owner** — ✅ 2026-08-10 |
+| **5. Production export** | Programmatic export from approved masters | Full package under `docs/design/logo/` | Director QA — ✅ complete |
 
 ## Workflow Rules
 
 1. Never auto-trace raster output — vectors are constructed, not converted.
 2. Every candidate passes the §4 anatomy check **before** any taste discussion.
-3. Master vectors live in `docs/design/logo-concepts/vector/`; all production assets are exported from masters, never recreated by hand or by image models.
+3. Master vectors live in `docs/design/logo/masters/`; all production assets are exported from masters via `export-final.js`, never recreated by hand or by image models.
 4. Raster prompts (Appendix) may be used for further exploration only — never for production input.
 5. Ownership note: a constructed vector mark produced under documented human direction provides materially stronger trademark and copyright footing than raw AI-generated imagery.
 
