@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.8.2] - 2026-08-10
+
+### Changed
+- `specs/theme/PDP_THEME_SPEC.md` — Approved & Locked by Business Owner. PDP Liquid implementation unblocked.
+
 ## [2.8.1] - 2026-08-10
 
 ### Added
