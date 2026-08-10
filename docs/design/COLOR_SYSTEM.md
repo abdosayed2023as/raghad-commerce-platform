@@ -1,6 +1,6 @@
 # Color System & Palette Tokens (`COLOR_SYSTEM.md`)
 
-**Status:** Approved & Locked — Business Owner pending final sign-off on token expansion  
+**Status:** Approved & Locked — Business Owner 2026-08-10  
 **Version:** 1.1.0  
 **Date:** 2026-08-10  
 **Category:** Visual Identity & Design System  
@@ -163,7 +163,7 @@ Original failing pairs (white on terracotta; emerald/amber as icons on canvas) w
 - [ ] Primary CTA = terracotta fill + plum text
 - [ ] Trust chips = emerald fill + plum text
 - [ ] Footer = plum (`#2C2230`), not slate-navy leftovers
-- [ ] Owner sign-off on this token expansion
+- [x] Owner sign-off on this token expansion
 
 ---
 

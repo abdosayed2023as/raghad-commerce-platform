@@ -59,9 +59,9 @@
    - ✅ **Logo deployed** to live channels by Business Owner (2026-08-10) — social avatars + store header/favicon.
    - ✅ Accessibility contrast rule finalized — see [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md).
    - ✅ **Typography locked** — [`TYPOGRAPHY.md`](./design/TYPOGRAPHY.md) (Cairo-only; Owner approved 2026-08-10).
-   - 🔵 **Color tokens draft ready for Owner sign-off** — [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md) v1.1 (semantic CSS tokens; BRAND-021 hex unchanged).
-   - Finalize `UI_COMPONENTS.md` card & button token contracts (trust shield as primary PDP system).
-   - Strip design-doc drift: no glassmorphism, no `#0F172A` footer (use plum).
+   - ✅ **Color tokens locked** — [`COLOR_SYSTEM.md`](./design/COLOR_SYSTEM.md) (Owner approved 2026-08-10).
+   - 🔵 **UI Components draft ready for Owner sign-off** — [`UI_COMPONENTS.md`](./design/UI_COMPONENTS.md) (Trust Shield as primary PDP system).
+   - ✅ Foundation tokens — [`DESIGN_SYSTEM.md`](./design/DESIGN_SYSTEM.md) (radius, spacing, breakpoints, motion).
 
 2. ⬜ **UX/UI Wireframes & Page Specifications:**
    - Define Information Architecture & PDP / PLP wireframe requirements.

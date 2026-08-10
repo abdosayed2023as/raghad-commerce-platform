@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.7.3] - 2026-08-10
+
+### Added
+- `docs/design/UI_COMPONENTS.md` v1.0 — Trust Shield as primary PDP system; buttons, product card, PDP sticky buy stack, header, cart, footer; rejects glassmorphism and `#0F172A` scaffold drift.
+- `docs/design/DESIGN_SYSTEM.md` v1.0 — spacing scale, radii, shadow, breakpoints, motion defaults.
+
+### Changed
+- `docs/design/COLOR_SYSTEM.md` — status Locked (Business Owner approved).
+
 ## [2.7.2] - 2026-08-10
 
 ### Added
